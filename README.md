@@ -10,8 +10,7 @@
   <i>Exploration as the Transition Mechanism</i>
 </p>
 
-<!-- Logo: 取消注释并替换为您自己的图片路径 -->
-<!-- <p align="center"><img src="fig/logo.png" width="700"/></p> -->
+<p align="center"><img src="fig/5levels.png" width="900"/></p>
 
 <p align="center">
   <!-- <a href="#"><img src="https://img.shields.io/badge/📄_Paper-ArXiv-red" alt="Paper"></a> -->
@@ -74,6 +73,9 @@ Unlike undirected exploration (e.g., ε-greedy), epistemic exploration is *inten
 
 ### 1.2 Three Criteria
 
+<p align="center"><img src="fig/3criteria.png" width="800"/></p>
+<p align="center"><i>Figure: Foundation of Epistemic Exploration — Why, What, and How.</i></p>
+
 We ground epistemic exploration in **three jointly necessary criteria**, each addressing a distinct failure mode of static optimisation:
 
 | Criterion | What It Does | Failure Mode Addressed | Explores... |
@@ -125,6 +127,9 @@ Our survey is organized as a **3×5 taxonomy** crossing three signal-driven meth
 ## 2. Levels 1–2: Responder → Reasoner — Reasoning-Space Exploration
 
 The transition from **Responder** to **Reasoner** requires exploration in *reasoning space*: branching over token sequences, reasoning trajectories, and latent thought representations. The agent must search for informative hypotheses rather than simply produce reactive outputs.
+
+<p align="center"><img src="fig/level1_reasoner.png" width="850"/></p>
+<p align="center"><i>Figure: Levels 1–2 Reasoning-Space Exploration — Why (entropy escalation & reward stagnation), Where (tokens → turns → latent trajectories), and How (uncertainty / competence / reachability-driven).</i></p>
 
 ### 2.1 Uncertainty-Driven Exploration
 
@@ -195,6 +200,9 @@ Agents operating in software-mediated environments (web, APIs, code interpreters
 
 ### 3.2 Embodied Agents
 
+<p align="center"><img src="fig/level3_embodied.png" width="850"/></p>
+<p align="center"><i>Figure: Level 3 Embodied Agent Exploration — Uncertainty-driven active perception, competence-driven RL & test-time compute, and reachability-driven safety & reward engineering.</i></p>
+
 Agents operating in physical/simulated environments with continuous action spaces:
 
 | Paradigm | Method | Key Idea |
@@ -215,6 +223,9 @@ Agents operating in physical/simulated environments with continuous action space
 ---
 
 ## 4. Level 4: Agent → Prospector — Imagination-Space Exploration
+
+<p align="center"><img src="fig/level4_worldmodel.png" width="850"/></p>
+<p align="center"><i>Figure: Level 4 Imagination-Space Exploration — Why (the dual exploration problem), Where (simulated rollouts, hazard zones, latent value landscapes), and How (MBRL, video generation, autonomous driving, social dynamics).</i></p>
 
 The Prospector internalises a **world model** and faces a **dual exploration problem**: simultaneously gathering real data to refine the model AND searching imagined trajectories to extract policies.
 
@@ -239,6 +250,9 @@ The Prospector internalises a **world model** and faces a **dual exploration pro
 ---
 
 ## 5. Level 5: Prospector → Ecosystem — Coordination-Space Exploration
+
+<p align="center"><img src="fig/level5_ecosystem.png" width="850"/></p>
+<p align="center"><i>Figure: Level 5 Coordination-Space Exploration — Why (single-agent limitations), Where (communication, collaboration, role, deployment), and How (orchestration, ensemble, MARL, self-evolving agents).</i></p>
 
 At the highest level, exploration enters **coordination space**: heterogeneous agents discover communication topologies, role specialisations, shared representations, and collaborative strategies.
 
