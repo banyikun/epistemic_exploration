@@ -90,27 +90,12 @@ These form a closed loop: **gain information → convert to value → keep the c
 
 We propose exploration as the **transition mechanism** between five levels of increasing agent sophistication. Each level introduces a qualitatively new exploration space that the previous level cannot access:
 
-```
-┌──────────────┐    reasoning-space     ┌──────────────┐    interaction-space    ┌──────────────┐
-│  L1 Responder│───── exploration ──────▶│  L2 Reasoner │───── exploration ──────▶│  L3 Agent    │
-│  (reactive)  │                        │  (deliberate)│                        │  (situated)  │
-└──────────────┘                        └──────────────┘                        └──────┬───────┘
-                                                                                       │
-                                                                          imagination-space
-                                                                            exploration
-                                                                                       │
-┌──────────────┐    coordination-space  ┌──────────────┐                        ┌──────▼───────┐
-│ L5 Ecosystem │◀──── exploration ──────│L4 Prospector │◀───────────────────────│  (world-model│
-│ (collective) │                        │  (imaginer)  │                        │   grounded)  │
-└──────────────┘                        └──────────────┘                        └──────────────┘
-```
-
 | Transition | Exploration Space | What Becomes Explorable |
 |:-----------|:------------------|:------------------------|
-| **L1→L2: Responder → Reasoner** | Reasoning space | Hypotheses, reasoning trajectories, latent thought representations |
-| **L2→L3: Reasoner → Agent** | Perception & action space | Tool invocation, sensorimotor loops, memory management |
-| **L3→L4: Agent → Prospector** | Imagination space | Counterfactual futures in learned world models, dual real-imagined exploration |
-| **L4→L5: Prospector → Ecosystem** | Coordination space | Communication topologies, role assignments, shared world models |
+| **L1→L2: Responder → Reasoner** | **Reasoning space** | Hypotheses, reasoning trajectories, latent thought representations |
+| **L2→L3: Reasoner → Agent** | **Perception & action space** | Tool invocation, sensorimotor loops, memory management |
+| **L3→L4: Agent → Prospector** | **Imagination space** | Counterfactual futures in learned world models, dual real-imagined exploration |
+| **L4→L5: Prospector → Ecosystem** | **Coordination space** | Communication topologies, role assignments, shared world models |
 
 ### 1.4 3×5 Taxonomy
 
