@@ -345,12 +345,15 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 ### 5.2 Agentic Ensemble Papers
 
+
+
+
 #### 5.2.1 Ensemble-During-Inference Papers
 
 
 
 | Date | Name | Title | Paper | Github |
-| --- | --- | --- | --- | --- |
+|:---:|:---:|---|:---:|:---:|
 | 2025-10 | `SAFE` | When to Ensemble: Identifying Token-Level Points for Stable and Fast LLM Ensembling | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2510.15346) | - |
 | 2025-10 | `CoRe` | Harnessing Consistency for Robust Test-Time LLM Ensemble | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2510.13855) | - |
 | 2025-05 | `Transformer Copilot` | Transformer Copilot: Learning from The Mistake Log in LLM Fine-tuning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.16270) | [![GitHub Stars](https://img.shields.io/github/stars/jiaruzouu/TransformerCopilot?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/jiaruzouu/TransformerCopilot) |
@@ -366,7 +369,7 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 
 | Date | Name | Title | Paper | Github |
-| --- | --- | --- | --- | --- |
+|:---:|:---:|---|:---:|:---:|
 | 2025-06 | `RLAE` | RLAE: Reinforcement Learning-Assisted Ensemble for LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.00439) | - |
 | 2024-12 | `SpecFuse` | SpecFuse: Ensembling Large Language Models via Next-Segment Prediction | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.07380) | - |
 | 2024-09 | `SweetSpan` | Hit the Sweet Spot! Span-Level Ensemble for Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.18583) | - |
@@ -374,7 +377,7 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 
 | Date | Name | Title | Paper | Github |
-| --- | --- | --- | --- | --- |
+|:---:|:---:|---|:---:|:---:|
 | 2025-11 | `CBS` | Collaborative Beam Search: Enhancing LLM Reasoning via Collective Consensus | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.emnlp-main.574/) | - |
 | 2024-12 | `LE-MCTS` | Ensembling Large Language Models with Process Reward-Guided Tree Search for Better Complex Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.15797) | - |
 
@@ -384,7 +387,7 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 
 | Date | Name | Title | Paper | Github |
-| --- | --- | --- | --- | --- |
+|:---:|:---:|---|:---:|:---:|
 | 2025-12 | `LLM-PeerReview` | Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.23213) | [![GitHub Stars](https://img.shields.io/github/stars/zeyuji/LLM-PeerReview?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zeyuji/LLM-PeerReview) |
 | 2025-10 | `LLMartini` | LLMartini: Seamless and Interactive Leveraging of Multiple LLMs through Comparison and Composition | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.19252) | - |
 | 2025-10 | `-` | Beyond Consensus: Mitigating the Agreeableness Bias in LLM Judge Evaluations | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.11822) | [![GitHub Stars](https://img.shields.io/github/stars/ai-cet/paper-arxiv-llm-judge-calibration?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ai-cet/paper-arxiv-llm-judge-calibration) |
@@ -408,8 +411,9 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 #### 5.2.3 Ensemble-Before-Inference Papers
 
+
 | Date | Name | Title | Paper | Github |
-| --- | --- | --- | --- | --- |
+|:---:|:---:|---|:---:|:---:|
 | 2025-10 | `DiSRouter` | DISROUTER: Distributed Self-Routing for LLM Selections | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.19208) | - |
 | 2025-10 | `WebRouter` | WebRouter: Query-specific Router via Variational Information Bottleneck for Cost-sensitive Web Agent | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.11221) | - |
 | 2025-10 | `LLMRank` | LLMRank: Understanding LLM Strengths for Model Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.01234) | - |
@@ -444,8 +448,9 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 #### 5.2.4 Cascaded-Based Papers
 
+
 | Date | Name | Title | Paper | Github |
-| --- | --- | --- | --- | --- |
+|:---:|:---:|---|:---:|:---:|
 | 2025-12 | `RoBoN` | RoBoN: Routed Online Best-of-n for Test-Time Scaling with Multiple LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2512.05542) | [![GitHub Stars](https://img.shields.io/github/stars/j-geuter/RoBoN?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/j-geuter/RoBoN) |
 | 2025-09 | `-` | Semantic Agreement Enables Efficient Open-Ended LLM Cascades | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2509.21837) | - |
 | 2025-04 | `EMAFusionTM` | EMAFusionTM: A Self-Optimizing System for Seamless LLM Selection and Integration | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.10681) | - |
