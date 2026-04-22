@@ -190,20 +190,20 @@ Agents operating in software-mediated environments (web, APIs, code interpreters
 
 Agents operating in physical/simulated environments with continuous action spaces:
 
-| Paradigm | Method | Key Idea |
-|:---------|:-------|:---------|
-| **Uncertainty-Driven (Active Perception)** | ActiveSplat | Gaussian splatting for information-maximizing viewpoint selection |
-| | Conan | Active reasoning in open-world environments |
-| | ActiveRIR | Cross-modal audio-visual exploration |
-| | Fisher-info path planning | Balances information gain with localization robustness |
-| **Competence-Driven** | **Offline RL-VLA**: Q-Transformer, Cal-QL | Scale value learning to static trajectories |
-| | **Online RL-VLA**: VLA-RL, FLaRe, SimpleVLA-RL | Real-time interactive policy exploration |
-| | **Hybrid**: ConRFT, SRPO, Dual-Actor | Stable offline-to-online transitions |
-| | **Test-Time**: VLA-Reasoner (MCTS), DeepThinkVLA, Hume | Imagination before physical execution |
-| | SayCan, Inner Monologue, LM-Nav | Language-guided objective-driven navigation |
-| **Reachability-Driven** | Eureka | LLM-driven reward code synthesis |
-| | Recovery RL, RECOVER, SafeVLA | Learned safety zones preserving reachable sets |
-| | RND, CurricuLLM | Curiosity-driven and curriculum-based coverage |
+| Paradigm | Method | Key Idea | Project |
+|:---------|:-------|:---------|:--------|
+| **Uncertainty-Driven (Active Perception)** | [ActiveSplat](https://arxiv.org/abs/2410.21955) | Gaussian splatting for information-maximizing viewpoint selection | [🔗](https://github.com/Li-Yuetao/ActiveSplat) |
+| | [Conan](https://arxiv.org/abs/2311.02018) | Active reasoning in open-world environments | [🔗](https://github.com/ariesssxu/Conan-Active-Reasoning) |
+| | [ActiveRIR](https://arxiv.org/abs/2404.16216) | Cross-modal audio-visual exploration | - |
+| | [Fisher-info path planning](https://arxiv.org/abs/2410.17422) | Balances information gain with localization robustness | [🔗](https://github.com/JiangWenPL/multimodal-active) |
+| **Competence-Driven** | **Offline RL-VLA**: [Q-Transformer](https://arxiv.org/abs/2309.10150), [Cal-QL](https://arxiv.org/abs/2303.05479) | Scale value learning to static trajectories | - |
+| | **Online RL-VLA**: [VLA-RL](https://arxiv.org/abs/2505.18719), [FLaRe](https://arxiv.org/abs/2409.16578), [SimpleVLA-RL](https://arxiv.org/abs/2509.09674) | Real-time interactive policy exploration | [🔗](https://github.com/GuanxingLu/vlarl) / [🔗](https://github.com/JiahengHu/FLaRe) / [🔗](https://github.com/PRIME-RL/SimpleVLA-RL) |
+| | **Hybrid**: [ConRFT](https://arxiv.org/abs/2502.05450), [SRPO](https://arxiv.org/abs/2511.15605), [Dual-Actor](https://arxiv.org/abs/2509.13774) | Stable offline-to-online transitions | [🔗](https://github.com/cccedric/conrft) / [🔗](https://github.com/SUSTechBruce/SRPO_MLLMs) |
+| | **Test-Time**: [VLA-Reasoner](https://arxiv.org/abs/2509.22643) (MCTS), [DeepThinkVLA](https://arxiv.org/abs/2511.15669), [Hume](https://arxiv.org/abs/2505.21432) | Imagination before physical execution | [🔗](https://github.com/OpenBMB/DeepThinkVLA) / [🔗](https://github.com/hume-vla/hume) |
+| | [SayCan](https://arxiv.org/abs/2204.01691), [Inner Monologue](https://arxiv.org/abs/2207.05608), [LM-Nav](https://arxiv.org/abs/2207.04429) | Language-guided objective-driven navigation | [🔗](https://github.com/google-research/google-research/tree/master/saycan) / [🔗](https://github.com/blazejosinski/lm_nav) |
+| **Reachability-Driven** | [Eureka](https://arxiv.org/abs/2310.12931) | LLM-driven reward code synthesis | [🔗](https://github.com/eureka-research/eureka) |
+| | [Recovery RL](https://arxiv.org/abs/2010.15920), [RECOVER](https://arxiv.org/abs/2404.00756), [SafeVLA](https://arxiv.org/abs/2503.03480) | Learned safety zones preserving reachable sets | [🔗](https://github.com/abalakrishna123/recovery-rl) / [🔗](https://github.com/PKU-Alignment/SafeVLA) |
+| | [RND](https://arxiv.org/abs/1810.12894), [CurricuLLM](https://arxiv.org/abs/2409.18382) | Curiosity-driven and curriculum-based coverage | [🔗](https://github.com/openai/random-network-distillation) / [🔗](https://github.com/labicon/CurricuLLM) |
 
 ---
 
