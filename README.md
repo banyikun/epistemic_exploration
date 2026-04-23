@@ -471,7 +471,7 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 <br>
 
 
-## 6. Cross-Cutting Topics
+## 6. Exploration Evaluation
 
 ### Foundations
 - **Three failure modes of static optimisation**: Belief Stagnation, Value Stagnation, Reachability Collapse
