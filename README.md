@@ -195,21 +195,6 @@ Methods that prevent irreversible contraction of reasoning trajectory distributi
 
 At Level 3, the agent crosses from internal reasoning into **situated interaction with external environments**. Exploration unfolds in perception and action space, where every step incurs real cost.
 
-### Recent embodied frontiers (2026) — Level 3 vs. Level 4
-
-This survey’s **Level 3** is *Reasoner → Agent* (perception- and action-space, closed-loop VLA / interaction). **Level 4** is *Agent → Prospector* (imagination- and world-model–driven control; internal dynamics / counterfactuals before or instead of costly pixels).
-
-- **Level 3 — [$\pi_{0.7}$](https://arxiv.org/abs/2604.15483)** (Physical Intelligence, 2026.04; [blog](https://www.pi.website/blog/pi07))  
-  A **steerable flow VLA** trained with **diverse multimodal context** (task language, subgoal images, strategy metadata, episode quality), including heterogeneous and suboptimal data. It reports **out-of-the-box** dexterous long-horizon skills, **instruction following in unseen environments**, **zero-shot cross-embodiment** transfer, and **compositional** reuse of skills (e.g., new appliances) without task-specific finetuning—an interaction-space generalist rather than a narrow specialist policy.
-
-- **Level 4 — [Being-H0.7](https://research.beingbeyond.com/projects/being-h07/being-h07.pdf)** (BeingBeyond, 2026)  
-  A **latent world–action model (WAM)** pretrained on **large-scale egocentric video** ($\sim$200k h). A **prior** branch and a **future-aware posterior** are **jointly aligned in latent space** so actions are grounded in world dynamics **without** expensive **test-time pixel rollouts**—positioned between flat VLAs and dense video-generation WAMs.
-
-- **Level 4 — [Fast-WAM](https://arxiv.org/abs/2603.16666)** (arXiv:2603.16666; [project](https://yuantianyuan01.github.io/FastWAM/))  
-  A **WAM** that **keeps video co-training** during learning but **skips future prediction at test time**, decoding actions in a **single pass** (reported **$\sim$190ms** latency, **$>$4×** faster than typical imagine-then-execute WAMs). Results on **LIBERO**, **RoboTwin**, and real robots suggest the main gain from video objectives is **better world-compatible representations**, not on-line generative “imagination” at inference.
-
----
-
 ### 3.1 Digital Agents
 
 Agents operating in software-mediated environments (web, APIs, code interpreters):
@@ -322,6 +307,7 @@ Competence-driven exploration spans two tightly coupled phases: the agent must f
 | 2025-11 | **WMPO** | Pure world-model PPO enables safe online action-space exploration for VLA | [WMPO: World Model-Based Policy Optimization for VLA](https://arxiv.org/abs/2511.09515) | - |
 | 2026-01 | **SOP** | Scalable online post-training infrastructure for fleet-scale VLA exploration | [SOP: Scalable Online Post-training for Generalist VLA Models](https://arxiv.org/abs/2601.03044) | - |
 | 2026-02 | **GigaBrain-0.5M** | Foundation VLA learned directly from world-model-based RL at fleet scale | [GigaBrain-0.5M*: A VLA That Learns From World Model-Based RL](https://arxiv.org/abs/2602.12099) | - |
+|| 2026-04 | **$\pi_{0.7}$** | Steerable flow VLA trained with diverse multimodal context for out-of-the-box generalist skills | [$\pi_{0.7}$: a Steerable Generalist Robotic Foundation Model with Emergent Capabilities](https://arxiv.org/abs/2604.15483) | - |
 
 **Test-time compute & cognitive search.** Moving the exploration burden from training to deployment via MCTS, flow-guided steering, test-time RL, and "System-2" deliberation before physical execution.
 
@@ -388,6 +374,8 @@ The Prospector internalises a **world model** and faces a **dual exploration pro
 | **MuZero** | Learned dynamics model with MCTS for planning |
 | **iVideoGPT** | Interactive video generation as scalable world models |
 | **World-Env / WMPO** | Internal simulators for safe GRPO/PPO updates in VLA |
+| **Being-H0.7** | Latent world-action model jointly aligned without expensive test-time pixel rollouts |
+| **Fast-WAM** | Video co-training world action model that skips future prediction at inference for latency reduction |
 
 ---
 
