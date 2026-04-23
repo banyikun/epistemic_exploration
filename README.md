@@ -196,41 +196,41 @@ Agents operating in software-mediated environments (web, APIs, code interpreters
 
 Methods that acquire information under partial observability by prioritising uncertain states, tool calls, or capability boundaries:
 
-| Method | Key Idea | Paper |
-|:-------|:---------|:------|
-| **JitRL** | Count-based exploration bonus for unseen state-action pairs | [Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates (2026)](https://arxiv.org/abs/2601.18510) |
-| **RAP** | MCTS/UCB-style planning for strategic state exploration | [Reasoning with Language Model is Planning with World Model (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.507) |
-| **Agent Q** | MCTS with UCB for autonomous agent learning | [Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents (2024)](https://arxiv.org/abs/2408.07199) |
-| **LAST** | Tree search that unifies reasoning, acting, and planning | [Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models (2024)](https://arxiv.org/abs/2310.04406) |
-| **KnowSelf** | Self-perceived capability boundaries trigger reflection | [Agentic Knowledgeable Self-awareness (2025)](https://arxiv.org/abs/2504.03553) |
-| **Search-o1** | Invokes web search upon encountering unfamiliar knowledge | [Search-o1: Agentic Search-Enhanced Large Reasoning Models (2025)](https://doi.org/10.18653/v1/2025.emnlp-main.276) |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2026-01 | **JitRL** | Count-based exploration bonus for unseen state-action pairs | [Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates (2026)](https://arxiv.org/abs/2601.18510) | [![GitHub Stars](https://img.shields.io/github/stars/liushiliushi/JitRL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/liushiliushi/JitRL) |
+| 2023-05 | **RAP** | MCTS/UCB-style planning for strategic state exploration | [Reasoning with Language Model is Planning with World Model (2023)](https://doi.org/10.18653/v1/2023.emnlp-main.507) | [![GitHub Stars](https://img.shields.io/github/stars/Ber666/RAP?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Ber666/RAP) |
+| 2024-08 | **Agent Q** | MCTS with UCB for autonomous agent learning | [Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents (2024)](https://arxiv.org/abs/2408.07199) | - |
+| 2023-10 | **LAST** | Tree search that unifies reasoning, acting, and planning | [Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models (2024)](https://arxiv.org/abs/2310.04406) | [![GitHub Stars](https://img.shields.io/github/stars/lapisrocks/LanguageAgentTreeSearch?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/lapisrocks/LanguageAgentTreeSearch) |
+| 2025-04 | **KnowSelf** | Self-perceived capability boundaries trigger reflection | [Agentic Knowledgeable Self-awareness (2025)](https://arxiv.org/abs/2504.03553) | [![GitHub Stars](https://img.shields.io/github/stars/zjunlp/KnowSelf?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zjunlp/KnowSelf) |
+| 2025-01 | **Search-o1** | Invokes web search upon encountering unfamiliar knowledge | [Search-o1: Agentic Search-Enhanced Large Reasoning Models (2025)](https://doi.org/10.18653/v1/2025.emnlp-main.276) | [![GitHub Stars](https://img.shields.io/github/stars/RUC-NLPIR/Search-o1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/RUC-NLPIR/Search-o1) |
 
 #### 3.1.2 Competence-Driven Exploration
 
 Methods that tame combinatorial tool-use spaces through curricula, process-level credit assignment, and self-generated training tasks:
 
-| Method | Key Idea | Paper |
-|:-------|:---------|:------|
-| **PilotRL** | Three-stage progressive RL curriculum | [PilotRL: Training Language Model Agents via Global Planning-Guided Progressive Reinforcement Learning (2025)](https://arxiv.org/abs/2508.00344) |
-| **ReSum-GRPO** | Context summarization for long-horizon search training | [ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization (2025)](https://arxiv.org/abs/2509.13313) |
-| **ETO** | Exploration-based trajectory optimization from trial and error | [Trial and Error: Exploration-Based Trajectory Optimization for LLM Agents (2024)](https://arxiv.org/abs/2403.02502) |
-| **Planner-R1** | Dense process-level rewards as priors | [Planner-R1: Reward Shaping Enables Efficient Agentic RL with Smaller LLMs (2025)](https://arxiv.org/abs/2509.25779) |
-| **RLTR** | Tool-use completeness rewards | [Encouraging Good Processes Without the Need for Good Answers: Reinforcement Learning for LLM Agent Planning (2025)](https://arxiv.org/abs/2508.19598) |
-| **GiGPO** | State-level relative advantages from grouped rollouts | [Group-in-Group Policy Optimization for LLM Agent Training (2025)](https://arxiv.org/abs/2505.10978) |
-| **Agent0-VL** | Self-Evolving Reasoning Cycle (SERC) | [Agent0-VL: Exploring Self-Evolving Agent for Tool-Integrated Vision-Language Reasoning (2025)](https://arxiv.org/abs/2511.19900) |
-| **Absolute Zero** | Joint proposer-solver self-play | [Absolute Zero: Reinforced Self-play Reasoning with Zero Data (2025)](https://arxiv.org/abs/2505.03335) |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2025-08 | **PilotRL** | Three-stage progressive RL curriculum | [PilotRL: Training Language Model Agents via Global Planning-Guided Progressive Reinforcement Learning (2025)](https://arxiv.org/abs/2508.00344) | - |
+| 2025-09 | **ReSum-GRPO** | Context summarization for long-horizon search training | [ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization (2025)](https://arxiv.org/abs/2509.13313) | - |
+| 2024-03 | **ETO** | Exploration-based trajectory optimization from trial and error | [Trial and Error: Exploration-Based Trajectory Optimization for LLM Agents (2024)](https://arxiv.org/abs/2403.02502) | [![GitHub Stars](https://img.shields.io/github/stars/Yifan-Song793/ETO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Yifan-Song793/ETO) |
+| 2025-09 | **Planner-R1** | Dense process-level rewards as priors | [Planner-R1: Reward Shaping Enables Efficient Agentic RL with Smaller LLMs (2025)](https://arxiv.org/abs/2509.25779) | - |
+| 2025-08 | **RLTR** | Tool-use completeness rewards | [Encouraging Good Processes Without the Need for Good Answers: Reinforcement Learning for LLM Agent Planning (2025)](https://arxiv.org/abs/2508.19598) | - |
+| 2025-05 | **GiGPO** | State-level relative advantages from grouped rollouts | [Group-in-Group Policy Optimization for LLM Agent Training (2025)](https://arxiv.org/abs/2505.10978) | [![GitHub Stars](https://img.shields.io/github/stars/langfengQ/verl-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/langfengQ/verl-agent) |
+| 2025-11 | **Agent0-VL** | Self-Evolving Reasoning Cycle (SERC) | [Agent0-VL: Exploring Self-Evolving Agent for Tool-Integrated Vision-Language Reasoning (2025)](https://arxiv.org/abs/2511.19900) | [![GitHub Stars](https://img.shields.io/github/stars/aiming-lab/Agent0?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/aiming-lab/Agent0) |
+| 2025-05 | **Absolute Zero** | Joint proposer-solver self-play | [Absolute Zero: Reinforced Self-play Reasoning with Zero Data (2025)](https://arxiv.org/abs/2505.03335) | [![GitHub Stars](https://img.shields.io/github/stars/LeapLabTHU/Absolute-Zero-Reasoner?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LeapLabTHU/Absolute-Zero-Reasoner) |
 
 #### 3.1.3 Reachability-Driven Exploration
 
 Methods that preserve behavioural flexibility by regulating entropy or injecting useful off-policy experience:
 
-| Method | Key Idea | Paper |
-|:-------|:---------|:------|
-| **EGPO** | Entropy bonus in advantage over CoT tokens | [Exploring Superior Function Calls via Reinforcement Learning (2025)](https://arxiv.org/abs/2508.05118) |
-| **EPO** | Entropy control for multi-turn agent RL | [EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning (2025)](https://arxiv.org/abs/2509.22576) |
-| **ENTROPO** | Entropy-enhanced multi-turn preference optimization | [Building Coding Agents via Entropy-Enhanced Multi-Turn Preference Optimization (2025)](https://arxiv.org/abs/2509.12434) |
-| **RAPO** | Retrieval-augmented policy optimization | [RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization (2026)](https://arxiv.org/abs/2603.03078) |
-| **E³-TIR** | Expert-guided branching at high-entropy prefixes | [E3-TIR: Enhanced Experience Exploitation for Tool-Integrated Reasoning (2026)](https://arxiv.org/abs/2604.09455) |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2025-08 | **EGPO** | Entropy bonus in advantage over CoT tokens | [Reasoning through Exploration: A Reinforcement Learning Framework for Robust Function Calling (2025)](https://arxiv.org/abs/2508.05118) | [![GitHub Stars](https://img.shields.io/github/stars/BingguangHao/RLFC?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/BingguangHao/RLFC) |
+| 2025-09 | **EPO** | Entropy control for multi-turn agent RL | [EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning (2025)](https://arxiv.org/abs/2509.22576) | [![GitHub Stars](https://img.shields.io/github/stars/WujiangXu/EPO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/WujiangXu/EPO) |
+| 2025-09 | **ENTROPO** | Entropy-enhanced multi-turn preference optimization | [Building Coding Agents via Entropy-Enhanced Multi-Turn Preference Optimization (2025)](https://arxiv.org/abs/2509.12434) | - |
+| 2026-03 | **RAPO** | Retrieval-augmented policy optimization | [RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization (2026)](https://arxiv.org/abs/2603.03078) | - |
+| 2026-04 | **E³-TIR** | Expert-guided branching at high-entropy prefixes | [E3-TIR: Enhanced Experience Exploitation for Tool-Integrated Reasoning (2026)](https://arxiv.org/abs/2604.09455) | [![GitHub Stars](https://img.shields.io/github/stars/yuki-younai/E3-TIR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yuki-younai/E3-TIR) |
 
 ### 3.2 Embodied Agents
 
