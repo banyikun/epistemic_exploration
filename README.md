@@ -187,6 +187,21 @@ Methods that prevent irreversible contraction of reasoning trajectory distributi
 
 At Level 3, the agent crosses from internal reasoning into **situated interaction with external environments**. Exploration unfolds in perception and action space, where every step incurs real cost.
 
+### Recent embodied frontiers (2026) — Level 3 vs. Level 4
+
+This survey’s **Level 3** is *Reasoner → Agent* (perception- and action-space, closed-loop VLA / interaction). **Level 4** is *Agent → Prospector* (imagination- and world-model–driven control; internal dynamics / counterfactuals before or instead of costly pixels).
+
+- **Level 3 — [$\pi_{0.7}$](https://arxiv.org/abs/2604.15483)** (Physical Intelligence, 2026.04; [blog](https://www.pi.website/blog/pi07))  
+  A **steerable flow VLA** trained with **diverse multimodal context** (task language, subgoal images, strategy metadata, episode quality), including heterogeneous and suboptimal data. It reports **out-of-the-box** dexterous long-horizon skills, **instruction following in unseen environments**, **zero-shot cross-embodiment** transfer, and **compositional** reuse of skills (e.g., new appliances) without task-specific finetuning—an interaction-space generalist rather than a narrow specialist policy.
+
+- **Level 4 — [Being-H0.7](https://research.beingbeyond.com/projects/being-h07/being-h07.pdf)** (BeingBeyond, 2026)  
+  A **latent world–action model (WAM)** pretrained on **large-scale egocentric video** ($\sim$200k h). A **prior** branch and a **future-aware posterior** are **jointly aligned in latent space** so actions are grounded in world dynamics **without** expensive **test-time pixel rollouts**—positioned between flat VLAs and dense video-generation WAMs.
+
+- **Level 4 — [Fast-WAM](https://arxiv.org/abs/2603.16666)** (arXiv:2603.16666; [project](https://yuantianyuan01.github.io/FastWAM/))  
+  A **WAM** that **keeps video co-training** during learning but **skips future prediction at test time**, decoding actions in a **single pass** (reported **$\sim$190ms** latency, **$>$4×** faster than typical imagine-then-execute WAMs). Results on **LIBERO**, **RoboTwin**, and real robots suggest the main gain from video objectives is **better world-compatible representations**, not on-line generative “imagination” at inference.
+
+---
+
 ### 3.1 Digital Agents
 
 Agents operating in software-mediated environments (web, APIs, code interpreters):
