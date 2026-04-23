@@ -241,45 +241,41 @@ Agents operating in physical/simulated environments with continuous action space
 
 | Paradigm | Method | Key Idea | Project |
 |:---------|:-------|:---------|:--------|
-| **Uncertainty-Driven** | | | |
-| *Geometric & high-fidelity reconstruction* | [ActiveSplat](https://arxiv.org/abs/2410.21955) | Gaussian splatting for information-maximizing viewpoint selection | [🔗](https://github.com/Li-Yuetao/ActiveSplat) |
-| | [APT](https://arxiv.org/abs/2103.04551) | Unsupervised active pre-training with every transition | [🔗](https://github.com/rll-research/url_benchmark) |
-| | [MAX](https://arxiv.org/abs/1810.12162) | Model-based active exploration via ensemble disagreement | [🔗](https://github.com/nnaisense/MAX) |
-| | [Active Neural SLAM](https://arxiv.org/abs/2004.05155) | Learning to explore using active neural SLAM | [🔗](https://github.com/devendrachaplot/Neural-SLAM) |
-| *Semantic active inference* | [Conan](https://arxiv.org/abs/2311.02018) | Active reasoning in open-world environments | [🔗](https://github.com/ariesssxu/Conan-Active-Reasoning) |
-| | [ActiveRIR](https://arxiv.org/abs/2404.16216) | Cross-modal audio-visual exploration | - |
-| | [Active Semantic Perception](https://arxiv.org/abs/2510.05430) | Active semantic perception for embodied agents | [🔗](https://github.com/grasp-lyrl/active_semantic_perception) |
-| *Active mapping & path planning* | [Fisher-info planning](https://arxiv.org/abs/2410.17422) | MLLM-guided exploration via Fisher information | [🔗](https://github.com/JiangWenPL/multimodal-active) |
-| **Objective-Driven** | | | |
-| *Language-guided navigation* | [SayCan](https://arxiv.org/abs/2204.01691) | Grounding language in robotic affordances | [🔗](https://github.com/google-research/google-research/tree/master/saycan) |
-| | [Inner Monologue](https://arxiv.org/abs/2207.05608) | Embodied reasoning through planning with language models | - |
-| | [LM-Nav](https://arxiv.org/abs/2207.04429) | Robotic navigation with large pre-trained models | [🔗](https://github.com/blazejosinski/lm_nav) |
-| | [VLMaps](https://arxiv.org/abs/2210.05714) | Visual language maps for robot navigation | [🔗](https://github.com/vlmaps/vlmaps) |
-| | [LFG](https://arxiv.org/abs/2310.10103) | Semantic guesswork as a heuristic for planning | [🔗](https://github.com/Michael-Equi/lfg-nav) |
-| **Competence-Driven** | | | |
-| *Offline RL-VLA* | [Q-Transformer](https://arxiv.org/abs/2309.10150) | Scale value learning to static trajectories | - |
-| | [Cal-QL](https://arxiv.org/abs/2303.05479) | Calibrated offline RL for robot manipulation | - |
-| *Online RL-VLA* | [VLA-RL](https://arxiv.org/abs/2505.18719) | PPO-based online RL for VLA | [🔗](https://github.com/GuanxingLu/vlarl) |
-| | [FLaRe](https://arxiv.org/abs/2409.16578) | Fine-tuning language models for autonomous RL | [🔗](https://github.com/JiahengHu/FLaRe) |
-| | [SimpleVLA-RL](https://arxiv.org/abs/2509.09674) | GRPO-based online RL for VLA | [🔗](https://github.com/PRIME-RL/SimpleVLA-RL) |
-| | [SOP](https://arxiv.org/abs/2601.03044) | Scalable online post-training for VLA | - |
-| *Hybrid (Offline+Online)* | [ConRFT](https://arxiv.org/abs/2502.05450) | Offline-to-online with Cal-QL + BC | [🔗](https://github.com/cccedric/conrft) |
-| | [SRPO](https://arxiv.org/abs/2511.15605) | Self-refined policy optimization | [🔗](https://github.com/SUSTechBruce/SRPO_MLLMs) |
-| | [Dual-Actor FT](https://arxiv.org/abs/2509.13774) | Dual-actor fine-tuning for offline-to-online | - |
-| *Test-time compute & cognitive search* | [VLA-Reasoner](https://arxiv.org/abs/2509.22643) | MCTS-based planning for VLA | - |
-| | [DeepThinkVLA](https://arxiv.org/abs/2511.15669) | Slow-thinking VLA via GRPO | [🔗](https://github.com/OpenBMB/DeepThinkVLA) |
-| | [Hume](https://arxiv.org/abs/2505.21432) | System-2 thinking for embodied agents | [🔗](https://github.com/hume-vla/hume) |
-| | [TT-VLA](https://arxiv.org/abs/2601.06748) | On-the-fly VLA adaptation at test-time | - |
-| | [TACO](https://arxiv.org/abs/2512.02834) | Steering VLA via anti-exploration | [🔗](https://github.com/breez3young/TACO) |
-| **Reachability-Driven** | | | |
-| *Automated reward engineering* | [Eureka](https://arxiv.org/abs/2310.12931) | LLM-driven reward code synthesis | [🔗](https://github.com/eureka-research/eureka) |
-| | [Language to Rewards](https://arxiv.org/abs/2306.08647) | Language-conditioned robotic reward synthesis | [🔗](https://github.com/google-deepmind/language_to_reward_2023) |
-| | [TeViR](https://arxiv.org/abs/2505.19769) | Text-to-video reward for efficient RL | - |
-| *Curiosity & curriculum* | [RND](https://arxiv.org/abs/1810.12894) | Exploration by random network distillation | [🔗](https://github.com/openai/random-network-distillation) |
-| | [CurricuLLM](https://arxiv.org/abs/2409.18382) | Automatic task curricula via LLMs | [🔗](https://github.com/labicon/CurricuLLM) |
-| *Constrained safety* | [Recovery RL](https://arxiv.org/abs/2010.15920) | Safe RL with learned recovery zones | [🔗](https://github.com/abalakrishna123/recovery-rl) |
-| | [RECOVER](https://arxiv.org/abs/2404.00756) | Neuro-symbolic failure detection and recovery | - |
-| | [SafeVLA](https://arxiv.org/abs/2503.03480) | Safe VLA with constrained policy optimization | [🔗](https://github.com/PKU-Alignment/SafeVLA) |
+| **Uncertainty-Driven** | [ActiveSplat](https://arxiv.org/abs/2410.21955) | Information-gain maximization via Gaussian-splat viewpoint exploration | [🔗](https://github.com/Li-Yuetao/ActiveSplat) |
+| | [APT](https://arxiv.org/abs/2103.04551) | Unsupervised active pre-training for state-space coverage | [🔗](https://github.com/rll-research/url_benchmark) |
+| | [MAX](https://arxiv.org/abs/1810.12162) | Ensemble-disagreement-driven active exploration of dynamics | [🔗](https://github.com/nnaisense/MAX) |
+| | [Active Neural SLAM](https://arxiv.org/abs/2004.05155) | Learning to explore unknown maps via coverage-maximizing policies | [🔗](https://github.com/devendrachaplot/Neural-SLAM) |
+| | [Conan](https://arxiv.org/abs/2311.02018) | Active interactive exploration to disambiguate open-world scenes | [🔗](https://github.com/ariesssxu/Conan-Active-Reasoning) |
+| | [ActiveRIR](https://arxiv.org/abs/2404.16216) | Cross-modal audio-visual exploration for acoustic mapping | - |
+| | [Active Semantic Perception](https://arxiv.org/abs/2510.05430) | Entropy-driven exploration over semantic scene hypotheses | [🔗](https://github.com/grasp-lyrl/active_semantic_perception) |
+| | [Fisher-info planning](https://arxiv.org/abs/2410.17422) | MLLM-guided exploration prioritizing Fisher-information frontiers | [🔗](https://github.com/JiangWenPL/multimodal-active) |
+| **Objective-Driven** | [SayCan](https://arxiv.org/abs/2204.01691) | Affordance-grounded exploration guided by task-level language goals | [🔗](https://github.com/google-research/google-research/tree/master/saycan) |
+| | [Inner Monologue](https://arxiv.org/abs/2207.05608) | Closed-loop replanning via inner-speech to re-explore failed plans | - |
+| | [LM-Nav](https://arxiv.org/abs/2207.04429) | Goal-directed navigation exploration over LLM-annotated topological graphs | [🔗](https://github.com/blazejosinski/lm_nav) |
+| | [VLMaps](https://arxiv.org/abs/2210.05714) | Language-grounded spatial exploration via open-vocabulary visual maps | [🔗](https://github.com/vlmaps/vlmaps) |
+| | [LFG](https://arxiv.org/abs/2310.10103) | LLM semantic-guess heuristics to prune frontier exploration | [🔗](https://github.com/Michael-Equi/lfg-nav) |
+| **Competence-Driven** | [Q-Transformer](https://arxiv.org/abs/2309.10150) | Scaling value-based exploration to static multi-task trajectories | - |
+| | [Cal-QL](https://arxiv.org/abs/2303.05479) | Calibrated offline value exploration enabling safe online fine-tuning | - |
+| | [VLA-RL](https://arxiv.org/abs/2505.18719) | PPO-based online action-space exploration for VLA policies | [🔗](https://github.com/GuanxingLu/vlarl) |
+| | [FLaRe](https://arxiv.org/abs/2409.16578) | Large-scale online RL fine-tuning exploration on pretrained VLAs | [🔗](https://github.com/JiahengHu/FLaRe) |
+| | [SimpleVLA-RL](https://arxiv.org/abs/2509.09674) | GRPO group-relative exploration for VLA skill acquisition | [🔗](https://github.com/PRIME-RL/SimpleVLA-RL) |
+| | [SOP](https://arxiv.org/abs/2601.03044) | Scalable online post-training exploration infrastructure for VLA | - |
+| | [ConRFT](https://arxiv.org/abs/2502.05450) | Consistent offline-to-online exploration via Cal-QL + BC anchoring | [🔗](https://github.com/cccedric/conrft) |
+| | [SRPO](https://arxiv.org/abs/2511.15605) | Self-refined exploration bridging static data and online rollouts | [🔗](https://github.com/SUSTechBruce/SRPO_MLLMs) |
+| | [Dual-Actor FT](https://arxiv.org/abs/2509.13774) | Dual-actor exploration for stable offline-to-online transitions | - |
+| | [VLA-Reasoner](https://arxiv.org/abs/2509.22643) | MCTS-based imagination-time exploration over action trajectories | - |
+| | [DeepThinkVLA](https://arxiv.org/abs/2511.15669) | Slow-thinking test-time exploration through deliberate chain-of-action | [🔗](https://github.com/OpenBMB/DeepThinkVLA) |
+| | [Hume](https://arxiv.org/abs/2505.21432) | System-2 deliberative exploration before committing physical actions | [🔗](https://github.com/hume-vla/hume) |
+| | [TT-VLA](https://arxiv.org/abs/2601.06748) | On-the-fly test-time exploration via lightweight policy updates | - |
+| | [TACO](https://arxiv.org/abs/2512.02834) | Anti-exploration test-time steering to stay within competent regions | [🔗](https://github.com/breez3young/TACO) |
+| **Reachability-Driven** | [Eureka](https://arxiv.org/abs/2310.12931) | LLM-synthesized reward code expanding the explorable task manifold | [🔗](https://github.com/eureka-research/eureka) |
+| | [Language to Rewards](https://arxiv.org/abs/2306.08647) | Language-conditioned reward design guiding exploration toward skills | [🔗](https://github.com/google-deepmind/language_to_reward_2023) |
+| | [TeViR](https://arxiv.org/abs/2505.19769) | Text-to-video dense rewards enabling efficient sparse-task exploration | - |
+| | [RND](https://arxiv.org/abs/1810.12894) | Curiosity-driven exploration bonus via random network distillation | [🔗](https://github.com/openai/random-network-distillation) |
+| | [CurricuLLM](https://arxiv.org/abs/2409.18382) | LLM-designed curricula for progressive exploration of hard skills | [🔗](https://github.com/labicon/CurricuLLM) |
+| | [Recovery RL](https://arxiv.org/abs/2010.15920) | Safe exploration via learned recovery zones preserving reachability | [🔗](https://github.com/abalakrishna123/recovery-rl) |
+| | [RECOVER](https://arxiv.org/abs/2404.00756) | Neuro-symbolic failure detection bounding exploratory trajectories | - |
+| | [SafeVLA](https://arxiv.org/abs/2503.03480) | Constrained policy exploration under hard safety guarantees | [🔗](https://github.com/PKU-Alignment/SafeVLA) |
 
 ---
 
