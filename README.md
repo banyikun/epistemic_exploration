@@ -411,6 +411,113 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 
 
+### 5.1 Multi-Agent Orchestration
+#### 🔹 Rule-based orchestration (reachability-driven)
+
+- **Scaling Large Language Model-based Multi-Agent Collaboration. (2025)**  
+  [Paper](https://arxiv.org/abs/2406.07155)  
+  Name: MACNET, Code: -
+
+- **AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol. (2026)**  
+  [Paper](https://arxiv.org/abs/2506.12508)  
+  Name: AgentOrchestra, Code: -
+
+- **MOSAIC: Multi-agent Orchestration for Task-Intelligent Scientific Coding. (2025)**  
+  [Paper](https://arxiv.org/abs/2510.08804)  
+  Name: MOSAIC, Code: -
+
+- **MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework. (2024)**  
+  [Paper](https://arxiv.org/abs/2308.00352)  
+  Name: MetaGPT, Code: -
+
+- **Multi-Agent LLM Orchestration Achieves Deterministic, High-Quality Decision Support for Incident Response. (2026)**  
+  [Paper](https://arxiv.org/abs/2511.15755)  
+  Name: -, Code: -
+
+- **ORCH: many analyses, one merge — a deterministic multi-agent orchestrator for discrete-choice reasoning with EMA-guided routing. (2026)**  
+  [Paper](https://arxiv.org/abs/2602.01797)  
+  Name: ORCH, Code: -
+
+- **Multi-agent collaboration via cross-team orchestration. (2025)**  
+  [Paper]()  
+  Name: Croto, Code: -
+
+- **Agentverse: Facilitating multi-agent collaboration and exploring emergent behaviors. (2023)**  
+  [Paper](https://openreview.net/forum?id=EHg5GDnyq1)  
+  Name: AgentVerse, Code: -
+
+---
+
+#### 🔹 Learnable orchestration (competence-driven)
+
+- **CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models. (2025)**  
+  [Paper](https://arxiv.org/abs/2404.01663)  
+  Name: CMAT, Code: -
+
+- **Multi-Agent Collaboration via Evolving Orchestration. (2025)**  
+  [Paper](https://arxiv.org/abs/2505.19591)  
+  Name: Puppeteer-Puppet, Code: -
+
+- **Language Agents as Optimizable Graphs. (2024)**  
+  [Paper](https://arxiv.org/abs/2402.16823)  
+  Name: GPTSwarm, Code: -
+
+- **MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks. (2026)**  
+  [Paper](https://arxiv.org/abs/2601.14652)  
+  Name: MAS-Orchestra, Code: -
+
+- **Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors. (2025)**  
+  [Paper](https://arxiv.org/abs/2504.04785)  
+  Name: W4S, Code: -
+
+---
+
+#### 🔹 Reflection & information-theoretic orchestration (uncertainty-driven)
+
+- **Orchestrator: Active Inference for Multi-Agent Systems in Long-Horizon Tasks. (2025)**  
+  [Paper](https://arxiv.org/abs/2509.05651)  
+  Name: Orchestrator, Code: -
+
+- **Mas-GPT: Training LLMs to Build LLM-based Multi-Agent Systems. (2025)**  
+  [Paper](https://arxiv.org/abs/2503.03686)  
+  Name: MAS-GPT, Code: -
+
+- **CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models. (2025)**  
+  [Paper](https://arxiv.org/abs/2404.01663)  
+  Name: CMAT, Code: -
+
+- **Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors. (2025)**  
+  [Paper](https://arxiv.org/abs/2504.04785)  
+  Name: W4S, Code: -
+
+---
+
+#### 🔹 Memory & knowledge substrate exploration
+
+- **Mobile-Agent-E: Self-Evolving Mobile Assistant for Complex Tasks. (2025)**  
+  [Paper](https://arxiv.org/abs/2501.11733)  
+  Name: Mobile-Agent-E, [Code](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E)
+
+- **MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions. (2025)**  
+  [Paper](https://arxiv.org/abs/2502.16796)  
+  Name: MobileSteward, [Code](https://github.com/XiaoMi/MobileSteward)
+
+- **Generative Agents: Interactive Simulacra of Human Behavior. (2023)**  
+  [Paper](https://arxiv.org/abs/2304.03442)  
+  Name: Generative Agents, [Code](https://github.com/joonspk-research/generative_agents)
+
+- **A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models. (2025)**  
+  [Paper]()  
+  Name: -, Code: -
+
+- **Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions. (2025)**  
+  [Paper](https://arxiv.org/abs/2503.22678)  
+  Name: MedAgentSim, [Code](https://github.com/MAXNORM8650/MedAgentSim)
+
+- **PiFlow: Principle-aware Scientific Discovery with Multi-Agent Collaboration. (2025)**  
+  [Paper](https://arxiv.org/abs/2505.15047)  
+  Name: PiFlow, [Code](https://github.com/amair-lab/PiFlow)
+
 
 
 
@@ -536,6 +643,65 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 | 2023-05 | `FrugalGPT` | FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2305.05176) | - |
 | 2023-01 | `-` | When Does Confidence-Based Cascade Deferral Suffice? | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/1f09e1ee5035a4c3fe38a5681cae5815-Abstract-Conference.html) | - |
 | 2022-10 | `Model Cascading` | Model Cascading: Towards Jointly Improving Efficiency and Accuracy of NLP Systems | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2210.05528) | - |
+
+### 5.3 MARL
+
+
+### 5.4 Self-Evolving
+- **Reflexion: Language Agents with Verbal Reinforcement Learning. (2023)** [Paper](https://arxiv.org/abs/2303.11366)  
+  Name: Reflexion, [Code](https://github.com/noahshinn/reflexion)
+
+- **Self-Refine: Iterative Refinement with Self-Feedback. (2023)** [Paper](https://arxiv.org/abs/2303.17651)  
+  Name: Self-Refine, [Code](https://github.com/madaan/self-refine)
+
+- **TextGrad: Automatic "Differentiation" via Text. (2024)** [Paper](https://arxiv.org/abs/2406.07496)  
+  Name: TextGrad, [Code](https://github.com/zou-group/textgrad)
+
+- **SELF: Self-Evolution with Language Feedback. (2023)** [Paper](https://arxiv.org/abs/2310.00533)  
+  Name: SELF, Code: -
+
+- **Self Rewarding Self Improving. (2025)** [Paper](https://arxiv.org/abs/2505.08827)  
+  Name: Self Rewarding Self Improving, Code: -
+
+- **Self-Rewarding Language Models. (2024)** [Paper](https://arxiv.org/abs/2401.10020)  
+  Name: Self-Rewarding Language Models, Code: -
+
+- **AgentEvolver: Towards Efficient Self-Evolving Agent System. (2025)** [Paper](https://arxiv.org/abs/2511.10395)  
+  Name: AgentEvolver, [Code](https://github.com/modelscope/AgentEvolver)
+
+- **STaR: Bootstrapping Reasoning with Reasoning. (2022)** [Paper](https://arxiv.org/abs/2203.14465)  
+  Name: STaR, [Code](https://github.com/ezelikman/STaR)
+
+- **Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking. (2024)** [Paper](https://arxiv.org/abs/2403.09629)  
+  Name: Quiet-STaR, [Code](https://github.com/ezelikman/quiet-star)
+
+- **SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning. (2025)** [Paper](https://arxiv.org/abs/2502.04780)  
+  Name: SiriuS, [Code](https://github.com/zou-group/sirius)
+
+- **Direct Preference Optimization: Your Language Model is Secretly a Reward Model. (2023)** [Paper](https://arxiv.org/abs/2305.18290)  
+  Name: DPO, [Code](https://github.com/eric-mitchell/direct-preference-optimization)
+
+- **DigiRL: Training In-The-Wild Device-Control Agents with Autonomous Reinforcement Learning. (2024)** [Paper](https://arxiv.org/abs/2406.11896)  
+  Name: DigiRL, [Code](https://github.com/DigiRL-agent/digirl)
+
+- **WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning. (2024)** [Paper](https://arxiv.org/abs/2411.02337)  
+  Name: WebRL, [Code](https://github.com/THUDM/WebRL)
+
+- **DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models. (2024)** [Paper](https://arxiv.org/abs/2402.03300)  
+  Name: GRPO, [Code](https://github.com/deepseek-ai/DeepSeek-Math)
+
+- **DAPO: An Open-Source LLM Reinforcement Learning System at Scale. (2025)** [Paper](https://arxiv.org/abs/2503.14476)  
+  Name: DAPO, [Code](https://github.com/BytedTsinghua-SIA/DAPO)
+
+- **RRHF: Rank Responses to Align Language Models with Human Feedback without Tears. (2023)** [Paper](https://arxiv.org/abs/2304.05302)  
+  Name: RRHF, [Code](https://github.com/GanjinZero/RRHF)
+
+- **Group-in-Group Policy Optimization for LLM Agent Training. (2025)** [Paper](https://arxiv.org/abs/2505.10978)  
+  Name: GiGPO, [Code](https://github.com/langfengQ/verl-agent)
+
+- **SPA-RL: Reinforcing LLM Agents via Stepwise Progress Attribution. (2025)** [Paper](https://arxiv.org/abs/2505.20732)  
+  Name: SPA-RL, [Code](https://github.com/WangHanLinHenry/SPA-RL-Agent)
+
 
 ---
 
