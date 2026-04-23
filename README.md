@@ -77,6 +77,14 @@
   - [3.2 Embodied Agents](#32-embodied-agents)
 - [4. Level 4: Agent → Prospector (Imagination-Space Exploration)](#4-level-4-agent--prospector--imagination-space-exploration)
 - [5. Level 5: Prospector → Ecosystem (Coordination-Space Exploration)](#5-level-5-prospector--ecosystem--coordination-space-exploration)
+  - [5.1 Multi-Agent Orchestration](#51-multi-agent-orchestration)
+  - [5.2 Agentic Ensemble Papers](#52-agentic-ensemble-papers)
+    - [5.2.1 Ensemble-During-Inference Papers](#521-ensemble-during-inference-papers)
+    - [5.2.2 Ensemble-After-Inference Papers](#522-ensemble-after-inference-papers)
+    - [5.2.3 Ensemble-Before-Inference Papers](#523-ensemble-before-inference-papers)
+    - [5.2.4 Cascaded-Based Papers](#524-cascaded-based-papers)
+  - [5.3 MARL](#53-marl)
+  - [5.4 Self-Evolving](#54-self-evolving)
 - [6. Cross-Cutting Topics](#6-cross-cutting-topics)
 - [7. Citation](#7-citation)
 
@@ -504,7 +512,7 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 
 
-#### 5.2.2  Ensemble-After-Inference Papers
+#### 5.2.2 Ensemble-After-Inference Papers
 
 
 | Date | Name | Title | Paper | Github |
