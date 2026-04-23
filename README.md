@@ -414,109 +414,52 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 ### 5.1 Multi-Agent Orchestration
 #### 🔹 Rule-based orchestration (reachability-driven)
 
-- **Scaling Large Language Model-based Multi-Agent Collaboration. (2025)**  
-  [Paper](https://arxiv.org/abs/2406.07155)  
-  Name: MACNET, Code: -
-
-- **AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol. (2026)**  
-  [Paper](https://arxiv.org/abs/2506.12508)  
-  Name: AgentOrchestra, Code: -
-
-- **MOSAIC: Multi-agent Orchestration for Task-Intelligent Scientific Coding. (2025)**  
-  [Paper](https://arxiv.org/abs/2510.08804)  
-  Name: MOSAIC, Code: -
-
-- **MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework. (2024)**  
-  [Paper](https://arxiv.org/abs/2308.00352)  
-  Name: MetaGPT, Code: -
-
-- **Multi-Agent LLM Orchestration Achieves Deterministic, High-Quality Decision Support for Incident Response. (2026)**  
-  [Paper](https://arxiv.org/abs/2511.15755)  
-  Name: -, Code: -
-
-- **ORCH: many analyses, one merge — a deterministic multi-agent orchestrator for discrete-choice reasoning with EMA-guided routing. (2026)**  
-  [Paper](https://arxiv.org/abs/2602.01797)  
-  Name: ORCH, Code: -
-
-- **Multi-agent collaboration via cross-team orchestration. (2025)**  
-  [Paper]()  
-  Name: Croto, Code: -
-
-- **Agentverse: Facilitating multi-agent collaboration and exploring emergent behaviors. (2023)**  
-  [Paper](https://openreview.net/forum?id=EHg5GDnyq1)  
-  Name: AgentVerse, Code: -
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2026-02 | `ORCH` | ORCH: many analyses, one merge — a deterministic multi-agent orchestrator for discrete-choice reasoning with EMA-guided routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2602.01797) | - |
+| 2025-11 | `-` | Multi-Agent LLM Orchestration Achieves Deterministic, High-Quality Decision Support for Incident Response | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.15755) | - |
+| 2025-10 | `MOSAIC` | MOSAIC: Multi-agent Orchestration for Task-Intelligent Scientific Coding | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.08804) | - |
+| 2025-06 | `AgentOrchestra` | AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.12508) | - |
+| 2025 | `Croto` | Multi-agent collaboration via cross-team orchestration | - | - |
+| 2024-06 | `MACNET` | Scaling Large Language Model-based Multi-Agent Collaboration | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.07155) | - |
+| 2023-08 | `MetaGPT` | MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2308.00352) | - |
+| 2023 | `AgentVerse` | Agentverse: Facilitating multi-agent collaboration and exploring emergent behaviors | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://openreview.net/forum?id=EHg5GDnyq1) | - |
 
 ---
 
 #### 🔹 Learnable orchestration (competence-driven)
 
-- **CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models. (2025)**  
-  [Paper](https://arxiv.org/abs/2404.01663)  
-  Name: CMAT, Code: -
-
-- **Multi-Agent Collaboration via Evolving Orchestration. (2025)**  
-  [Paper](https://arxiv.org/abs/2505.19591)  
-  Name: Puppeteer-Puppet, Code: -
-
-- **Language Agents as Optimizable Graphs. (2024)**  
-  [Paper](https://arxiv.org/abs/2402.16823)  
-  Name: GPTSwarm, Code: -
-
-- **MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks. (2026)**  
-  [Paper](https://arxiv.org/abs/2601.14652)  
-  Name: MAS-Orchestra, Code: -
-
-- **Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors. (2025)**  
-  [Paper](https://arxiv.org/abs/2504.04785)  
-  Name: W4S, Code: -
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2026-01 | `MAS-Orchestra` | MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2601.14652) | - |
+| 2025-05 | `Puppeteer-Puppet` | Multi-Agent Collaboration via Evolving Orchestration | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19591) | - |
+| 2025-04 | `W4S` | Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.04785) | - |
+| 2024-04 | `CMAT` | CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.01663) | - |
+| 2024-02 | `GPTSwarm` | Language Agents as Optimizable Graphs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.16823) | - |
 
 ---
 
 #### 🔹 Reflection & information-theoretic orchestration (uncertainty-driven)
 
-- **Orchestrator: Active Inference for Multi-Agent Systems in Long-Horizon Tasks. (2025)**  
-  [Paper](https://arxiv.org/abs/2509.05651)  
-  Name: Orchestrator, Code: -
-
-- **Mas-GPT: Training LLMs to Build LLM-based Multi-Agent Systems. (2025)**  
-  [Paper](https://arxiv.org/abs/2503.03686)  
-  Name: MAS-GPT, Code: -
-
-- **CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models. (2025)**  
-  [Paper](https://arxiv.org/abs/2404.01663)  
-  Name: CMAT, Code: -
-
-- **Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors. (2025)**  
-  [Paper](https://arxiv.org/abs/2504.04785)  
-  Name: W4S, Code: -
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-09 | `Orchestrator` | Orchestrator: Active Inference for Multi-Agent Systems in Long-Horizon Tasks | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.05651) | - |
+| 2025-04 | `W4S` | Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.04785) | - |
+| 2025-03 | `MAS-GPT` | Mas-GPT: Training LLMs to Build LLM-based Multi-Agent Systems | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.03686) | - |
+| 2024-04 | `CMAT` | CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.01663) | - |
 
 ---
 
 #### 🔹 Memory & knowledge substrate exploration
 
-- **Mobile-Agent-E: Self-Evolving Mobile Assistant for Complex Tasks. (2025)**  
-  [Paper](https://arxiv.org/abs/2501.11733)  
-  Name: Mobile-Agent-E, [Code](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E)
-
-- **MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions. (2025)**  
-  [Paper](https://arxiv.org/abs/2502.16796)  
-  Name: MobileSteward, [Code](https://github.com/XiaoMi/MobileSteward)
-
-- **Generative Agents: Interactive Simulacra of Human Behavior. (2023)**  
-  [Paper](https://arxiv.org/abs/2304.03442)  
-  Name: Generative Agents, [Code](https://github.com/joonspk-research/generative_agents)
-
-- **A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models. (2025)**  
-  [Paper]()  
-  Name: -, Code: -
-
-- **Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions. (2025)**  
-  [Paper](https://arxiv.org/abs/2503.22678)  
-  Name: MedAgentSim, [Code](https://github.com/MAXNORM8650/MedAgentSim)
-
-- **PiFlow: Principle-aware Scientific Discovery with Multi-Agent Collaboration. (2025)**  
-  [Paper](https://arxiv.org/abs/2505.15047)  
-  Name: PiFlow, [Code](https://github.com/amair-lab/PiFlow)
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-05 | `PiFlow` | PiFlow: Principle-aware Scientific Discovery with Multi-Agent Collaboration | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.15047) | [![GitHub Stars](https://img.shields.io/github/stars/amair-lab/PiFlow?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/amair-lab/PiFlow) |
+| 2025-03 | `MedAgentSim` | Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.22678) | [![GitHub Stars](https://img.shields.io/github/stars/MAXNORM8650/MedAgentSim?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MAXNORM8650/MedAgentSim) |
+| 2025 | `-` | A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models | - | - |
+| 2025-02 | `MobileSteward` | MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.16796) | [![GitHub Stars](https://img.shields.io/github/stars/XiaoMi/MobileSteward?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/XiaoMi/MobileSteward) |
+| 2025-01 | `Mobile-Agent-E` | Mobile-Agent-E: Self-Evolving Mobile Assistant for Complex Tasks | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.11733) | [![GitHub Stars](https://img.shields.io/github/stars/X-PLUG/MobileAgent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) |
+| 2023-04 | `Generative Agents` | Generative Agents: Interactive Simulacra of Human Behavior | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2304.03442) | [![GitHub Stars](https://img.shields.io/github/stars/joonspk-research/generative_agents?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/joonspk-research/generative_agents) |
 
 
 
@@ -648,59 +591,27 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 
 
 ### 5.4 Self-Evolving
-- **Reflexion: Language Agents with Verbal Reinforcement Learning. (2023)** [Paper](https://arxiv.org/abs/2303.11366)  
-  Name: Reflexion, [Code](https://github.com/noahshinn/reflexion)
 
-- **Self-Refine: Iterative Refinement with Self-Feedback. (2023)** [Paper](https://arxiv.org/abs/2303.17651)  
-  Name: Self-Refine, [Code](https://github.com/madaan/self-refine)
-
-- **TextGrad: Automatic "Differentiation" via Text. (2024)** [Paper](https://arxiv.org/abs/2406.07496)  
-  Name: TextGrad, [Code](https://github.com/zou-group/textgrad)
-
-- **SELF: Self-Evolution with Language Feedback. (2023)** [Paper](https://arxiv.org/abs/2310.00533)  
-  Name: SELF, Code: -
-
-- **Self Rewarding Self Improving. (2025)** [Paper](https://arxiv.org/abs/2505.08827)  
-  Name: Self Rewarding Self Improving, Code: -
-
-- **Self-Rewarding Language Models. (2024)** [Paper](https://arxiv.org/abs/2401.10020)  
-  Name: Self-Rewarding Language Models, Code: -
-
-- **AgentEvolver: Towards Efficient Self-Evolving Agent System. (2025)** [Paper](https://arxiv.org/abs/2511.10395)  
-  Name: AgentEvolver, [Code](https://github.com/modelscope/AgentEvolver)
-
-- **STaR: Bootstrapping Reasoning with Reasoning. (2022)** [Paper](https://arxiv.org/abs/2203.14465)  
-  Name: STaR, [Code](https://github.com/ezelikman/STaR)
-
-- **Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking. (2024)** [Paper](https://arxiv.org/abs/2403.09629)  
-  Name: Quiet-STaR, [Code](https://github.com/ezelikman/quiet-star)
-
-- **SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning. (2025)** [Paper](https://arxiv.org/abs/2502.04780)  
-  Name: SiriuS, [Code](https://github.com/zou-group/sirius)
-
-- **Direct Preference Optimization: Your Language Model is Secretly a Reward Model. (2023)** [Paper](https://arxiv.org/abs/2305.18290)  
-  Name: DPO, [Code](https://github.com/eric-mitchell/direct-preference-optimization)
-
-- **DigiRL: Training In-The-Wild Device-Control Agents with Autonomous Reinforcement Learning. (2024)** [Paper](https://arxiv.org/abs/2406.11896)  
-  Name: DigiRL, [Code](https://github.com/DigiRL-agent/digirl)
-
-- **WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning. (2024)** [Paper](https://arxiv.org/abs/2411.02337)  
-  Name: WebRL, [Code](https://github.com/THUDM/WebRL)
-
-- **DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models. (2024)** [Paper](https://arxiv.org/abs/2402.03300)  
-  Name: GRPO, [Code](https://github.com/deepseek-ai/DeepSeek-Math)
-
-- **DAPO: An Open-Source LLM Reinforcement Learning System at Scale. (2025)** [Paper](https://arxiv.org/abs/2503.14476)  
-  Name: DAPO, [Code](https://github.com/BytedTsinghua-SIA/DAPO)
-
-- **RRHF: Rank Responses to Align Language Models with Human Feedback without Tears. (2023)** [Paper](https://arxiv.org/abs/2304.05302)  
-  Name: RRHF, [Code](https://github.com/GanjinZero/RRHF)
-
-- **Group-in-Group Policy Optimization for LLM Agent Training. (2025)** [Paper](https://arxiv.org/abs/2505.10978)  
-  Name: GiGPO, [Code](https://github.com/langfengQ/verl-agent)
-
-- **SPA-RL: Reinforcing LLM Agents via Stepwise Progress Attribution. (2025)** [Paper](https://arxiv.org/abs/2505.20732)  
-  Name: SPA-RL, [Code](https://github.com/WangHanLinHenry/SPA-RL-Agent)
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-11 | `AgentEvolver` | AgentEvolver: Towards Efficient Self-Evolving Agent System | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2511.10395) | [![GitHub Stars](https://img.shields.io/github/stars/modelscope/AgentEvolver?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/modelscope/AgentEvolver) |
+| 2025-05 | `SPA-RL` | SPA-RL: Reinforcing LLM Agents via Stepwise Progress Attribution | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.20732) | [![GitHub Stars](https://img.shields.io/github/stars/WangHanLinHenry/SPA-RL-Agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/WangHanLinHenry/SPA-RL-Agent) |
+| 2025-05 | `GiGPO` | Group-in-Group Policy Optimization for LLM Agent Training | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.10978) | [![GitHub Stars](https://img.shields.io/github/stars/langfengQ/verl-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/langfengQ/verl-agent) |
+| 2025-05 | `SRSI` | Self Rewarding Self Improving | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.08827) | - |
+| 2025-03 | `DAPO` | DAPO: An Open-Source LLM Reinforcement Learning System at Scale | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.14476) | [![GitHub Stars](https://img.shields.io/github/stars/BytedTsinghua-SIA/DAPO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/BytedTsinghua-SIA/DAPO) |
+| 2025-02 | `SiriuS` | SiriuS: Self-improving Multi-agent Systems via Bootstrapped Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.04780) | [![GitHub Stars](https://img.shields.io/github/stars/zou-group/sirius?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zou-group/sirius) |
+| 2024-11 | `WebRL` | WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2411.02337) | [![GitHub Stars](https://img.shields.io/github/stars/THUDM/WebRL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/THUDM/WebRL) |
+| 2024-06 | `TextGrad` | TextGrad: Automatic "Differentiation" via Text | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.07496) | [![GitHub Stars](https://img.shields.io/github/stars/zou-group/textgrad?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zou-group/textgrad) |
+| 2024-06 | `DigiRL` | DigiRL: Training In-The-Wild Device-Control Agents with Autonomous Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.11896) | [![GitHub Stars](https://img.shields.io/github/stars/DigiRL-agent/digirl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/DigiRL-agent/digirl) |
+| 2024-03 | `Quiet-STaR` | Quiet-STaR: Language Models Can Teach Themselves to Think Before Speaking | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2403.09629) | [![GitHub Stars](https://img.shields.io/github/stars/ezelikman/quiet-star?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ezelikman/quiet-star) |
+| 2024-02 | `GRPO` | DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.03300) | [![GitHub Stars](https://img.shields.io/github/stars/deepseek-ai/DeepSeek-Math?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/deepseek-ai/DeepSeek-Math) |
+| 2024-01 | `SRLM` | Self-Rewarding Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.10020) | - |
+| 2023-10 | `SELF` | SELF: Self-Evolution with Language Feedback | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.00533) | - |
+| 2023-05 | `DPO` | Direct Preference Optimization: Your Language Model is Secretly a Reward Model | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2305.18290) | [![GitHub Stars](https://img.shields.io/github/stars/eric-mitchell/direct-preference-optimization?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/eric-mitchell/direct-preference-optimization) |
+| 2023-04 | `RRHF` | RRHF: Rank Responses to Align Language Models with Human Feedback without Tears | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2304.05302) | [![GitHub Stars](https://img.shields.io/github/stars/GanjinZero/RRHF?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/GanjinZero/RRHF) |
+| 2023-03 | `Self-Refine` | Self-Refine: Iterative Refinement with Self-Feedback | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2303.17651) | [![GitHub Stars](https://img.shields.io/github/stars/madaan/self-refine?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/madaan/self-refine) |
+| 2023-03 | `Reflexion` | Reflexion: Language Agents with Verbal Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2303.11366) | [![GitHub Stars](https://img.shields.io/github/stars/noahshinn/reflexion?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/noahshinn/reflexion) |
+| 2022-03 | `STaR` | STaR: Bootstrapping Reasoning with Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2203.14465) | [![GitHub Stars](https://img.shields.io/github/stars/ezelikman/STaR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ezelikman/STaR) |
 
 
 ---
