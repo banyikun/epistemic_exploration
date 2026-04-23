@@ -9,7 +9,7 @@
 <p align="center">
   <b>◇ Responder → Reasoner → Agent → Prospector → Ecosystem ◇</b>
   <br>
-  <i><b>Exploration as the Transition Mechanism</b></i>
+  <i><b>$\color{red}{\text{Exploration as the Transition Mechanism}}$</b></i>
 </p>
 
 <p align="center"><img src="fig/5levels.png" width="900"/></p>
