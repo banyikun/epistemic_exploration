@@ -1,16 +1,20 @@
-# 🔥 Epistemic Exploration Toward Artificial General Intelligence
+
+<h1 align="center">🔥 Awesome-Epistemic-Exploration
+
+"Epistemic Exploration Toward Artificial General Intelligence"  (ArXiv 2026) </h2>
+
+
+
 
 <p align="center">
-  <b>"Epistemic Exploration Toward Artificial General Intelligence"</b>
-  <br>
-  <i>ArXiv 2026</i>
-  <br><br>
   <b>◇ Responder → Reasoner → Agent → Prospector → Ecosystem ◇</b>
-  <br>
-  <i>Exploration as the Transition Mechanism</i>
+    <br>
+   <i><b>🚀 Exploration as the Transition Mechanism 🚀</b></i>
 </p>
 
 <p align="center"><img src="fig/5levels.png" width="900"/></p>
+
+
 
 <p align="center">
   <!-- <a href="#"><img src="https://img.shields.io/badge/📄_Paper-ArXiv-red" alt="Paper"></a> -->
@@ -19,6 +23,8 @@
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
   <a href="#"><img src="https://img.shields.io/badge/Maintained%3F-Yes-brightgreen.svg" alt="Maintained"></a>
   <a href="#"><img src="https://img.shields.io/badge/PRs-Welcome-orange.svg" alt="PRs Welcome"></a>
+  </a>
+  <a href=""><img src="https://img.shields.io/github/last-commit/banyikun/epistemic_exploration?color=lightgrey"></a>
 </p>
 
 <p align="center">
@@ -26,7 +32,12 @@
   <a href="https://github.com/banyikun/epistemic_exploration/network/members"><img src="https://img.shields.io/github/forks/banyikun/epistemic_exploration?style=social" alt="GitHub forks"></a>
 </p>
 
-> **If you find our survey helpful, please give it a ⭐ star to show your support! Thank you :)**
+<h4 align="center">If you find our survey helpful, please give it a star ⭐ to show your support！Thank you:)
+
+</h4>
+
+
+
 
 ---
 
@@ -34,13 +45,18 @@
 
 > 🔥 This is a curated paper list for the survey **"Epistemic Exploration Toward Artificial General Intelligence"**, covering exploration mechanisms across reasoning, embodied AI, world models, and multi-agent systems.
 
-> 🔥 **[Stay tuned for our full paper release, incorporating the latest developments.]**
+> 🔥 **Stay tuned for our full paper release, incorporating the latest developments.**
 
 > **[Always] [Add your papers]** We welcome all related papers! If you find any missed or new work, please open a Pull Request or contact us.
 
 > **[Always] [Maintain]** We will keep this list updated frequently!
 
 ---
+
+
+<br>
+
+
 
 ## 📑 Table of Contents
 
@@ -55,6 +71,9 @@
   - [2.3 Reachability-Driven Exploration](#23-reachability-driven-exploration)
 - [3. Level 3: Reasoner → Agent (Perception- & Action-Space Exploration)](#3-level-3-reasoner--agent--perception--action-space-exploration)
   - [3.1 Digital Agents](#31-digital-agents)
+    - [3.1.1 Uncertainty-Driven Exploration](#311-uncertainty-driven-exploration)
+    - [3.1.2 Competence-Driven Exploration](#312-competence-driven-exploration)
+    - [3.1.3 Reachability-Driven Exploration](#313-reachability-driven-exploration)
   - [3.2 Embodied Agents](#32-embodied-agents)
 - [4. Level 4: Agent → Prospector (Imagination-Space Exploration)](#4-level-4-agent--prospector--imagination-space-exploration)
 - [5. Level 5: Prospector → Ecosystem (Coordination-Space Exploration)](#5-level-5-prospector--ecosystem--coordination-space-exploration)
@@ -62,6 +81,8 @@
 - [7. Citation](#7-citation)
 
 ---
+
+
 
 ## 1. Overview
 
@@ -108,6 +129,8 @@ Our survey is organized as a **3×5 taxonomy** crossing three signal-driven meth
 | **Reachability-Driven** | Anti-repetition | Beam diversity, reasoning-path anti-foreclosure | Go-Explore, coverage curricula | Latent-space diversity bonuses | Role-diversity, anti-specialisation |
 
 ---
+
+<br>
 
 ## 2. Levels 1–2: Responder → Reasoner — Reasoning-Space Exploration
 
@@ -159,6 +182,8 @@ Methods that prevent irreversible contraction of reasoning trajectory distributi
 
 ---
 
+<br>
+
 ## 3. Level 3: Reasoner → Agent — Perception- & Action-Space Exploration
 
 At Level 3, the agent crosses from internal reasoning into **situated interaction with external environments**. Exploration unfolds in perception and action space, where every step incurs real cost.
@@ -167,170 +192,155 @@ At Level 3, the agent crosses from internal reasoning into **situated interactio
 
 Agents operating in software-mediated environments (web, APIs, code interpreters):
 
-| Paradigm | Method | Key Idea |
-|:---------|:-------|:---------|
-| **Uncertainty-Driven** | JitRL | Count-based exploration bonus for unseen state-action pairs |
-| | Agent Q | MCTS with UCB for strategic state exploration |
-| | KnowSelf | Self-perceived capability boundaries trigger reflection |
-| | Search-o1 | Invokes web search upon encountering unfamiliar knowledge |
-| | [TTRL](https://arxiv.org/abs/2504.16084) | Test-time RL via majority-voted pseudo-rewards turns inference disagreement into exploration |
-| **Competence-Driven** | PilotRL | Three-stage progressive RL curriculum |
-| | [WebRL](https://arxiv.org/abs/2411.02337) | Self-evolving online curriculum from failure trajectories for web agents |
-| | Planner-R1 | Dense process-level rewards as priors |
-| | RLTR | Tool-use completeness rewards |
-| | [ReTool](https://arxiv.org/abs/2504.11536) | RL rewards strategic tool-invocation patterns, penalises redundant calls |
-| | Agent0-VL | Self-Evolving Reasoning Cycle (SERC) |
-| | Absolute Zero | Joint proposer-solver self-play |
-| **Reachability-Driven** | EGPO | Entropy bonus in advantage over CoT tokens |
-| | EPO | Three-part entropy control for multi-turn RL |
-| | RAPO | Retrieval-augmented policy optimization |
-| | E³-TIR | Expert-guided branching at high-entropy prefixes |
+#### 3.1.1 Uncertainty-Driven Exploration
+
+Methods that acquire information under partial observability by prioritising uncertain states, tool calls, or capability boundaries:
+
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2026-01 | **JitRL** | Uses count-based uncertainty bonuses to explore unseen state-action pairs | [Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates](https://arxiv.org/abs/2601.18510) | [![GitHub Stars](https://img.shields.io/github/stars/liushiliushi/JitRL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/liushiliushi/JitRL) |
+| 2023-05 | **RAP** | Explores alternative reasoning paths with MCTS and UCB guidance | [Reasoning with Language Model is Planning with World Model](https://doi.org/10.18653/v1/2023.emnlp-main.507) | [![GitHub Stars](https://img.shields.io/github/stars/Ber666/RAP?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Ber666/RAP) |
+| 2024-08 | **Agent Q** | Expands high-value action trajectories via MCTS-guided exploration | [Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents](https://arxiv.org/abs/2408.07199) | - |
+| 2023-10 | **LAST** | Explores reasoning-action branches through language-agent tree search | [Language Agent Tree Search Unifies Reasoning Acting and Planning in Language Models](https://arxiv.org/abs/2310.04406) | [![GitHub Stars](https://img.shields.io/github/stars/lapisrocks/LanguageAgentTreeSearch?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/lapisrocks/LanguageAgentTreeSearch) |
+| 2025-04 | **KnowSelf** | Explores capability boundaries by detecting uncertain self-knowledge | [Agentic Knowledgeable Self-awareness](https://arxiv.org/abs/2504.03553) | [![GitHub Stars](https://img.shields.io/github/stars/zjunlp/KnowSelf?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zjunlp/KnowSelf) |
+| 2025-01 | **Search-o1** | Explores external evidence when reasoning exposes knowledge uncertainty | [Search-o1: Agentic Search-Enhanced Large Reasoning Models](https://doi.org/10.18653/v1/2025.emnlp-main.276) | [![GitHub Stars](https://img.shields.io/github/stars/RUC-NLPIR/Search-o1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/RUC-NLPIR/Search-o1) |
+| 2025-04 | **TTRL** | Test-time RL via majority-voted pseudo-rewards turns inference disagreement into exploration | [TTRL: Test-Time Reinforcement Learning](https://arxiv.org/abs/2504.16084) | - |
+
+#### 3.1.2 Competence-Driven Exploration
+
+Methods that tame combinatorial tool-use spaces through curricula, process-level credit assignment, and self-generated training tasks:
+
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2025-08 | **PilotRL** | Stages curricula to expand agent exploration from planning to tool use | [PilotRL: Training Language Model Agents via Global Planning-Guided Progressive Reinforcement Learning](https://arxiv.org/abs/2508.00344) | - |
+| 2025-09 | **ReSum-GRPO** | Sustains long-horizon search exploration through context summarization | [ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization](https://arxiv.org/abs/2509.13313) | - |
+| 2024-03 | **ETO** | Optimizes exploratory trial-and-error trajectories for agent learning | [Trial and Error: Exploration-Based Trajectory Optimization for LLM Agents](https://arxiv.org/abs/2403.02502) | [![GitHub Stars](https://img.shields.io/github/stars/Yifan-Song793/ETO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Yifan-Song793/ETO) |
+| 2024-11 | **WebRL** | Self-evolving online curriculum from failure trajectories for web agents | [WebRL: Training LLM Web Agents via Self-Evolving Online Curriculum RL](https://arxiv.org/abs/2411.02337) | - |
+| 2025-09 | **Planner-R1** | Uses dense process rewards to steer exploration toward feasible plans | [Planner-R1: Reward Shaping Enables Efficient Agentic RL with Smaller LLMs](https://arxiv.org/abs/2509.25779) | - |
+| 2025-08 | **RLTR** | Rewards complete tool-use processes to improve exploratory planning | [Encouraging Good Processes Without the Need for Good Answers: Reinforcement Learning for LLM Agent Planning](https://arxiv.org/abs/2508.19598) | - |
+| 2025-04 | **ReTool** | RL rewards strategic tool-invocation patterns, penalises redundant calls | [ReTool: Reinforcement Learning for Strategic Tool Use in LLMs](https://arxiv.org/abs/2504.11536) | - |
+| 2025-05 | **GiGPO** | Assigns state-level credit across grouped rollouts for exploration | [Group-in-Group Policy Optimization for LLM Agent Training](https://arxiv.org/abs/2505.10978) | [![GitHub Stars](https://img.shields.io/github/stars/langfengQ/verl-agent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/langfengQ/verl-agent) |
+| 2025-11 | **Agent0-VL** | Evolves tool-integrated exploration through repeated reasoning cycles | [Agent0-VL: Exploring Self-Evolving Agent for Tool-Integrated Vision-Language Reasoning](https://arxiv.org/abs/2511.19900) | [![GitHub Stars](https://img.shields.io/github/stars/aiming-lab/Agent0?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/aiming-lab/Agent0) |
+| 2025-05 | **Absolute Zero** | Uses proposer-solver self-play to explore new reasoning tasks | [Absolute Zero: Reinforced Self-play Reasoning with Zero Data](https://arxiv.org/abs/2505.03335) | [![GitHub Stars](https://img.shields.io/github/stars/LeapLabTHU/Absolute-Zero-Reasoner?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LeapLabTHU/Absolute-Zero-Reasoner) |
+
+#### 3.1.3 Reachability-Driven Exploration
+
+Methods that preserve behavioural flexibility by regulating entropy or injecting useful off-policy experience:
+
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2025-08 | **EGPO** | Adds entropy bonuses to encourage exploration in function-call reasoning | [Reasoning through Exploration: A Reinforcement Learning Framework for Robust Function Calling](https://arxiv.org/abs/2508.05118) | [![GitHub Stars](https://img.shields.io/github/stars/BingguangHao/RLFC?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/BingguangHao/RLFC) |
+| 2025-09 | **EPO** | Regularizes entropy to sustain exploration in multi-turn agent RL | [EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning](https://arxiv.org/abs/2509.22576) | [![GitHub Stars](https://img.shields.io/github/stars/WujiangXu/EPO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/WujiangXu/EPO) |
+| 2025-09 | **ENTROPO** | Uses entropy-enhanced preferences to diversify coding-agent exploration | [Building Coding Agents via Entropy-Enhanced Multi-Turn Preference Optimization](https://arxiv.org/abs/2509.12434) | - |
+| 2026-03 | **RAPO** | Expands policy exploration with retrieval-augmented experience | [RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization](https://arxiv.org/abs/2603.03078) | - |
+| 2026-04 | **E³-TIR** | Branches from high-entropy prefixes to exploit exploratory experience | [E3-TIR: Enhanced Experience Exploitation for Tool-Integrated Reasoning](https://arxiv.org/abs/2604.09455) | [![GitHub Stars](https://img.shields.io/github/stars/yuki-younai/E3-TIR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yuki-younai/E3-TIR) |
 
 ### 3.2 Embodied Agents
 
 <p align="center"><img src="fig/level3_embodied.png" width="850"/></p>
-<p align="center"><i>Figure: Level 3 Embodied Agent Exploration — Uncertainty-driven active perception, competence-driven RL & test-time compute, and reachability-driven safety & reward engineering.</i></p>
+<p align="center"><i>Figure: Level 3 Embodied Agent Exploration — Uncertainty-driven active perception, competence-driven navigation & RL & test-time compute, and reachability-driven reward engineering & constrained safety.</i></p>
 
-Agents operating in physical/simulated environments with continuous action spaces:
+Embodied agents operate in continuous, high-dimensional action spaces where every physical interaction consumes time, energy, and mechanical wear, and many actions are irreversible. The three exploration paradigms adapt to this setting as follows:
 
-| Paradigm | Method | Key Idea | Project |
-|:---------|:-------|:---------|:--------|
-| **Uncertainty-Driven (Active Perception)** | [ActiveSplat](https://arxiv.org/abs/2410.21955) | Gaussian splatting for information-maximizing viewpoint selection | [🔗](https://github.com/Li-Yuetao/ActiveSplat) |
-| | [Conan](https://arxiv.org/abs/2311.02018) | Active reasoning in open-world environments | [🔗](https://github.com/ariesssxu/Conan-Active-Reasoning) |
-| | [ActiveRIR](https://arxiv.org/abs/2404.16216) | Cross-modal audio-visual exploration | - |
-| | [Fisher-info path planning](https://arxiv.org/abs/2410.17422) | Balances information gain with localization robustness | [🔗](https://github.com/JiangWenPL/multimodal-active) |
-| **Competence-Driven** | **Offline RL-VLA**: [Q-Transformer](https://arxiv.org/abs/2309.10150), [Cal-QL](https://arxiv.org/abs/2303.05479) | Scale value learning to static trajectories | - |
-| | **Real-world RL foundations**: [SERL](https://github.com/rail-berkeley/serl), [HIL-SERL](https://hil-serl.github.io/), [DPPO](https://arxiv.org/abs/2409.00588) | Sample-efficient on-robot RL with demos, human-in-the-loop interventions, and the first stable PPO through diffusion denoising trajectories | [🔗](https://github.com/rail-berkeley/serl) / [🔗](https://github.com/rail-berkeley/hil-serl) / [🔗](https://github.com/irom-princeton/dppo) |
-| | **Online RL-VLA**: [VLA-RL](https://arxiv.org/abs/2505.18719), [FLaRe](https://arxiv.org/abs/2409.16578), [SimpleVLA-RL](https://arxiv.org/abs/2509.09674) | Real-time interactive policy exploration | [🔗](https://github.com/GuanxingLu/vlarl) / [🔗](https://github.com/JiahengHu/FLaRe) / [🔗](https://github.com/PRIME-RL/SimpleVLA-RL) |
-| | **Hybrid**: [ConRFT](https://arxiv.org/abs/2502.05450) (extends HIL-SERL with consistency policy), [SRPO](https://arxiv.org/abs/2511.15605), [Dual-Actor](https://arxiv.org/abs/2509.13774) | Stable offline-to-online transitions on real hardware | [🔗](https://github.com/cccedric/conrft) / [🔗](https://github.com/SUSTechBruce/SRPO_MLLMs) |
-| | **Test-Time**: [VLA-Reasoner](https://arxiv.org/abs/2509.22643) (MCTS), [DeepThinkVLA](https://arxiv.org/abs/2511.15669), [Hume](https://arxiv.org/abs/2505.21432) | Imagination before physical execution | [🔗](https://github.com/OpenBMB/DeepThinkVLA) / [🔗](https://github.com/hume-vla/hume) |
-| | [SayCan](https://arxiv.org/abs/2204.01691), [Inner Monologue](https://arxiv.org/abs/2207.05608), [LM-Nav](https://arxiv.org/abs/2207.04429) | Language-guided objective-driven navigation | [🔗](https://github.com/google-research/google-research/tree/master/saycan) / [🔗](https://github.com/blazejosinski/lm_nav) |
-| **Reachability-Driven** | [Eureka](https://arxiv.org/abs/2310.12931) | LLM-driven reward code synthesis | [🔗](https://github.com/eureka-research/eureka) |
-| | [Recovery RL](https://arxiv.org/abs/2010.15920), [RECOVER](https://arxiv.org/abs/2404.00756), [SafeVLA](https://arxiv.org/abs/2503.03480) | Learned safety zones preserving reachable sets | [🔗](https://github.com/abalakrishna123/recovery-rl) / [🔗](https://github.com/PKU-Alignment/SafeVLA) |
-| | [RND](https://arxiv.org/abs/1810.12894), [CurricuLLM](https://arxiv.org/abs/2409.18382) | Curiosity-driven and curriculum-based coverage | [🔗](https://github.com/openai/random-network-distillation) / [🔗](https://github.com/labicon/CurricuLLM) |
+#### 3.2.1 Uncertainty-Driven Exploration
 
-### 📚 RL-VLA Paper Collection
+Before executing complex plans in open-ended environments, agents must overcome severe partial observability by actively controlling their sensors to maximise information gain, eliminating cognitive blind spots.
 
-**Legend:**
-- **Action:** AR (Autoregressive), Diffusion, Flow (Flow-matching)
-- **Reward:** D (Dense Reward), S (Sparse Reward)
-- **Model Type:** MB (Model-based), MF (Model-free)
-- **Environment:** Sim. (Simulation), Real (Real-world)
-- **Task:** MT (Multi-task), ST (Single-task)
+**Geometric & high-fidelity reconstruction.** Viewpoint selection for active mapping, information-theoretic coverage, and ensemble-disagreement-based exploration of dynamics.
 
-#### Offline RL-VLA
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2018-10 | **MAX** | Ensemble-disagreement drives active exploration of dynamics | [Model-Based Active Exploration](https://arxiv.org/abs/1810.12162) | [![GitHub Stars](https://img.shields.io/github/stars/nnaisense/MAX?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/nnaisense/MAX) |
+| 2020-04 | **Active Neural SLAM** | Coverage-maximising hierarchical policies explore unknown occupancy maps | [Learning To Explore Using Active Neural SLAM](https://arxiv.org/abs/2004.05155) | [![GitHub Stars](https://img.shields.io/github/stars/devendrachaplot/Neural-SLAM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/devendrachaplot/Neural-SLAM) |
+| 2021-03 | **APT** | Non-parametric entropy maximisation for unsupervised active pre-training | [Behavior From the Void: Unsupervised Active Pre-Training](https://arxiv.org/abs/2103.04551) | [![GitHub Stars](https://img.shields.io/github/stars/rll-research/url_benchmark?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/rll-research/url_benchmark) |
+| 2023-12 | **Model-Free Active Exploration** | Information-theoretic lower-bound approximation for ensemble-based exploration | [Model-Free Active Exploration in Reinforcement Learning](https://proceedings.neurips.cc/paper_files/paper/2023/hash/a9f8d5a20d4d12f04b84fb8cd61c0800-Abstract-Conference.html) | - |
+| 2024-10 | **ActiveSplat** | Gaussian-splat viewpoint exploration maximises reconstruction fidelity under a time budget | [ActiveSplat: High-Fidelity Scene Reconstruction through Active Gaussian Splatting](https://arxiv.org/abs/2410.21955) | [![GitHub Stars](https://img.shields.io/github/stars/Li-Yuetao/ActiveSplat?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Li-Yuetao/ActiveSplat) |
 
-Offline RL trains VLA models on pre-collected static datasets, enabling learning independently from environment interactions. This paradigm is suitable for high-risk or resource-constrained deployment scenarios.
+**Semantic & multi-modal active inference.** Probing the environment to disambiguate alternative scene-graph completions or to gather cross-modal (audio / language) evidence.
 
-**Key Research Directions:**
-- **Data Utilization:** Effective utilization of static datasets for policy improvement
-- **Objective Modification:** Customizing RL objectives for novel architectures and data augmentation
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2023-11 | **Conan** | Active interactive exploration as Bayesian query to disambiguate latent scene state | [Active Reasoning in an Open-World Environment](https://arxiv.org/abs/2311.02018) | [![GitHub Stars](https://img.shields.io/github/stars/ariesssxu/Conan-Active-Reasoning?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ariesssxu/Conan-Active-Reasoning) |
+| 2024-04 | **ActiveRIR** | Cross-modal audio-visual exploration for acoustic scene mapping (room impulse responses) | [ActiveRIR: Active Audio-Visual Exploration for Building Room Impulse Responses](https://arxiv.org/abs/2404.16216) | - |
+| 2025-10 | **Active Semantic Perception** | Entropy-driven exploration over LLM-sampled scene graph hypotheses | [Active Semantic Perception](https://arxiv.org/abs/2510.05430) | [![GitHub Stars](https://img.shields.io/github/stars/grasp-lyrl/active_semantic_perception?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/grasp-lyrl/active_semantic_perception) |
 
-| Method | Date | Publication | Sim. | Real | Base VLA Model | Action | Reward | Algorithm | Type | Project |
-|:---|:---|:---|:---:|:---:|:---|:---|:---:|:---|:---:|:---|
-| [Q-Transformer](https://arxiv.org/abs/2309.10150) | 2023.10 | [CoRL23](https://proceedings.mlr.press/v229/) | ✓ | ✗ | Transformer | AR | S | CQL | MF | - |
-| [PAC](https://arxiv.org/abs/2412.06685) | 2024.02 | [ICML24](https://proceedings.mlr.press/v267/) | ✓ | ✓ | Perceiver-Actor-Critic | AR | S | AC | MF | [🔗](https://github.com/MaxSobolMark/PolicyAgnosticRL) |
-| [GeRM](https://arxiv.org/abs/2403.13358) | 2024.03 | [IROS24](https://ieee-iros.org/) | ✓ | ✗ | Transformer-MoE | AR | S | CQL | MF | [🔗](https://github.com/Songwxuan/GeRM) |
-| [MoRE](https://arxiv.org/abs/2503.08007) | 2025.03 | [ICRA25](https://2025.ieee-icra.org/) | ✗ | ✓ | MLLM-MoE | AR | S | CQL | MF | - |
-| [ReinboT](https://arxiv.org/abs/2505.07395) | 2025.05 | [ICML25](https://proceedings.mlr.press/v267/zhang25dr.html) | ✓ | ✓ | ReinboT | AR | D | DT + RTG | MF | [🔗](https://github.com/COST-97/reinboT) |
-| [CO-RFT](https://arxiv.org/abs/2508.02219) | 2025.08 | - | ✗ | ✓ | RoboVLMs | AR | D | Cal-QL + TD3 | MF | - |
-| [ARFM](https://arxiv.org/abs/2509.04063) | 2025.09 | [AAAI26](https://ojs.aaai.org/index.php/AAAI/article/view/38944) | ✓ | ✓ | π₀ | Flow | D | ARFM | MF | - |
-| [π\*₀.₆](https://arxiv.org/abs/2511.14759) | 2025.11 | - | ✗ | ✓ | π₀.₆ | Flow | D | RECAP | MF | - |
-| [NORA-1.5](https://arxiv.org/abs/2511.14659) | 2025.11 | - | ✓ | ✓ | NORA-1.5 | AR / Flow | D | DPO | MB | [🔗](https://github.com/declare-lab/nora-1.5) |
-| [GigaBrain-0.5M\*](https://arxiv.org/abs/2602.12099) | 2026.2 | - | ✗ | ✓ | GigaBrain-0.5 | Flow | D | RAMP | MB | [🔗](https://github.com/open-gigaai/giga-brain-0) |
-| [ARM](https://arxiv.org/abs/2604.03037) | 2026.4 | - | ✗ | ✓ | GR00T N1.5 | Flow | D | AW-BC | MF | - |
+#### 3.2.2 Competence-Driven Exploration
 
-#### Online RL-VLA
+Competence-driven exploration spans two tightly coupled phases: the agent must first **navigate** to task-relevant states, then **manipulate** the environment to achieve its objectives. Both push beyond pre-trained priors at the frontier between what the agent can already do and what it cannot yet do.
 
-Online RL-VLA enables interactive policy learning through continuous environment interaction, empowering pre-trained VLAs with adaptive closed-loop control capability for real-world OOD environments.
+**Objective-driven navigation.** Translating high-level language goals into executable subgoals and using semantic representations to prune the spatial search manifold.
 
-**Key Research Directions:**
-- **Policy Optimization:** Direct policy improvement based on environmental rewards
-- **Sample Efficiency:** Learning effective policies with limited interaction budget
-- **Active Exploration:** Efficient exploration strategies for higher performance gains
-- **Training Stability:** Ensuring consistent policy updates and convergence
-- **Infrastructure:** Scalable frameworks for online RL-VLA training
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2022-04 | **SayCan** | Affordance value-function reweights LLM-proposed action exploration | [Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://arxiv.org/abs/2204.01691) | [![GitHub Stars](https://img.shields.io/github/stars/google-research/google-research?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/google-research/google-research) |
+| 2022-07 | **Inner Monologue** | Closed-loop replanning via inner-speech feedback re-explores failed plans | [Inner Monologue: Embodied Reasoning through Planning with Language Models](https://arxiv.org/abs/2207.05608) | - |
+| 2022-07 | **LM-Nav** | Goal-directed exploration over LLM-annotated topological graphs | [LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action](https://arxiv.org/abs/2207.04429) | [![GitHub Stars](https://img.shields.io/github/stars/blazejosinski/lm_nav?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/blazejosinski/lm_nav) |
+| 2022-10 | **VLMaps** | Open-vocabulary visual-language maps guide language-conditioned spatial exploration | [Visual Language Maps for Robot Navigation](https://arxiv.org/abs/2210.05714) | [![GitHub Stars](https://img.shields.io/github/stars/vlmaps/vlmaps?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/vlmaps/vlmaps) |
+| 2023-10 | **LFG** | LLM semantic-priors prune frontier exploration toward goal-relevant regions | [Language Frontier Guide: LLM-Based Semantic Priors for Exploration](https://arxiv.org/abs/2310.10103) | [![GitHub Stars](https://img.shields.io/github/stars/Michael-Equi/lfg-nav?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Michael-Equi/lfg-nav) |
+| 2024-10 | **Fisher-Info Planning** | MLLM-guided exploration balancing information gain vs. localisation risk (Fisher information) | [Multimodal LLM Guided Exploration and Active Mapping using Fisher Information](https://arxiv.org/abs/2410.17422) | [![GitHub Stars](https://img.shields.io/github/stars/JiangWenPL/multimodal-active?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JiangWenPL/multimodal-active) |
 
-| Method | Date | Publication | Sim. | Real | Base VLA Model | Action | Reward | Algorithm | Type | Project |
-|:---|:---|:---|:---:|:---:|:---|:---|:---:|:---|:---:|:---|
-| [DPPO](https://arxiv.org/abs/2409.00588) | 2024.09 | [RSS25](https://roboticsconference.org/) | ✓ (ST) | ✓ (ST) | Diffusion Policy | Diffusion | D | PPO (denoising MDP) | MF | [🔗](https://github.com/irom-princeton/dppo) |
-| [FLaRe](https://arxiv.org/abs/2409.16578) | 2024.09 | [ICRA25](https://2025.ieee-icra.org/) | ✓ (ST) | ✓ (ST) | SPOC | AR | S | PPO | MF | [🔗](https://github.com/JiahengHu/FLaRe) |
-| [HIL-SERL](https://arxiv.org/abs/2410.21845) | 2024.10 | [Science Robotics 25](https://www.science.org/journal/scirobotics) | ✗ | ✓ (ST) | ResNet-based actor | AR | S | RLPD + human interventions | MF | [🔗](https://github.com/rail-berkeley/hil-serl) |
-| [PA-RL](https://arxiv.org/abs/2412.06685) | 2024.12 | [ICLR25 Workshop](https://openreview.net/) | ✓ (ST) | ✓ (ST) | OpenVLA | AR | S | PA-RL | MF | [🔗](https://github.com/MaxSobolMark/PolicyAgnosticRL) |
-| [RLDG](https://arxiv.org/abs/2412.09858) | 2024.12 | [RSS25](https://roboticsconference.org/) | ✗ | ✓ (ST) | OpenVLA / Octo | AR / Diffusion | S | RLPD | MF | [🔗](https://generalist-distillation.github.io/) |
-| [iRe-VLA](https://arxiv.org/abs/2501.16664) | 2025.01 | [ICRA25](https://2025.ieee-icra.org/) | ✓ (MT) | ✓ (MT) | iRe-VLA | AR | S | SACfD + SFT | MF | - |
-| [GRAPE](https://arxiv.org/abs/2411.19309) | 2025.02 | [ICRA25 Poster](https://2025.ieee-icra.org/) | ✓ (MT) | ✓ (MT) | OpenVLA | AR | D | TPO | MF | [🔗](https://github.com/aiming-lab/GRAPE) |
-| [SafeVLA](https://arxiv.org/abs/2503.03480) | 2025.03 | [NeurIPS25 Poster](https://neurips.cc/) | ✓ (ST) | ✗ | SPOC | AR | S | PPO | MF | [🔗](https://github.com/PKU-Alignment/SafeVLA) |
-| [RIPT-VLA](https://arxiv.org/abs/2505.17016) | 2025.05 | - | ✓ (MT) | ✗ | QueST / OpenVLA-OFT | AR | S | LOOP | MF | [🔗](https://github.com/Ariostgx/ript-vla) |
-| [VLA-RL](https://arxiv.org/abs/2505.18719) | 2025.05 | - | ✓ (MT) | ✗ | OpenVLA | AR | D | PPO | MF | [🔗](https://github.com/GuanxingLu/vlarl) |
-| [RLVLA](https://arxiv.org/abs/2505.19789) | 2025.05 | [NeurIPS25 Poster](https://neurips.cc/) | ✓ (MT) | ✗ | OpenVLA | AR | S | PPO / GRPO / DPO | MF | [🔗](https://github.com/gen-robot/RL4VLA) |
-| [RFTF](https://arxiv.org/abs/2505.19767) | 2025.05 | - | ✓ (MT) | ✗ | GR-MG, Seer | AR | D | PPO | MF | - |
-| [TGRPO](https://arxiv.org/abs/2506.08440) | 2025.06 | - | ✓ (ST) | ✗ | OpenVLA | AR | D | GRPO | MF | - |
-| [RLRC](https://arxiv.org/abs/2506.17639) | 2025.06 | - | ✓ (MT) | ✗ | OpenVLA | AR | S | PPO | MF | - |
-| [ThinkAct](https://arxiv.org/abs/2507.16815) | 2025.07 | [NeurIPS25 Poster](https://neurips.cc/) | ✓ (MT) | ✗ | MLLM + DiT | AR / Diffusion | D | GRPO (System 2) | MF | - |
-| [SimpleVLA-RL](https://arxiv.org/abs/2509.09674) | 2025.09 | [ICLR26 Poster](https://iclr.cc/) | ✓ (MT) | ✓ (ST) | OpenVLA-OFT | AR | S | GRPO | MF | [🔗](https://github.com/PRIME-RL/SimpleVLA-RL) |
-| [Dual-Actor FT](https://arxiv.org/abs/2509.13774) | 2025.09 | IROS25 Workshop | ✓ (MT) | ✓ (MT) | Octo / SmolVLA | Diffusion | S | QL + BC | MF | - |
-| [Generalist](https://arxiv.org/abs/2509.15155) | 2025.09 | [NeurIPS25 Poster](https://neurips.cc/) | ✓ (MT) | ✓ (MT) | PaLI 3B | AR | D | REINFORCE | MF | - |
-| [VLAC](https://arxiv.org/abs/2509.15937) | 2025.09 | - | ✗ | ✓ (MT) | VLAC | AR | D | PPO | MF | [🔗](https://github.com/InternRobotics/VLAC) |
-| [AC PPO](https://arxiv.org/abs/2509.25718) | 2025.09 | - | ✓ (ST) | ✗ | Octo-small | AR | S | PPO+BC | MF | - |
-| [VLA-RFT](https://arxiv.org/abs/2510.00406) | 2025.10 | - | ✓ (MT) | ✗ | VLA-Adapter | Flow | D | GRPO | MB | [🔗](https://github.com/OpenHelix-Team/VLA-RFT) |
-| [RLinf-VLA](https://arxiv.org/abs/2510.06710) | 2025.10 | - | ✓ (MT) | ✓ (MT) | OpenVLA / OpenVLA-OFT | AR | S | PPO / GRPO | MF | [🔗](https://github.com/RLinf/RLinf) |
-| [FPO](https://arxiv.org/abs/2510.09976) | 2025.10 | - | ✓ (MT) | ✗ | π₀ | Flow | S | FPO | MF | - |
-| [ReSA](https://arxiv.org/abs/2510.12710) | 2025.10 | - | ✓ (MT) | ✗ | OpenVLA | AR | D | PPO + SFT | MF | - |
-| [π\_RL](https://arxiv.org/abs/2510.25889) | 2025.10 | - | ✓ (MT) | ✗ | π₀ / π₀.₅ | Flow | S | PPO / GRPO | MF | [🔗](https://github.com/RLinf/RLinf) |
-| [PLD](https://arxiv.org/abs/2511.00091) | 2025.10 | [ICLR26 Poster](https://iclr.cc/) | ✓ (MT) | ✓ (MT) | OpenVLA / π₀ / Octo | AR / Flow | S | Cal-QL + SAC | MF | - |
-| [DeepThinkVLA](https://arxiv.org/abs/2511.15669) | 2025.10 | - | ✓ (MT) | ✗ | π₀-Fast | AR | S | GRPO | MF | [🔗](https://github.com/OpenBMB/DeepThinkVLA) |
-| [World-Env](https://arxiv.org/abs/2509.24948) | 2025.11 | - | ✓ (ST) | ✓ (ST) | OpenVLA-OFT | AR | D | PPO | MB | [🔗](https://github.com/amap-cvlab/world-env) |
-| [RobustVLA](https://arxiv.org/abs/2511.01331) | 2025.11 | - | ✓ (MT) | ✗ | OpenVLA-OFT | AR | D | PPO | MF | - |
-| [WMPO](https://arxiv.org/abs/2511.09515) | 2025.11 | [ICLR26 Poster](https://iclr.cc/) | ✓ (MT) | ✓ (MT) | OpenVLA-OFT | AR | S | GRPO | MB | [🔗](https://github.com/WM-PO/WMPO) |
-| [ProphRL](https://arxiv.org/abs/2511.20633) | 2025.11 | - | ✓ (ST) | ✓ (ST) | VLA-Adapter / π0.5 / OpenVLA-OFT | Flow | S | FA-GRPO | MB | [🔗](https://github.com/LogosRoboticsGroup/ProphRL) |
-| [Robo-Dopamine](https://arxiv.org/abs/2512.23703) | 2025.12 | [CVPR26](https://cvpr.thecvf.com/) | ✓ (MT) | ✓ (MT) | Pi0.5 | Flow | D | PPO | MF | [🔗](https://github.com/FlagOpen/Robo-Dopamine) |
-| [EVOLVE-VLA](https://arxiv.org/abs/2512.14666) | 2025.12 | - | ✓ (MT) | ✗ | OpenVLA-OFT | AR | D | GRPO | MB(VLAC) | [🔗](https://github.com/showlab/EVOLVE-VLA) |
-| [SOP](https://arxiv.org/abs/2601.03044) | 2026.1 | - | ✗ | ✓ (MT) | π0.5 | Flow | S | HG-DAgger / RECAP | MF | - |
-| [Green-VLA](https://arxiv.org/abs/2602.00919) | 2026.1 | - | ✓ (MT) | ✓ (MT) | Green-VLA | Flow | S | IQL + actor-critic | MF | [🔗](https://github.com/greenvla/GreenVLA) |
-| [SA-VLA](https://arxiv.org/abs/2602.00743) | 2026.1 | - | ✓ (MT) | ✗ | π0.5 | Flow | D | PPO | MF | - |
-| [World-Gymnast](https://arxiv.org/abs/2602.02454) | 2026.2 | [ICLR26 Workshop](https://iclr.cc/) | ✓ (MT) | ✓ (MT) | OpenVLA-OFT | AR | S | GRPO | MB | [🔗](https://github.com/world-gymnast/world-gymnast) |
-| [RL-VLA3](https://arxiv.org/abs/2602.05765) | 2026.2 | [ICLR26 Workshop](https://iclr.cc/) | ✓ (MT) | ✗ | π0 / π0.5 / GR00T N1.5 / OpenVLA-OFT | Flow / AR | S | - | MF | — |
-| [World-VLA-Loop](https://arxiv.org/abs/2602.06508) | 2026.2 | - | ✓ (ST) | ✓ (ST) | OpenVLA-OFT | AR | S | GRPO | MB | [🔗](https://github.com/showlab/World-VLA-Loop) |
-| [RISE](https://arxiv.org/abs/2602.11075) | 2026.2 | - | ✗ | ✓ (ST) | π0.5 | Flow | D | RISE | MB | - |
-| [WoVR](https://arxiv.org/abs/2602.13977) | 2026.2 | - | ✓ (MT) | ✓ (MT) | OpenVLA-OFT | AR | S | GRPO | MB | [🔗](https://github.com/RLinf/RLinf) |
-| [ALOE](https://arxiv.org/abs/2602.12691) | 2026.2 | - | ✗ | ✓ (ST) | π₀.₅ | Flow | S | AWR | MF | - |
-| [TwinRL-VLA](https://arxiv.org/abs/2602.09023) | 2026.2 | - | ✗ | ✓ (ST) | Octo | Diffusion | S | Actor-Critic | MF | — |
-| [RL-Co](https://arxiv.org/abs/2602.12628) | 2026.3 | - | ✓ (ST) | ✓ (ST) | OpenVLA / π0.5 | AR / Flow | D | ReinFlow / GRPO | MF | — |
-| [π\_StepNFT](https://arxiv.org/abs/2603.02083) | 2026.3 | - | ✓ (MT) | ✗ | π₀ / π₀.₅ | Flow | S | NFT | MF | [🔗](https://github.com/wangst0181/pi-StepNFT) |
-| [ROBOMETER](https://arxiv.org/abs/2603.02115) | 2026.3 | - | ✗ | ✓ (MT) | π₀ | Flow | D | DSRL | MF | [🔗](https://github.com/robometer/robometer) |
-| [AtomVLA](https://arxiv.org/abs/2603.08519) | 2026.3 | - | ✓ (MT) | ✓ (ST) | AtomVLA | Flow | D | GRPO | MB | — |
-| [NS-VLA](https://arxiv.org/abs/2603.09542) | 2026.3 | - | ✓ (MT) | ✗ | NS-VLA | AR | D | GRPO | MF | [🔗](https://github.com/Zuzuzzy/NS-VLA) |
+**RL for VLA policy exploration.** Safely expanding manipulation boundaries via offline RL, online PPO/GRPO, and hybrid offline-to-online fine-tuning on Vision-Language-Action architectures.
 
-#### Offline + Online RL-VLA
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2023-03 | **Cal-QL** | Calibrated offline value exploration enabling safe online fine-tuning | [Cal-QL: Calibrated Offline RL Pre-Training for Efficient Online Fine-Tuning](https://arxiv.org/abs/2303.05479) | - |
+| 2023-09 | **Q-Transformer** | Scales autoregressive value-based exploration to static multi-task trajectories | [Q-Transformer: Scalable Offline RL via Autoregressive Q-Functions](https://arxiv.org/abs/2309.10150) | - |
+| 2024-09 | **DPPO** | Formulates denoising trajectories as auxiliary MDP for stable PPO on diffusion policies | [Diffusion Policy Policy Optimization](https://arxiv.org/abs/2409.00588) | [![GitHub Stars](https://img.shields.io/github/stars/irom-princeton/dppo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/irom-princeton/dppo) |
+| 2024-09 | **FLaRe** | Large-scale online RL fine-tuning exploration on pretrained VLAs | [FLaRe: Achieving Masterful and Adaptive Robot Policies with Large-Scale RL Fine-Tuning](https://arxiv.org/abs/2409.16578) | [![GitHub Stars](https://img.shields.io/github/stars/JiahengHu/FLaRe?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JiahengHu/FLaRe) |
+| 2024-10 | **HIL-SERL** | Sample-efficient on-robot RL with human-in-the-loop interventions for dexterous tasks | [Precise and Dexterous Robotic Manipulation via Human-in-the-Loop RL](https://arxiv.org/abs/2410.21845) | [![GitHub Stars](https://img.shields.io/github/stars/rail-berkeley/hil-serl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/rail-berkeley/hil-serl) |
+| 2024-11 | **GRAPE** | Preference-aligned exploration generalises VLA policies to novel scenarios | [GRAPE: Generalizing Robot Policy via Preference Alignment](https://arxiv.org/abs/2411.19309) | - |
+| 2025-02 | **ConRFT** | Consistency-regularised offline-to-online exploration (HIL-SERL + consistency) for diffusion VLA | [ConRFT: A Reinforced Fine-tuning Method for VLA Models via Consistency Policy](https://arxiv.org/abs/2502.05450) | [![GitHub Stars](https://img.shields.io/github/stars/cccedric/conrft?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/cccedric/conrft) |
+| 2025-05 | **ReinboT** | RL amplifies VLA manipulation exploration via reward-guided offline alignment | [ReinboT: Amplifying Robot Visual-Language Manipulation with Reinforcement Learning](https://arxiv.org/abs/2505.07395) | [![GitHub Stars](https://img.shields.io/github/stars/COST-97/reinboT?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/COST-97/reinboT) |
+| 2025-05 | **VLA-RL** | Scalable PPO-based online action-space exploration for VLA policies | [VLA-RL: Towards Masterful and General Robotic Manipulation with Scalable RL](https://arxiv.org/abs/2505.18719) | [![GitHub Stars](https://img.shields.io/github/stars/GuanxingLu/vlarl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/GuanxingLu/vlarl) |
+| 2025-09 | **SimpleVLA-RL** | GRPO group-relative exploration scales VLA skill acquisition | [SimpleVLA-RL: Scaling VLA Training via Reinforcement Learning](https://arxiv.org/abs/2509.09674) | [![GitHub Stars](https://img.shields.io/github/stars/PRIME-RL/SimpleVLA-RL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/PRIME-RL/SimpleVLA-RL) |
+| 2025-09 | **Dual-Actor FT** | Dual-actor decoupling of exploration vs. exploitation for stable offline-to-online RL | [Dual-Actor Fine-Tuning of VLA Models](https://arxiv.org/abs/2509.13774) | - |
+| 2025-10 | **π_RL** | First online PPO/GRPO RL fine-tuning for flow-matching VLA | [πRL: Online RL Fine-Tuning for Flow-Based Vision-Language-Action Models](https://arxiv.org/abs/2510.25889) | - |
+| 2025-11 | **SRPO** | Self-refined exploration bridging static data and online rollouts | [SRPO: Self-Refined Policy Optimization for VLA](https://arxiv.org/abs/2511.15605) | [![GitHub Stars](https://img.shields.io/github/stars/SUSTechBruce/SRPO_MLLMs?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SUSTechBruce/SRPO_MLLMs) |
+| 2025-11 | **π*₀.₆** | Flow-matching VLA that learns from online experience via offline RL | [π*₀.₆: A VLA That Learns From Experience](https://arxiv.org/abs/2511.14759) | - |
+| 2025-11 | **WMPO** | Pure world-model PPO enables safe online action-space exploration for VLA | [WMPO: World Model-Based Policy Optimization for VLA](https://arxiv.org/abs/2511.09515) | - |
+| 2026-01 | **SOP** | Scalable online post-training infrastructure for fleet-scale VLA exploration | [SOP: Scalable Online Post-training for Generalist VLA Models](https://arxiv.org/abs/2601.03044) | - |
+| 2026-02 | **GigaBrain-0.5M** | Foundation VLA learned directly from world-model-based RL at fleet scale | [GigaBrain-0.5M*: A VLA That Learns From World Model-Based RL](https://arxiv.org/abs/2602.12099) | - |
 
-| Method | Date | Publication | Sim. | Real | Base VLA Model | Action | Reward | Algorithm | Type | Project |
-|:---|:---|:---|:---:|:---:|:---|:---|:---:|:---|:---:|:---|
-| [ConRFT](https://arxiv.org/abs/2502.05450) | 2025.4 | [RSS26](https://roboticsconference.org/) | ✗ | ✓ | Octo-small | Diffusion | S | Cal-QL + BC (on [HIL-SERL](https://arxiv.org/abs/2410.21845) framework + consistency policy) | MF | [🔗](https://github.com/cccedric/conrft) |
-| [DiffusionRL-VLA](https://arxiv.org/abs/2509.19752) | 2025.9 | - | ✓ | ✗ | π₀ | Flow | S | PPO(DP) + BC(VLA) | MF | - |
-| [SRPO](https://arxiv.org/abs/2511.15605) | 2025.11 | - | ✓ | ✓ | OpenVLA\* / π₀ / π₀-Fast | AR / Flow | D | SRPO | MF | [🔗](https://github.com/SUSTechBruce/SRPO_MLLMs) |
-| [DLR](https://arxiv.org/abs/2503.05833) | 2025.11 | - | ✓ | ✗ | π₀ / OpenVLA | Flow / AR | S | PPO(MLP) + SFT(VLA) | MF | [🔗](https://github.com/Refined-Policy-Distillation/RPD) |
-| [GR-RL](https://arxiv.org/abs/2512.01801) | 2025.12 | - | ✗ | ✓ | GR-3 | Flow | S | TD3 / DSRL | MF | - |
-| [STARE-VLA](https://arxiv.org/abs/2512.05107) | 2025.12 | - | ✓ | ✗ | OpenVLA / π₀.₅ | AR / Flow | D | PPO / TPO / SFT | MF | [🔗](https://github.com/starVLA/starVLA) |
+**Test-time compute & cognitive search.** Moving the exploration burden from training to deployment via MCTS, flow-guided steering, test-time RL, and "System-2" deliberation before physical execution.
 
-#### Test-time RL-VLA
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2024-10 | **V-GPS** | Offline value guidance steers generalist AR / diffusion VLA decoding at test time | [Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance](https://arxiv.org/abs/2410.13816) | - |
+| 2025-05 | **Hume** | System-2 deliberative exploration via continuous flow value guidance | [Hume: Introducing System-2 Thinking in Visual-Language-Action Model](https://arxiv.org/abs/2505.21432) | [![GitHub Stars](https://img.shields.io/github/stars/hume-vla/hume?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/hume-vla/hume) |
+| 2025-08 | **MB-Search VLA** | Model-based MCTS over AR / Diffusion VLA imagines trajectories before acting | [Improving Pre-Trained VLA Policies with Model-Based Search](https://arxiv.org/abs/2508.12211) | - |
+| 2025-09 | **VLA-Reasoner** | MCTS imagination-time exploration over autoregressive action trajectories | [VLA-Reasoner: Empowering VLA Models via Test-Time Monte Carlo Tree Search](https://arxiv.org/abs/2509.22643) | - |
+| 2025-11 | **DeepThinkVLA** | Slow-thinking test-time exploration through deliberate chain-of-action reasoning | [DeepThink-VLA: From Language Reasoning to Action Reasoning](https://arxiv.org/abs/2511.15669) | [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/DeepThinkVLA?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/DeepThinkVLA) |
+| 2025-12 | **TACO** | Anti-exploration test-time steering via continuous normalising flows | [TACO: Steering VLA Models at Test-Time via Anti-Exploration](https://arxiv.org/abs/2512.02834) | [![GitHub Stars](https://img.shields.io/github/stars/breez3young/TACO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/breez3young/TACO) |
+| 2026-01 | **TT-VLA** | Value-free on-the-fly test-time RL adapts VLA policies per-episode | [Test-Time VLA: On-the-Fly Adaptation for Embodied Policies](https://arxiv.org/abs/2601.06748) | - |
+| 2026-02 | **Recurrent-Depth VLA** | Implicit test-time compute scaling via latent iterative reasoning (no explicit tokens) | [Recurrent-Depth VLA: Implicit Test-Time Compute Scaling of VLA via Latent Iterative Reasoning](https://arxiv.org/abs/2602.07845) | - |
 
-Test-time RL-VLA adapts behavior during deployment through lightweight updates, addressing the expensive cost of full model fine-tuning in real-world scenarios.
+#### 3.2.3 Reachability-Driven Exploration
 
-**Key Adaptation Mechanisms:**
-- **Value Guidance:** Using pre-trained value functions to influence action selection
-- **Memory Buffer Guidance:** Retrieving relevant historical experiences during inference
-- **Planning-guided Adaptation:** Explicit reasoning over future action sequences
+Defining *what* to explore and preventing exploration from irreversibly foreclosing future options are the central reachability challenges for embodied agents.
 
-| Method | Date | Publication | Base VLA Model | Mechanism | Project |
-|:---|:---|:---|:---|:---|:---|
-| [Steering Your Generalists (V-GPS)](https://arxiv.org/abs/2410.13816) | 2024.10 | - | Octo / OpenVLA | Value Guidance | [🔗](https://github.com/nakamotoo/V-GPS) |
-| [GVL (In-Context Value Learners)](https://arxiv.org/abs/2411.04549) | 2024.11 | - | VLM | Value Guidance | - |
-| [STRAP](https://arxiv.org/abs/2412.15182) | 2024.12 | [ICLR25](https://iclr.cc/) | Any | Memory Buffer Guidance | [🔗](https://github.com/WEIRDLabUW/STRAP) |
-| [MAP-VLA](https://arxiv.org/abs/2511.09516) | 2025.11 | - | VLA | Memory Buffer Guidance | - |
-| [VLA-Reasoner](https://arxiv.org/abs/2509.22643) | 2025.09 | - | VLA | Planning-guided Adaptation | - |
+**Automated reward engineering & curiosity.** LLM-driven reward synthesis and curiosity / curriculum mechanisms sustain broad exploration incentives in unbounded physical manifolds.
+
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2018-10 | **RND** | Curiosity-driven exploration bonus via random network distillation | [Exploration by Random Network Distillation](https://arxiv.org/abs/1810.12894) | [![GitHub Stars](https://img.shields.io/github/stars/openai/random-network-distillation?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/random-network-distillation) |
+| 2020-02 | **Never Give Up** | Episodic + lifelong novelty bonuses sustain directed exploration across long horizons | [Never Give Up: Learning Directed Exploration Strategies](https://arxiv.org/abs/2002.06038) | - |
+| 2023-06 | **Language-to-Rewards** | LLM synthesises dense language-conditioned reward for skill exploration | [Language to Rewards for Robotic Skill Synthesis](https://arxiv.org/abs/2306.08647) | [![GitHub Stars](https://img.shields.io/github/stars/google-deepmind/language_to_reward_2023?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/google-deepmind/language_to_reward_2023) |
+| 2023-10 | **Eureka** | LLM-synthesised executable reward code evolves the explorable task manifold | [Eureka: Human-Level Reward Design via Coding Large Language Models](https://arxiv.org/abs/2310.12931) | [![GitHub Stars](https://img.shields.io/github/stars/eureka-research/eureka?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/eureka-research/eureka) |
+| 2024-09 | **CurricuLLM** | LLM-designed curricula for progressive exploration of hard manipulation skills | [CurricuLLM: Automatic Task Curricula Design for Learning Complex Robot Skills using LLMs](https://arxiv.org/abs/2409.18382) | [![GitHub Stars](https://img.shields.io/github/stars/labicon/CurricuLLM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/labicon/CurricuLLM) |
+| 2025-05 | **TeViR** | Text-to-video diffusion rewards enable efficient sparse-task exploration | [TeViR: Text-to-Video Reward with Diffusion Models for Efficient RL](https://arxiv.org/abs/2505.19769) | - |
+
+**Constrained safety.** Learned safety zones, recovery policies, and hard safety constraints bound trajectories while preserving the agent's reachable state set.
+
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2020-10 | **Recovery RL** | Learned recovery zones bound exploration without collapsing reachable set | [Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones](https://arxiv.org/abs/2010.15920) | [![GitHub Stars](https://img.shields.io/github/stars/abalakrishna123/recovery-rl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/abalakrishna123/recovery-rl) |
+| 2024-04 | **RECOVER** | Neuro-symbolic failure detection bounds exploratory trajectories in manipulation | [RECOVER: Neuro-Symbolic Failure Recovery for Robotic Manipulation](https://arxiv.org/abs/2404.00756) | - |
+| 2025-03 | **SafeVLA** | Constrained policy exploration under hard safety guarantees for VLA | [SafeVLA: Towards Safety Alignment of VLA Model via Constrained Learning](https://arxiv.org/abs/2503.03480) | [![GitHub Stars](https://img.shields.io/github/stars/PKU-Alignment/SafeVLA?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/PKU-Alignment/SafeVLA) |
+
 
 ---
+
+<br>
 
 ## 4. Level 4: Agent → Prospector — Imagination-Space Exploration
 
@@ -359,6 +369,8 @@ The Prospector internalises a **world model** and faces a **dual exploration pro
 
 ---
 
+<br>
+
 ## 5. Level 5: Prospector → Ecosystem — Coordination-Space Exploration
 
 <p align="center"><img src="fig/level5_ecosystem.png" width="850"/></p>
@@ -383,9 +395,140 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 | **Multi-agent Debate** | Structured deliberation improving collective reasoning (Du et al.) |
 | **Learnable orchestration** | RL-evolved coordination topologies, optimisable agent graphs |
 
+
+
+
+
+
+### 5.2 Agentic Ensemble Papers
+
+
+
+
+#### 5.2.1 Ensemble-During-Inference Papers
+
+
+
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-10 | `SAFE` | When to Ensemble: Identifying Token-Level Points for Stable and Fast LLM Ensembling | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2510.15346) | - |
+| 2025-10 | `CoRe` | Harnessing Consistency for Robust Test-Time LLM Ensemble | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2510.13855) | - |
+| 2025-05 | `Transformer Copilot` | Transformer Copilot: Learning from The Mistake Log in LLM Fine-tuning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.16270) | [![GitHub Stars](https://img.shields.io/github/stars/jiaruzouu/TransformerCopilot?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/jiaruzouu/TransformerCopilot) |
+| 2025-02 | `ABE` | Token-level Ensembling of Models with Different Vocabularies | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.21265) | [![GitHub Stars](https://img.shields.io/github/stars/mjpost/abe?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/mjpost/abe) |
+| 2025-02 | `CITER` | CITER: Collaborative Inference for Efficient Large Language Model Decoding with Token-Level Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.01976) | [![GitHub Stars](https://img.shields.io/github/stars/aiming-lab/CITER?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/aiming-lab/CITER) |
+| 2025-02 | `Speculative Ensemble` | Speculative Ensemble: Fast Large Language Model Ensemble via Speculation | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.01662) | [![GitHub Stars](https://img.shields.io/github/stars/Kamichanw/Speculative-Ensemble?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Kamichanw/Speculative-Ensemble/) |
+| 2024-10 | `UniTe` | Determine-Then-Ensemble: Necessity of Top-k Union for Large Language Model Ensembling | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.03777) | - |
+| 2024-06 | `GaC` | Breaking the Ceiling of the LLM Community by Treating Token Generation as a Classification for Ensembling | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.12585) | [![GitHub Stars](https://img.shields.io/github/stars/yaoching0/GaC?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yaoching0/GaC) |
+| 2024-04 | `DeePEn` | Ensemble Learning for Heterogeneous Large Language Models with Deep Parallel Collaboration | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.12715) | [![GitHub Stars](https://img.shields.io/github/stars/OrangeInSouth/DeePEn?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OrangeInSouth/DeePEn) |
+| 2024-04 | `PackLLM` | Pack of LLMs: Model Fusion at Test-Time via Perplexity Optimization | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.11531) | [![GitHub Stars](https://img.shields.io/github/stars/cmavro/PackLLM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/cmavro/PackLLM) |
+| 2024-04 | `EVA` | Bridging the Gap between Different Vocabularies for LLM Ensemble | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.09492) | [![GitHub Stars](https://img.shields.io/github/stars/xydaytoy/EVA?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/xydaytoy/EVA) |
+| 2024-02 | `-` | Purifying large language models by ensembling a small language model | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.14845) | - |
+
+
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-06 | `RLAE` | RLAE: Reinforcement Learning-Assisted Ensemble for LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.00439) | - |
+| 2024-12 | `SpecFuse` | SpecFuse: Ensembling Large Language Models via Next-Segment Prediction | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.07380) | - |
+| 2024-09 | `SweetSpan` | Hit the Sweet Spot! Span-Level Ensemble for Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.18583) | - |
+| 2024-07 | `Cool-Fusion` | Cool-Fusion: Fuse Large Language Models without Training | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.19807) | - |
+
+
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-11 | `CBS` | Collaborative Beam Search: Enhancing LLM Reasoning via Collective Consensus | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2025.emnlp-main.574/) | - |
+| 2024-12 | `LE-MCTS` | Ensembling Large Language Models with Process Reward-Guided Tree Search for Better Complex Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.15797) | - |
+
+
+
+#### 5.2.2  Ensemble-After-Inference Papers
+
+
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-12 | `LLM-PeerReview` | Scoring, Reasoning, and Selecting the Best! Ensembling Large Language Models via a Peer-Review Process | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2512.23213) | [![GitHub Stars](https://img.shields.io/github/stars/zeyuji/LLM-PeerReview?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zeyuji/LLM-PeerReview) |
+| 2025-10 | `LLMartini` | LLMartini: Seamless and Interactive Leveraging of Multiple LLMs through Comparison and Composition | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.19252) | - |
+| 2025-10 | `-` | Beyond Consensus: Mitigating the Agreeableness Bias in LLM Judge Evaluations | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.11822) | [![GitHub Stars](https://img.shields.io/github/stars/ai-cet/paper-arxiv-llm-judge-calibration?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ai-cet/paper-arxiv-llm-judge-calibration) |
+| 2025-10 | `OW/ISP` | Beyond Majority Voting: LLM Aggregation by Leveraging Higher-Order Information | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2510.01499) | - |
+| 2025-09 | `FLAME` | Explainable Fault Localization for Programming Assignments via LLM-Guided Annotation | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/pdf/2509.25676v1) | [![GitHub Stars](https://img.shields.io/github/stars/FLAME-FL/FLAME?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/FLAME-FL/FLAME) |
+| 2025-09 | `CARGO` | CARGO: A Framework for Confidence-Aware Routing of Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2509.14899) | - |
+| 2025-07 | `LENS` | LENS: Learning Ensemble Confidence from Neural States for Multi-LLM Answer Integration | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2507.23167) | - |
+| 2025-05 | `EL4NER` | EL4NER: Ensemble Learning for Named Entity Recognition via Multiple Small-Parameter Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.23038) | - |
+| 2025-03 | `Symbolic-MoE` | Symbolic Mixture-of-Experts: Adaptive Skill-based Routing for Heterogeneous Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2503.05641) | [![GitHub Stars](https://img.shields.io/github/stars/dinobby/Symbolic-MoE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/dinobby/Symbolic-MoE/) |
+| 2025-01 | `DFPE` | DFPE: A Diverse Fingerprint Ensemble for Enhancing LLM Performance | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2501.17479) | [![GitHub Stars](https://img.shields.io/github/stars/nivgold/DFPE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/nivgold/DFPE) |
+| 2025-01 | `DMoA` | Balancing Act: Diversity and Consistency in Large Language Model Ensembles | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://openreview.net/pdf?id=Dl6nkKKvlX) | - |
+| 2024-12 | `Smoothie` | Smoothie: Label Free Language Model Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.04692) | [![GitHub Stars](https://img.shields.io/github/stars/HazyResearch/smoothie?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/HazyResearch/smoothie) |
+| 2024-10 | `LLM-Forest` | LLM-Forest: Ensemble Learning of LLMs with Graph-Augmented Prompts for Data Imputation | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.21520) | [![GitHub Stars](https://img.shields.io/github/stars/Xinrui17/LLM-Forest?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Xinrui17/LLM-Forest) |
+| 2024-10 | `LLM-TOPLA` | LLM-TOPLA: Efficient LLM Ensemble by Maximising Diversity | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.03953) | [![GitHub Stars](https://img.shields.io/github/stars/git-disl/llm-topla?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/git-disl/llm-topla) |
+| 2024-10 | `MLKF` | Two Heads are Better than One: Zero-shot Cognitive Reasoning via Multi-LLM Knowledge Fusion | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://dl.acm.org/doi/abs/10.1145/3627673.3679744) | [![GitHub Stars](https://img.shields.io/github/stars/trueBatty/MLKF?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/trueBatty/MLKF) |
+| 2024-08 | `URG` | URG: A Unified Ranking and Generation Method for Ensembling Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://aclanthology.org/2024.findings-acl.261/) | - |
+| 2024-02 | `Agent-Forest` | More Agents Is All You Need | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2402.05120) | [![GitHub Stars](https://img.shields.io/github/stars/MoreAgentsIsAllYouNeed/AgentForest?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MoreAgentsIsAllYouNeed/AgentForest) |
+| 2023-06 | `LLM-Blender` | LLM-Blender: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2306.02561) | [![GitHub Stars](https://img.shields.io/github/stars/yuchenlin/LLM-Blender?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yuchenlin/LLM-Blender) |
+| 2023-05 | `MoRE` | Getting MoRE out of Mixture of Language Model Reasoning Experts | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2305.14628) | [![GitHub Stars](https://img.shields.io/github/stars/NoviScl/MoRE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/NoviScl/MoRE) |
+
+
+#### 5.2.3 Ensemble-Before-Inference Papers
+
+
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-10 | `DiSRouter` | DISROUTER: Distributed Self-Routing for LLM Selections | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.19208) | - |
+| 2025-10 | `WebRouter` | WebRouter: Query-specific Router via Variational Information Bottleneck for Cost-sensitive Web Agent | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.11221) | - |
+| 2025-10 | `LLMRank` | LLMRank: Understanding LLM Strengths for Model Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.01234) | - |
+| 2025-06 | `TagRouter` | TAGROUTER: Learning Route to LLMs through Tags for Open-Domain Text Generation Tasks | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.12473) | - |
+| 2025-06 | `Router-R1` | Router-R1: Teaching LLMs Multi-Round Routing and Aggregation via Reinforcement Learning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2506.09033) | [![GitHub Stars](https://img.shields.io/github/stars/ulab-uiuc/Router-R1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ulab-uiuc/Router-R1) |
+| 2025-06 | `RadialRouter` | RadialRouter: Structured Representation for Efficient and Robust Large Language Models Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2506.03880) | - |
+| 2025-05 | `Avengers` | The Avengers: A Simple Recipe for Uniting Smaller Language Models to Challenge Proprietary Giants | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19797) | [![GitHub Stars](https://img.shields.io/github/stars/ZhangYiqun018/Avengers?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ZhangYiqun018/Avengers) |
+| 2025-05 | `RTR` | Route to Reason: Adaptive Routing for LLM and Reasoning Strategy Selection | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.19435) | [![GitHub Stars](https://img.shields.io/github/stars/goodmanpzh/Route-To-Reason?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/goodmanpzh/Route-To-Reason) |
+| 2025-05 | `InferenceDynamics` | InferenceDynamics: Efficient Routing Across LLMs through Structured Capability and Knowledge Profiling | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.16303) | - |
+| 2025-05 | `-` | Rethinking Predictive Modeling for LLM Routing: When Simple kNN Beats Complex Learned Routers | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2505.12601) | - |
+| 2025 | `RELM` | Co-optimizing Recommendation and Evaluation for LLM Selection | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://openreview.net/pdf?id=gWi4ZcPQRl) | - |
+| 2025-02 | `-` | LLM Bandit: Cost-Efficient LLM Generation via Preference-Conditioned Dynamic Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.02743) | - |
+| 2024-12 | `PickLLM` | PickLLM: Context-Aware RL-Assisted Large Language Model Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.12170) | - |
+| 2024-12 | `Bench-CoE` | Bench-CoE: a Framework for Collaboration of Experts from Benchmark | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.04167) | [![GitHub Stars](https://img.shields.io/github/stars/ZhangXJ199/Bench-CoE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ZhangXJ199/Bench-CoE) |
+| 2024-10 | `GraphRouter` | GraphRouter: A Graph-based Router for LLM Selections | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.03834) | [![GitHub Stars](https://img.shields.io/github/stars/ulab-uiuc/GraphRouter?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ulab-uiuc/GraphRouter) |
+| 2024-09 | `Eagle` | Eagle: Efficient Training-Free Router for Multi-LLM Inference | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2409.15518) | - |
+| 2024-08 | `TO-Router` | TensorOpera Router: A Multi-Model Router for Efficient LLM Inference | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.12320) | - |
+| 2024-08 | `SelectLLM` | SelectLLM: Query-Aware Efficient Selection Algorithm for Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2408.08545) | - |
+| 2024-07 | `MetaLLM` | MetaLLM: A High-performant and Cost-efficient Dynamic Framework for Wrapping LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2407.10834) | [![GitHub Stars](https://img.shields.io/github/stars/mail-research/MetaLLM-wrapper?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/mail-research/MetaLLM-wrapper/) |
+| 2024-06 | `RouteLLM` | RouteLLM: Learning to Route LLMs with Preference Data | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.18665) | [![GitHub Stars](https://img.shields.io/github/stars/lm-sys/RouteLLM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/lm-sys/RouteLLM) |
+| 2024-06 | `HomoRouter` | Query Routing for Homogeneous Tools: An Instantiation in the RAG Scenario | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2406.12429) | - |
+| 2024-05 | `-` | Harnessing the Power of Multiple Minds: Lessons Learned from LLM Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2405.00467) | [![GitHub Stars](https://img.shields.io/github/stars/kvadityasrivatsa/llm-routing?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/kvadityasrivatsa/llm-routing) |
+| 2024-04 | `Hybrid-LLM` | Hybrid LLM: Cost-Efficient and Quality-Aware Query Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.14618) | [![GitHub Stars](https://img.shields.io/github/stars/m365-core/hybrid_llm_routing?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/m365-core/hybrid_llm_routing) |
+| 2024-03 | `ETR` | An Expert is Worth One Token: Synergizing Multiple Expert LLMs as Generalist via Expert Token Routing | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2403.16854) | [![GitHub Stars](https://img.shields.io/github/stars/zjunet/ETR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zjunet/ETR) |
+| 2024-01 | `Routoo` | Routoo: Learning to Route to Large Language Models Effectively | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.13979) | - |
+| 2024-01 | `Blending` | Blending Is All You Need: Cheaper, Better Alternative to Trillion-Parameters LLM | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2401.02994) | - |
+| 2024 | `RouterDC` | RouterDC: Query-Based Router by Dual Contrastive Learning for Assembling Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/7a641b8ec86162fc875fb9f6456a542f-Abstract-Conference.html) | [![GitHub Stars](https://img.shields.io/github/stars/shuhao02/RouterDC?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/shuhao02/RouterDC) |
+| 2023-11 | `ZOOTER` | Routing to the Expert: Efficient Reward-guided Ensemble of Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2311.08692) | - |
+| 2023-08 | `FORC` | Fly-Swat or Cannon? Cost-Effective Language Model Choice via Meta-Modeling | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2308.06077) | [![GitHub Stars](https://img.shields.io/github/stars/epfl-dlab/forc?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/epfl-dlab/forc) |
+| 2023 | `-` | LLM Routing with Benchmark Datasets | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://openreview.net/forum?id=k9EfAJhFZc) | - |
+
+
+#### 5.2.4 Cascaded-Based Papers
+
+
+| Date | Name | Title | Paper | Github |
+|:---:|:---:|---|:---:|:---:|
+| 2025-12 | `RoBoN` | RoBoN: Routed Online Best-of-n for Test-Time Scaling with Multiple LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2512.05542) | [![GitHub Stars](https://img.shields.io/github/stars/j-geuter/RoBoN?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/j-geuter/RoBoN) |
+| 2025-09 | `-` | Semantic Agreement Enables Efficient Open-Ended LLM Cascades | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://www.arxiv.org/abs/2509.21837) | - |
+| 2025-04 | `EMAFusionTM` | EMAFusionTM: A Self-Optimizing System for Seamless LLM Selection and Integration | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.10681) | - |
+| 2025-04 | `ModelSwitch` | Do We Truly Need So Many Samples? Multi-LLM Repeated Sampling Efficiently Scales Test-Time Compute | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2504.00762) | [![GitHub Stars](https://img.shields.io/github/stars/JianhaoChen-nju/ModelSwitch?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JianhaoChen-nju/ModelSwitch) |
+| 2024-12 | `DER` | Dynamic Ensemble Reasoning for LLM Experts | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2412.07448) | - |
+| 2024-10 | `Cascade Routing` | A Unified Approach to Routing and Cascading for LLMs | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2410.10347) | [![GitHub Stars](https://img.shields.io/github/stars/eth-sri/cascade-routing?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/eth-sri/cascade-routing) |
+| 2024-04 | `-` | Language Model Cascades: Token-level uncertainty and beyond | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2404.10136) | - |
+| 2023-10 | `AutoMix` | AutoMix: Automatically Mixing Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.12963) | [![GitHub Stars](https://img.shields.io/github/stars/automix-llm/automix?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/automix-llm/automix) |
+| 2023-10 | `neural caching` | Cache & Distil: Optimising API Calls to Large Language Models | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.13561) | [![GitHub Stars](https://img.shields.io/github/stars/guillemram97/neural-caching?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/guillemram97/neural-caching) |
+| 2023-10 | `-` | Large Language Model Cascades with Mixture of Thoughts Representations for Cost-efficient Reasoning | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.03094) | [![GitHub Stars](https://img.shields.io/github/stars/MurongYue/LLM_MoT_cascade?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MurongYue/LLM_MoT_cascade) |
+| 2023-10 | `EcoAssistant` | EcoAssistant: Using LLM Assistant More Affordably and Accurately | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2310.03046) | [![GitHub Stars](https://img.shields.io/github/stars/JieyuZ2/EcoAssistant?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JieyuZ2/EcoAssistant) |
+| 2023-05 | `FrugalGPT` | FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2305.05176) | - |
+| 2023-01 | `-` | When Does Confidence-Based Cascade Deferral Suffice? | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://proceedings.neurips.cc/paper_files/paper/2023/hash/1f09e1ee5035a4c3fe38a5681cae5815-Abstract-Conference.html) | - |
+| 2022-10 | `Model Cascading` | Model Cascading: Towards Jointly Improving Efficiency and Accuracy of NLP Systems | [![Paper](https://img.shields.io/badge/paper-A42C25?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2210.05528) | - |
+
 ---
 
-## 6. Cross-Cutting Topics
+<br>
+
+
+## 6. Exploration Evaluation
 
 ### Foundations
 - **Three failure modes of static optimisation**: Belief Stagnation, Value Stagnation, Reachability Collapse
@@ -412,6 +555,8 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 - Scalable coordination-space exploration without combinatorial explosion
 
 ---
+
+<br>
 
 ## 7. Citation
 
