@@ -398,7 +398,11 @@ The Prospector internalises a **world model** and faces a **dual exploration pro
 <p align="center"><img src="fig/level5_ecosystem.png" width="850"/></p>
 <p align="center"><i>Figure: Level 5 Coordination-Space Exploration — Why (single-agent limitations), Where (communication, collaboration, role, deployment), and How (orchestration, ensemble, MARL, self-evolving agents).</i></p>
 
-At the highest level, exploration enters **coordination space**: heterogeneous agents discover communication topologies, role specialisations, shared representations, and collaborative strategies.
+<!-- At the highest level, exploration enters **coordination space**: heterogeneous agents discover communication topologies, role specialisations, shared representations, and collaborative strategies. -->
+
+At Level 5, exploration transcends the individual agent entirely. The object of exploration is no longer a reasoning trajectory, an action sequence, or an imagined future, but the \emph{coordination structure} itself---communication protocols, collaboration topologies, role assignments, and collective knowledge substrates. The central question shifts from ``how should a single agent explore?'' to ``how should a population of heterogeneous agents organise their joint exploration?''
+
+This transition is not merely about scaling the number of agents. Single-agent systems face fundamental limitations in capability coverage, robustness, and adaptability when confronting tasks that require cross-domain knowledge, long-horizon planning, and multi-step verification. Static multi-agent architectures with fixed interaction pathways suppress structural exploration, restricting adaptability to dynamic environments. Domain-specific tasks demand structured collaboration with specialised roles and verification steps to reduce hallucinations and ensure executability. And unconstrained multi-agent deployment introduces substantial computational overhead, requiring resource-efficient coordination strategies. Level~5 addresses these challenges by making the organisation of intelligence itself---how agents communicate, coordinate, specialise, compose, and co-evolve---the target of exploration.
 
 | Challenge | Description |
 |:----------|:------------|
@@ -407,7 +411,7 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 | **Diversity vs. Convergence Tension** | Balancing ecological diversity against system-level coherence |
 | **Role–Communication Co-evolution** | Jointly evolving functional specialisation and information exchange protocols |
 
-**Key Systems & Methods:**
+<!-- **Key Systems & Methods:**
 
 | Method | Key Contribution |
 |:-------|:-----------------|
@@ -415,7 +419,7 @@ At the highest level, exploration enters **coordination space**: heterogeneous a
 | **AutoGen** | Flexible conversational multi-agent framework |
 | **CAMEL** | Communicative agents for mind exploration |
 | **Multi-agent Debate** | Structured deliberation improving collective reasoning (Du et al.) |
-| **Learnable orchestration** | RL-evolved coordination topologies, optimisable agent graphs |
+| **Learnable orchestration** | RL-evolved coordination topologies, optimisable agent graphs | -->
 
 
 
