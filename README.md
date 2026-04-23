@@ -143,42 +143,46 @@ The transition from **Responder** to **Reasoner** requires exploration in *reaso
 
 Methods that prioritise exploration at high-uncertainty branching points in the reasoning process:
 
-| Method | Strategy | Paper |
-|:-------|:---------|:------|
-| **CURE** | High-entropy tokens as re-branching anchors | Uncertainty-aware Reasoning Enhancement (2025) |
-| **SPINE** | Concentrates updates on high-entropy branching points | Sparse Inference with Entropy (2025) |
-| **TreeRL** | On-policy tree search from high-entropy steps | Tree-Structured RL for Reasoning (2025) |
-| **CE-GPPO** | Coordinating entropy-gradient preservation | CE-GPPO (2025) |
-| **SIREN** | Top-p & peak-entropy masks for meaningful exploration | Rethinking Entropy in LLM Reasoning (2025) |
-| **AEPO** | Anchors entropy to user-specified target level | Arbitrary Entropy Policy Optimization (2025) |
-| **ICPO** | Intrinsic confidence from relative generation probabilities | Intrinsic Confidence Policy Optimization (2025) |
-| **REAL** | Categorical labels replacing scalar rewards | Rewards as Labels (2026) |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2025-08 | **CURE** | Expands the training-state distribution at critical decision points to sustain exploration | [CURE: Critical-Token-Guided Re-Concatenation for Entropy-Collapse Prevention](https://arxiv.org/pdf/2508.11016) | [![GitHub Stars](https://img.shields.io/github/stars/bytedance/CURE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bytedance/CURE) |
+| 2026-03 | **SPINE** | Preserves exploration by selectively updating high-entropy branch tokens | [SPINE: Token-Selective Test-Time Reinforcement Learning with Entropy-Band Regularization](https://arxiv.org/abs/2511.17938) | - |
+| 2025-06 | **TreeRL** | Explores reasoning via on-policy tree search from uncertain intermediate states | [TreeRL: LLM Reinforcement Learning with On-Policy Tree Search](https://arxiv.org/abs/2506.11902) | [![GitHub Stars](https://img.shields.io/github/stars/THUDM/TreeRL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/THUDM/TreeRL) |
+| 2025-09 | **CE-GPPO** | Sustains exploration by preserving clipped-token gradients | [CE-GPPO: Coordinating Entropy via Gradient-Preserving Clipping Policy
+Optimization in Reinforcement Learning](https://arxiv.org/pdf/2509.20712) | - |
+| 2025-10 | **STEER** | Preserves exploration by stabilizing token-level entropy change through adaptive reweighting | [Rethinking Entropy Interventions in RLVR:
+An Entropy Change Perspective](https://arxiv.org/pdf/2510.10150) | [![GitHub Stars](https://img.shields.io/github/stars/zz-haooo/STEER?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/zz-haooo/STEER) 
+| 2025-10 | **AEPO** | Breaks the exploration bottleneck by directly controlling policy entropy through temperature-guided REINFORCE | [Arbitrary Entropy Policy Optimization Breaks The Exploration Bottleneck of Reinforcement Learning](https://arxiv.org/pdf/2510.08141) | [![GitHub Stars](https://img.shields.io/github/stars/597358816/AEPO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/597358816/AEPO) |
+| 2025-11 | **ICPO** | Promotes exploration by combining verifiable rewards with confidence-based preference advantages | [ICPO: Intrinsic Confidence-Driven Group Relative Preference Optimization for Efficient Reinforcement Learning](https://arxiv.org/abs/2511.21005) | - |
+| 2026-02 | **REAL** | Stabilizes exploration via balanced gradient allocation | [Rewards as labels: Revisiting rlvr from a classifica-
+tion perspective](https://arxiv.org/pdf/2602.05630) | - |
 
 ### 2.2 Competence-Driven Exploration
 
 Methods that match problem difficulty to the model's evolving competence frontier:
 
-| Method | Strategy | Paper |
-|:-------|:---------|:------|
-| **E2H** | Easy-to-hard curriculum with gradual fade-out | Easy to Hard Curriculum (2025) |
-| **RLAAR** | Ability-gated curriculum with abstention reward | RL with Abstention-Aware Rewards (2025) |
-| **Online Difficulty Filtering** | Selects medium-difficulty samples by current success rate | Dynamic Difficulty Filtering (2025) |
-| **CDAS** | Historical performance gaps for robust difficulty estimation | Competence-Driven Adaptive Sampling (2025) |
-| **HA-DW** | Tracks evolving competence, reweights difficulty | Hardness-Aware Dynamic Weighting (2026) |
-| **SvS** | Self-synthesized harder variants from solved examples | Solve via Self-play (2025) |
-| **Absolute Zero** | Reinforced self-play with zero external data | Absolute Zero Reasoner (2025) |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2025-06 | **E2H** | Guides exploration through an easy-to-hard curriculum | [Curriculum Reinforcement Learning from Easy to Hard Tasks Improves LLM Reasoning](https://arxiv.org/abs/2506.06632) | [![GitHub Stars](https://img.shields.io/github/stars/divelab/E2H-Reasoning?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/divelab/E2H-Reasoning) |
+| 2025-10 | **RLAAR** | Steers exploration through curriculum learning and rewarded abstention | [Verifiable Accuracy and Abstention Rewards in Curriculum RL
+to Alleviate Lost-in-Conversation](https://arxiv.org/pdf/2510.18731) | - |
+| 2025-05 | **CDAS** | Explores the competence frontier by sampling problems matched to the model’s current ability | [Rethinking the Sampling Criteria in Reinforcement Learning for LLM Reasoning: A Competence-Difficulty Alignment Perspective](https://arxiv.org/pdf/2505.17652) | [![GitHub Stars](https://img.shields.io/github/stars/DeyangKong/CDAS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/DeyangKong/CDAS) |
+| 2026-01 | **HA-DW** | Reduces exploration imbalance by debiasing group-relative advantages across prompt difficulty | [Your Group-Relative Advantage Is Biased](https://arxiv.org/abs/2601.08521) | - |
+| 2025-08 | **SvS** | Sustains exploration by self-synthesizing diverse but answer-equivalent problems during RLVR | [Beyond Pass@1: Self-play with Variational Problem
+Synthesis Sustains RLVR](https://arxiv.org/pdf/2508.14029) | [![GitHub Stars](https://img.shields.io/github/stars/MasterVito/SvS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MasterVito/SvS) |
+
 
 ### 2.3 Reachability-Driven Exploration
 
 Methods that prevent irreversible contraction of reasoning trajectory distributions:
 
-| Method | Strategy | Paper |
-|:-------|:---------|:------|
-| **Trust-region methods** | KL penalties, PPO clipping to preserve pre-trained breadth | Various (2025) |
-| **Anti-degeneration penalties** | Repetition penalties, length-budget constraints | Welleck et al. (2020), various (2025) |
-| **SPO / KTAE** | Step-level credit assignment preserving alternative trajectories | Step Policy Optimization / KTAE (2025) |
-| **VRPRM** | Process-level dense supervision for intermediate steps | Verifiable Reward PRM (2025) |
-| **RLVRR** | Content coverage + style constraints for denser rewards | RL with Verifiable & Reward-Rich feedback (2026) |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------|:---------|:------|:---:|
+| 2025-10 | **TROLL** | Stabilizes exploration with principled trust-region updates instead of PPO-style clipping | [TROLL: Trust Regions improve Reinforcement Learning for Large Language Models](https://arxiv.org/abs/2510.03817) | [![GitHub Stars](https://img.shields.io/github/stars/niklasfreymuth.github.io/troll?style=for-the-badge&logo=github&label=GitHub&color=black)](https://niklasfreymuth.github.io/troll/) |
+| 2024-04 | **ROPO** | Preserves useful exploration by downweighting noisy preference signals instead of overfitting to them | [ROPO: Robust Preference Optimization for Large Language Models](https://arxiv.org/abs/2404.04102) | - |
+| 2025-05 | **KTAE** | Explores better by assigning credit to key reasoning tokens rather than whole rollouts | [KTAE: A Model-Free Algorithm to Key-Tokens Advantage Estimation in Mathematical Reasoning](https://arxiv.org/abs/2505.16826) | [![GitHub Stars](https://img.shields.io/github/stars/ZNLP/KTAE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ZNLP/KTAE.git) |
+| 2025-08 | **VRPRM** | Guides exploration with visual step-level rewards that encourage deeper reasoning paths | [VRPRM: Process Reward Modeling via Visual Reasoning](https://arxiv.org/abs/2508.03556) | - |
+| 2026-01 | **RLVRR** | Turns sparse end rewards into a verifiable reward chain that supports broader open-ended exploration | [From Verifiable Dot to Reward Chain: Harnessing Verifiable Reference-based Rewards for Reinforcement Learning of Open-ended Generation](https://arxiv.org/abs/2601.18533) | [![GitHub Stars](https://img.shields.io/github/stars/YJiangcm/RLVRR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/YJiangcm/RLVRR) |
 
 ---
 
