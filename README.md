@@ -121,20 +121,22 @@ We propose exploration as the **transition mechanism** between five levels of in
 
 | Transition | Exploration Space | What Becomes Explorable |
 |:-----------|:------------------|:------------------------|
-| **L1→L2: Responder → Reasoner** | **Reasoning space** | Hypotheses, reasoning trajectories, latent thought representations |
-| **L2→L3: Reasoner → Agent** | **Perception & action space** | Tool invocation, sensorimotor loops, memory management |
-| **L3→L4: Agent → Prospector** | **Imagination space** | Counterfactual futures in learned world models, dual real-imagined exploration |
-| **L4→L5: Prospector → Ecosystem** | **Coordination space** | Communication topologies, role assignments, shared world models |
+| **L1 → L2: Responder → Reasoner** | **Reasoning space** | Hypotheses, alternative reasoning trajectories, latent thought representations; self-verification and revision |
+| **L2 → L3: Reasoner → Agent** | **Interaction space** | Embodied perception, tool invocation, memory management, closed-loop action under partial observability |
+| **L3 → L4: Agent → Prospector** | **Imagination space** | Counterfactual futures in learned world models; the dual exploration problem across real and imagined environments |
+| **L4 → L5: Prospector → Ecosystem** | **Coordination space** | Communication topologies, co-evolving role specialisations, shared representations, collaborative strategies |
 
 ### 1.4 3×5 Taxonomy
 
 Our survey is organized as a **3×5 taxonomy** crossing three signal-driven methodologies with the five levels:
 
-|  | **L1 Responder** | **L2 Reasoner** | **L3 Agent** | **L4 Prospector** | **L5 Ecosystem** |
-|:-|:---|:---|:---|:---|:---|
-| **Uncertainty-Driven** | Token entropy | Ensemble disagreement, semantic uncertainty | Active SLAM, prediction variance | Epistemic disagreement in latent space | Joint-belief uncertainty |
-| **Competence-Driven** | Input difficulty | Iterative curricula, self-play | Skill bootstrapping, RL-VLA | Imagination-based skill discovery | Multi-agent self-play curricula |
-| **Reachability-Driven** | Anti-repetition | Beam diversity, reasoning-path anti-foreclosure | Go-Explore, coverage curricula | Latent-space diversity bonuses | Role-diversity, anti-specialisation |
+| | **L1 Responder** | **L2 Reasoner** | **L3 Agent** | **L4 Prospector** | **L5 Ecosystem** |
+|---|---|---|---|---|---|
+| **Uncertainty-Driven** | *— (single forward pass; no internal search)* | Token / step entropy, entropy-guided branching | Active SLAM, prediction variance, pose uncertainty | Ensemble disagreement in latent world models | Inter-agent disagreement, joint-belief uncertainty |
+| **Competence-Driven** | *— (no learning loop at inference)* | Difficulty-adaptive curricula, self-verification, self-play | Skill bootstrapping, goal-conditioned self-play | Imagination-based skill discovery, learning-progress curricula | Emergent multi-agent self-play, co-evolving curricula |
+| **Reachability-Driven** | *— (fixed output manifold)* | Beam diversity, anti-repetition, KL-to-reference trust regions | Go-Explore, coverage-maximising curricula | Latent-space diversity bonuses, action-entropy regularisation | Role-diversity bonuses, anti-convergence on coordination topologies |
+
+
 
 ---
 
