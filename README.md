@@ -115,7 +115,33 @@ We ground epistemic exploration in **three jointly necessary criteria**, each ad
 
 These form a closed loop: **gain information → convert to value → keep the capacity to gain information alive → ...**
 
-### 1.3 Five-Level Trajectory Toward AGI
+
+### 1.3 Unified Epistemic Exploration Objective
+
+The three criteria combine into a single constrained objective:
+
+$$
+\pi_{\mathfrak{A},t}^{*}
+\=\
+\underset{\underbrace{\pi_{\mathfrak{A}} \,\in\, \Pi_{\mathrm{reach}}(b_t)}_{\text{Reachability (C3)}}}{\arg\max}\
+\underbrace{\mathbb{E}_{\theta \sim b_t}\!\Big[V^{\pi_{\mathfrak{A}}}_\theta(s_t, h_t)\Big]}_{\text{Value Improvement (C2)}}
+\ +\ \beta \cdot
+\underbrace{\mathbb{E}^{\pi_{\mathfrak{A}}}_{b_t}\!\left[\sum_{t'=t}^{\infty} \gamma^{\,t'-t}\,\mathcal{U}(s_{t'}, a_{t'};\, b_{t'})\right]}_{\text{Information Gain (C1)}}
+$$
+
+
+where $\mathcal{U}(s, a;\, b) = I(\theta;\, s', r \mid s, a, b)$ is epistemic uncertainty, and  $\Pi_{\mathrm{reach}}(b_t)$ is the reachability-feasible policy set.
+
+
+**Reading the objective.** The three terms map one-to-one onto the three criteria:
+
+- **Information-gain term (C1)** — expected cumulative epistemic uncertainty the agent anticipates resolving along its trajectory. 
+- **Value Improvement (C2)** — expected cumulative reward under current beliefs; what a pure exploiter would maximise.
+- **Reachability (C3)** — visitation must remain over every region plausibly relevant under beliefs, preventing short-term gains from foreclosing future learning.
+
+
+
+### 1.4 Five-Level Trajectory Toward AGI
 
 We propose exploration as the **transition mechanism** between five levels of increasing agent sophistication. Each level introduces a qualitatively new exploration space that the previous level cannot access:
 
@@ -126,7 +152,7 @@ We propose exploration as the **transition mechanism** between five levels of in
 | **L3 → L4: Agent → Prospector** | **Imagination space** | Counterfactual futures in learned world models; the dual exploration problem across real and imagined environments |
 | **L4 → L5: Prospector → Ecosystem** | **Coordination space** | Communication topologies, co-evolving role specialisations, shared representations, collaborative strategies |
 
-### 1.4 3×5 Taxonomy
+### 1.5 3×5 Taxonomy
 
 Our survey is organized as a **3×5 taxonomy** crossing three signal-driven methodologies with the five levels:
 
