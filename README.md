@@ -746,14 +746,14 @@ Methods that coordinate collaboration through pre-defined routing rules, role pr
 
 | Date | Method | Key Idea | Paper | Github |
 |:---:|:-------|:---------|:------|:---:|
-| 2026-02 | **ORCH** | Merges many parallel analyses via a deterministic EMA-guided router for discrete-choice reasoning | [ORCH: Many Analyses, One Merge — A Deterministic Multi-Agent Orchestrator for Discrete-Choice Reasoning with EMA-Guided Routing](https://arxiv.org/abs/2602.01797) | - |
+| 2026-02 | **ORCH** | Explores many parallel analysis trajectories and merges them via a deterministic EMA-guided router to ensure reachable consensus in discrete-choice reasoning | [ORCH: Many Analyses, One Merge — A Deterministic Multi-Agent Orchestrator for Discrete-Choice Reasoning with EMA-Guided Routing](https://arxiv.org/abs/2602.01797) | - |
 | 2025-11 | **MA-IR** | Deterministic multi-agent orchestration for high-quality incident response decision support | [Multi-Agent LLM Orchestration Achieves Deterministic, High-Quality Decision Support for Incident Response](https://arxiv.org/abs/2511.15755) | - |
-| 2025-10 | **MOSAIC** | Task-intelligent orchestration over specialised agents for scientific coding workflows | [MOSAIC: Multi-agent Orchestration for Task-Intelligent Scientific Coding](https://arxiv.org/abs/2510.08804) | - |
-| 2025-06 | **AgentOrchestra** | Organises agents via a Tool-Environment-Agent (TEA) protocol for scalable coordination | [AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol](https://arxiv.org/abs/2506.12508) | - |
-| 2025 | **Croto** | Orchestrates collaboration across teams of agents via cross-team communication rules | Multi-agent collaboration via cross-team orchestration | - |
-| 2024-06 | **MACNET** | Scales multi-agent collaboration through topological agent networks with predefined links | [Scaling Large Language Model-based Multi-Agent Collaboration](https://arxiv.org/abs/2406.07155) | - |
-| 2023-08 | **MetaGPT** | Encodes SOPs as meta-programming to structure role-based multi-agent workflows | [MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352) | - |
-| 2023 | **AgentVerse** | Facilitates rule-driven multi-agent collaboration and studies emergent group behaviours | [Agentverse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors](https://openreview.net/forum?id=EHg5GDnyq1) | - |
+| 2025-10 | **MOSAIC** | Task-intelligent orchestration routes specialised agents to explore scientific coding workflows within a rule-governed collaboration space | [MOSAIC: Multi-agent Orchestration for Task-Intelligent Scientific Coding](https://arxiv.org/abs/2510.08804) | - |
+| 2025-06 | **AgentOrchestra** | Defines the reachable coordination space via a Tool-Environment-Agent (TEA) protocol, scaffolding scalable multi-agent exploration | [AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent (TEA) Protocol](https://arxiv.org/abs/2506.12508) | - |
+| 2025 | **Croto** | Cross-team communication rules carve out a reachable space of inter-team collaboration for multi-agent exploration | Multi-agent collaboration via cross-team orchestration | - |
+| 2024-06 | **MACNET** | Predefined topological links bound the agent interaction graph that large-scale multi-agent collaboration can traverse | [Scaling Large Language Model-based Multi-Agent Collaboration](https://arxiv.org/abs/2406.07155) | - |
+| 2023-08 | **MetaGPT** | Encodes SOPs as meta-programming so role-based workflows follow reliably reachable collaboration trajectories | [MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework](https://arxiv.org/abs/2308.00352) | - |
+| 2023 | **AgentVerse** | Rule-driven collaboration scaffolds multi-agent exploration of emergent group behaviours within a reachable role space | [Agentverse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors](https://openreview.net/forum?id=EHg5GDnyq1) | - |
 
 #### 5.1.2 Learnable Orchestration (Competence-Driven)
 
@@ -761,11 +761,11 @@ Methods that train orchestrators, meta-agents, or agent graphs to route tasks to
 
 | Date | Method | Key Idea | Paper | Github |
 |:---:|:-------|:---------|:------|:---:|
-| 2026-01 | **MAS-Orchestra** | Improves multi-agent reasoning through holistic orchestration and controlled benchmarks | [MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks](https://arxiv.org/abs/2601.14652) | - |
-| 2025-05 | **Puppeteer-Puppet** | Evolves a puppeteer that dynamically orchestrates puppet agents during collaboration | [Multi-Agent Collaboration via Evolving Orchestration](https://arxiv.org/abs/2505.19591) | - |
-| 2025-04 | **W4S** | Trains a weak meta-agent to decompose tasks and harness strong executor agents | [Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors](https://arxiv.org/abs/2504.04785) | - |
-| 2024-04 | **CMAT** | Collaboration tuning framework that strengthens small-model agents via multi-agent signals | [CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models](https://arxiv.org/abs/2404.01663) | - |
-| 2024-02 | **GPTSwarm** | Treats language agents as optimizable computation graphs of prompts and edges | [Language Agents as Optimizable Graphs](https://arxiv.org/abs/2402.16823) | - |
+| 2026-01 | **MAS-Orchestra** | Expands multi-agent reasoning competence through holistic orchestration, with controlled benchmarks probing the explored system space | [MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks](https://arxiv.org/abs/2601.14652) | - |
+| 2025-05 | **Puppeteer-Puppet** | Evolves a puppeteer that explores dynamic orchestration strategies over puppet agents to extend collaborative competence | [Multi-Agent Collaboration via Evolving Orchestration](https://arxiv.org/abs/2505.19591) | - |
+| 2025-04 | **W4S** | Trains a weak meta-agent to explore task decompositions and harness strong executor agents beyond its own competence | [Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors](https://arxiv.org/abs/2504.04785) | - |
+| 2024-04 | **CMAT** | Collaboration tuning expands small-model agent competence by exploring multi-agent interaction signals | [CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models](https://arxiv.org/abs/2404.01663) | - |
+| 2024-02 | **GPTSwarm** | Treats language agents as optimizable computation graphs, enabling competence-driven search over prompts and inter-agent edges | [Language Agents as Optimizable Graphs](https://arxiv.org/abs/2402.16823) | - |
 
 #### 5.1.3 Reflection & Information-Theoretic Orchestration (Uncertainty-Driven)
 
@@ -773,10 +773,10 @@ Methods that adapt orchestration policies through reflection feedback or informa
 
 | Date | Method | Key Idea | Paper | Github |
 |:---:|:-------|:---------|:------|:---:|
-| 2025-09 | **Orchestrator** | Uses active inference to coordinate agents under uncertainty in long-horizon tasks | [Orchestrator: Active Inference for Multi-Agent Systems in Long-Horizon Tasks](https://arxiv.org/abs/2509.05651) | - |
-| 2025-04 | **W4S** | Weak meta-agent learns to orchestrate strong executors via reflection on outcomes | [Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors](https://arxiv.org/abs/2504.04785) | - |
-| 2025-03 | **MAS-GPT** | Trains LLMs to build multi-agent systems tailored to each query's uncertainty profile | [MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems](https://arxiv.org/abs/2503.03686) | - |
-| 2024-04 | **CMAT** | Collaboration tuning with reflective feedback to calibrate small-agent competence | [CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models](https://arxiv.org/abs/2404.01663) | - |
+| 2025-09 | **Orchestrator** | Uses active inference to drive multi-agent exploration under epistemic uncertainty across long-horizon tasks | [Orchestrator: Active Inference for Multi-Agent Systems in Long-Horizon Tasks](https://arxiv.org/abs/2509.05651) | - |
+| 2025-04 | **W4S** | Weak meta-agent explores orchestration policies over strong executors, guided by reflection on uncertain outcomes | [Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors](https://arxiv.org/abs/2504.04785) | - |
+| 2025-03 | **MAS-GPT** | Trains LLMs to synthesise multi-agent systems per query, exploring the system-design space conditioned on task uncertainty | [MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems](https://arxiv.org/abs/2503.03686) | - |
+| 2024-04 | **CMAT** | Reflective multi-agent tuning explores feedback-driven collaboration to calibrate small-agent competence under uncertainty | [CMAT: A Multi-Agent Collaboration Tuning Framework for Enhancing Small Language Models](https://arxiv.org/abs/2404.01663) | - |
 
 #### 5.1.4 Memory & Knowledge Substrate Exploration
 
@@ -784,12 +784,12 @@ Methods that build self-evolving multi-agent systems on shared memory or knowled
 
 | Date | Method | Key Idea | Paper | Github |
 |:---:|:-------|:---------|:------|:---:|
-| 2025-05 | **PiFlow** | Principle-aware orchestration maintains a scientific knowledge substrate across agents | [PiFlow: Principle-aware Scientific Discovery with Multi-Agent Collaboration](https://arxiv.org/abs/2505.15047) | [![GitHub Stars](https://img.shields.io/github/stars/amair-lab/PiFlow?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/amair-lab/PiFlow) |
-| 2025-03 | **MedAgentSim** | Self-evolving clinical multi-agent simulation accumulates case-level memory over time | [Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions](https://arxiv.org/abs/2503.22678) | [![GitHub Stars](https://img.shields.io/github/stars/MAXNORM8650/MedAgentSim?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MAXNORM8650/MedAgentSim) |
-| 2025 | **SEMC** | Self-evolving medical consultation framework grows a shared diagnostic knowledge base | A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models | - |
-| 2025-02 | **MobileSteward** | Orchestrates app-oriented agents with self-evolving memory for cross-app instructions | [MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions](https://arxiv.org/abs/2502.16796) | [![GitHub Stars](https://img.shields.io/github/stars/XiaoMi/MobileSteward?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/XiaoMi/MobileSteward) |
-| 2025-01 | **Mobile-Agent-E** | Self-evolving mobile assistant accumulates tips and shortcuts across complex tasks | [Mobile-Agent-E: Self-Evolving Mobile Assistant for Complex Tasks](https://arxiv.org/abs/2501.11733) | [![GitHub Stars](https://img.shields.io/github/stars/X-PLUG/MobileAgent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) |
-| 2023-04 | **Generative Agents** | Interactive simulacra with memory-retrieval substrates drive emergent social behaviour | [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442) | [![GitHub Stars](https://img.shields.io/github/stars/joonspk-research/generative_agents?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/joonspk-research/generative_agents) |
+| 2025-05 | **PiFlow** | Principle-aware orchestration grows a scientific knowledge substrate that guides multi-agent discovery exploration | [PiFlow: Principle-aware Scientific Discovery with Multi-Agent Collaboration](https://arxiv.org/abs/2505.15047) | [![GitHub Stars](https://img.shields.io/github/stars/amair-lab/PiFlow?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/amair-lab/PiFlow) |
+| 2025-03 | **MedAgentSim** | Self-evolving clinical multi-agent simulation explores new cases by accumulating case-level memory as a shared substrate | [Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions](https://arxiv.org/abs/2503.22678) | [![GitHub Stars](https://img.shields.io/github/stars/MAXNORM8650/MedAgentSim?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MAXNORM8650/MedAgentSim) |
+| 2025 | **SEMC** | Self-evolving consultation grows a shared diagnostic knowledge base, expanding the reachable medical case space over time | A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models | - |
+| 2025-02 | **MobileSteward** | Orchestrates app-oriented agents with self-evolving memory to explore cross-app instruction compositions | [MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions](https://arxiv.org/abs/2502.16796) | [![GitHub Stars](https://img.shields.io/github/stars/XiaoMi/MobileSteward?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/XiaoMi/MobileSteward) |
+| 2025-01 | **Mobile-Agent-E** | Self-evolving mobile assistant explores complex tasks by accumulating reusable tips and shortcuts as a growing experience substrate | [Mobile-Agent-E: Self-Evolving Mobile Assistant for Complex Tasks](https://arxiv.org/abs/2501.11733) | [![GitHub Stars](https://img.shields.io/github/stars/X-PLUG/MobileAgent?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/X-PLUG/MobileAgent/tree/main/Mobile-Agent-E) |
+| 2023-04 | **Generative Agents** | Interactive simulacra use memory-retrieval substrates to explore and surface emergent social behaviour over long horizons | [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442) | [![GitHub Stars](https://img.shields.io/github/stars/joonspk-research/generative_agents?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/joonspk-research/generative_agents) |
 
 
 
