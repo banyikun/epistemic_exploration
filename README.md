@@ -60,28 +60,61 @@
 
 ## 📑 Table of Contents
 
+- [📣 Notices](#-notices)
+- [📑 Table of Contents](#-table-of-contents)
 - [1. Overview](#1-overview)
   - [1.1 What is Epistemic Exploration?](#11-what-is-epistemic-exploration)
   - [1.2 Three Criteria](#12-three-criteria)
-  - [1.3 Five-Level Trajectory Toward AGI](#13-five-level-trajectory-toward-agi)
-  - [1.4 3×5 Taxonomy](#14-3×5-taxonomy)
-- [2. Level 1–2: Responder → Reasoner (Reasoning-Space Exploration)](#2-levels-12-responder--reasoner--reasoning-space-exploration)
+  - [1.3 Unified Epistemic Exploration Objective](#13-unified-epistemic-exploration-objective)
+  - [1.4 Five-Level Trajectory Toward AGI](#14-five-level-trajectory-toward-agi)
+  - [1.5 3×5 Taxonomy](#15-35-taxonomy)
+- [2. Levels 1–2: Responder → Reasoner — Reasoning-Space Exploration](#2-levels-12-responder--reasoner--reasoning-space-exploration)
   - [2.1 Uncertainty-Driven Exploration](#21-uncertainty-driven-exploration)
   - [2.2 Competence-Driven Exploration](#22-competence-driven-exploration)
   - [2.3 Reachability-Driven Exploration](#23-reachability-driven-exploration)
-- [3. Level 3: Reasoner → Agent (Perception- & Action-Space Exploration)](#3-level-3-reasoner--agent--perception--action-space-exploration)
+- [3. Level 3: Reasoner → Agent — Perception- \& Action-Space Exploration](#3-level-3-reasoner--agent--perception---action-space-exploration)
   - [3.1 Digital Agents](#31-digital-agents)
     - [3.1.1 Uncertainty-Driven Exploration](#311-uncertainty-driven-exploration)
     - [3.1.2 Competence-Driven Exploration](#312-competence-driven-exploration)
     - [3.1.3 Reachability-Driven Exploration](#313-reachability-driven-exploration)
   - [3.2 Embodied Agents](#32-embodied-agents)
-- [4. Level 4: Agent → Prospector (Imagination-Space Exploration)](#4-level-4-agent--prospector--imagination-space-exploration)
-- [5. Level 5: Prospector → Ecosystem (Coordination-Space Exploration)](#5-level-5-prospector--ecosystem--coordination-space-exploration)
+    - [3.2.1 Uncertainty-Driven Exploration](#321-uncertainty-driven-exploration)
+    - [3.2.2 Competence-Driven Exploration](#322-competence-driven-exploration)
+    - [3.2.3 Reachability-Driven Exploration](#323-reachability-driven-exploration)
+- [4. Level 4: Agent → Prospector — Imagination-Space Exploration](#4-level-4-agent--prospector--imagination-space-exploration)
+  - [4.1 Why: The Dual Exploration Problem](#41-why-the-dual-exploration-problem)
+    - [4.1.1 Compounding Errors and Reality Drift](#411-compounding-errors-and-reality-drift)
+    - [4.1.2 The Noise-Hijacking Trap](#412-the-noise-hijacking-trap)
+    - [4.1.3 Fatal Detail Loss in Latent Space](#413-fatal-detail-loss-in-latent-space)
+  - [4.2 Where: Exploration Across Different Spaces](#42-where-exploration-across-different-spaces)
+    - [4.2.1 Simulated Future Rollouts](#421-simulated-future-rollouts)
+    - [4.2.2 Counterfactual Hazard Zones](#422-counterfactual-hazard-zones)
+    - [4.2.3 Latent Value Landscapes](#423-latent-value-landscapes)
+    - [4.2.4 Action-Grounded Latent Manifolds](#424-action-grounded-latent-manifolds)
+  - [4.3 How: Exploration Across World-Model Domains](#43-how-exploration-across-world-model-domains)
+    - [4.3.1 Model-Based Reinforcement Learning (MBRL)](#431-model-based-reinforcement-learning-mbrl)
+      - [Deterministic Dynamics and Iterative Exploration](#deterministic-dynamics-and-iterative-exploration)
+      - [Uncertainty-Aware Exploration](#uncertainty-aware-exploration)
+      - [From Pixels to Latent Planning: Representation Learning for World Models](#from-pixels-to-latent-planning-representation-learning-for-world-models)
+      - [Imagination-Based Exploration: The Dreamer Family](#imagination-based-exploration-the-dreamer-family)
+      - [Predictive Architectures: JEPA](#predictive-architectures-jepa)
+    - [4.3.2 Video Generation as World Simulation](#432-video-generation-as-world-simulation)
+      - [Model as Environment](#model-as-environment)
+      - [Model as Agent](#model-as-agent)
+      - [Inference as Exploration](#inference-as-exploration)
+      - [Active Closed-Loop Simulation via World Action Models (WAMs)](#active-closed-loop-simulation-via-world-action-models-wams)
+    - [4.3.3 Autonomous Driving: Vectorised and Occupancy Exploration](#433-autonomous-driving-vectorised-and-occupancy-exploration)
+      - [Generative Foundations and End-to-End Latent Planning](#generative-foundations-and-end-to-end-latent-planning)
+      - [Counterfactual Reasoning and Uncertainty Awareness](#counterfactual-reasoning-and-uncertainty-awareness)
+      - [4D Occupancy Exploration and Physical Consistency](#4d-occupancy-exploration-and-physical-consistency)
+      - [Closed-Loop Neural Simulation](#closed-loop-neural-simulation)
+    - [4.3.4 Social Dynamics: Exploration in Strategic and Normative Environments](#434-social-dynamics-exploration-in-strategic-and-normative-environments)
+- [5. Level 5: Prospector → Ecosystem — Coordination-Space Exploration](#5-level-5-prospector--ecosystem--coordination-space-exploration)
   - [5.1 Multi-Agent Orchestration](#51-multi-agent-orchestration)
     - [5.1.1 Rule-based Orchestration (Reachability-Driven)](#511-rule-based-orchestration-reachability-driven)
     - [5.1.2 Learnable Orchestration (Competence-Driven)](#512-learnable-orchestration-competence-driven)
-    - [5.1.3 Reflection & Information-Theoretic Orchestration (Uncertainty-Driven)](#513-reflection--information-theoretic-orchestration-uncertainty-driven)
-    - [5.1.4 Memory & Knowledge Substrate Exploration](#514-memory--knowledge-substrate-exploration)
+    - [5.1.3 Reflection \& Information-Theoretic Orchestration (Uncertainty-Driven)](#513-reflection--information-theoretic-orchestration-uncertainty-driven)
+    - [5.1.4 Memory \& Knowledge Substrate Exploration](#514-memory--knowledge-substrate-exploration)
   - [5.2 Agentic Ensemble Papers](#52-agentic-ensemble-papers)
     - [5.2.1 Ensemble-During-Inference Papers](#521-ensemble-during-inference-papers)
     - [5.2.2 Ensemble-After-Inference Papers](#522-ensemble-after-inference-papers)
@@ -89,7 +122,11 @@
     - [5.2.4 Cascaded-Based Papers](#524-cascaded-based-papers)
   - [5.3 MARL](#53-marl)
   - [5.4 Self-Evolving](#54-self-evolving)
-- [6. Cross-Cutting Topics](#6-cross-cutting-topics)
+- [6. Exploration Evaluation](#6-exploration-evaluation)
+  - [Foundations](#foundations)
+  - [Biological Exploration Parallels](#biological-exploration-parallels)
+  - [Evaluation Principles](#evaluation-principles)
+  - [Open Challenges](#open-challenges)
 - [7. Citation](#7-citation)
 
 ---
@@ -944,7 +981,20 @@ Methods that explore an ordered chain of models—typically from cheaper/weaker 
 | 2022-10 | **Model Cascading** | Explores early exit across models of increasing capacity, reserving large-model compute for harder inputs | [Model Cascading: Towards Jointly Improving Efficiency and Accuracy of NLP Systems](https://arxiv.org/abs/2210.05528) | - |
 
 ### 5.3 MARL
-
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
+| 2025-12 | **SDAX** | Treats unsupervised skill discovery as high-level exploration and bi-level tunes diversity-vs-task rewards to learn agile locomotion behaviors | [Unsupervised Skill Discovery as Exploration for Learning Agile Locomotion](https://arxiv.org/abs/2508.08982) | - |
+| 2025-09 | **CERMIC** | Calibrates curiosity with inferred peer-intention context to filter noisy novelty and reward high information-gain transitions in sparse-reward MARL | [Wonder Wins Ways: Curiosity-Driven Exploration through Multi-Agent Contextual Calibration](https://arxiv.org/abs/2509.20648) | [![GitHub Stars](https://img.shields.io/github/stars/PyyWill/CERMIC?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/PyyWill/CERMIC) |
+| 2025-02 | **TEE** | Maximizes cross-agent trajectory entropy in a contrastive latent space via particle-based estimation, yielding intrinsic rewards for diverse coordinated exploration | [Toward Efficient Multi-Agent Exploration with Trajectory Entropy Maximization](https://arxiv.org/abs/2502.08365v1) | - |
+| 2025-02 | **Consensus-Diversity Tradeoff** | Shows implicit consensus with partial disagreement can preserve exploration diversity and improve robustness in dynamic multi-agent settings | [The Hidden Strength of Disagreement: Unraveling the Consensus-Diversity Tradeoff in Adaptive Multi-Agent Systems](https://arxiv.org/abs/2502.16565) | [![GitHub Stars](https://img.shields.io/github/stars/wuzengqing001225/ConsensusDiversityTradeoffMAS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/wuzengqing001225/ConsensusDiversityTradeoffMAS) |
+| 2023-02 | **EMAX** | Uses per-agent value ensembles for UCB-guided exploration, low-variance ensemble targets, and majority-vote action selection to reduce miscoordination | [Ensemble Value Functions for Efficient Exploration in Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2302.03439) | - |
+| 2022-08 | **MACE** | Combines collaborative voxel mapping, global goal assignment, and time-aware safe-corridor planning for collision-safe multi-robot exploration of unknown spaces | [MACE: Multi-Agent Autonomous Collaborative Exploration of Unknown Environments](https://arxiv.org/abs/2208.06949) | - |
+| 2021-11 | **EMC** | Uses prediction errors of induced individual Q-values as coordinated intrinsic rewards, plus episodic memory to reinforce informative experiences | [Episodic Multi-agent Reinforcement Learning with Curiosity-Driven Exploration](https://arxiv.org/abs/2111.11032) | [![GitHub Stars](https://img.shields.io/github/stars/kikojay/EMC?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/kikojay/EMC) |
+| 2021-07 | **CMAE** | Selects shared exploration goals from entropy-scored projected state spaces and trains agents to reach them in a coordinated way | [Cooperative Exploration for Multi-Agent Deep Reinforcement Learning](https://arxiv.org/abs/2107.11444) | [![GitHub Stars](https://img.shields.io/github/stars/IouJenLiu/CMAE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/IouJenLiu/CMAE) |
+| 2021-04 | **MASAC** | Integrates soft actor-critic with value decomposition and counterfactual credit assignment for efficient off-policy cooperative learning | [Decomposed Soft Actor-Critic Method for Cooperative Multi-Agent Reinforcement Learning](https://arxiv.org/abs/2104.06655) | [![GitHub Stars](https://img.shields.io/github/stars/puyuan1996/MARL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/puyuan1996/MARL) |
+| 2019-10 | **MAVEN** | Introduces latent-variable hierarchical control to induce temporally committed exploration modes while retaining value-decomposition scalability | [MAVEN: Multi-Agent Variational Exploration](https://arxiv.org/abs/1910.07483) | [![GitHub Stars](https://img.shields.io/github/stars/AnujMahajanOxf/MAVEN?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/AnujMahajanOxf/MAVEN) |
+| 2019-10 | **EITI/EDTI** | Encourages coordinated exploration by maximizing inter-agent influence, using mutual information (EITI) and value-of-interaction rewards (EDTI) | [Influence-Based Multi-Agent Exploration](https://arxiv.org/abs/1910.05512) | [![GitHub Stars](https://img.shields.io/github/stars/TonghanWang/EITI-EDTI?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/TonghanWang/EITI-EDTI) |
+| 2017-05 | **ICM** | Defines curiosity as forward-model prediction error in inverse-dynamics features, promoting exploration without relying on extrinsic rewards | [Curiosity-driven Exploration by Self-supervised Prediction](https://arxiv.org/abs/1705.05363) | [![GitHub Stars](https://img.shields.io/github/stars/pathak22/noreward-rl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/pathak22/noreward-rl) |
 
 ### 5.4 Self-Evolving
 
