@@ -1125,6 +1125,13 @@ Classical multi-agent RL suites and newer language-agent collaboration benchmark
 | 2025-02 | **MLGym** | Evaluates research-agent collaboration on decomposition quality and information sharing across long horizons, testing whether specialisation reduces redundancy | [MLGym: A New Framework and Benchmark for Advancing AI Research Agents](https://arxiv.org/abs/2502.14499) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/MLGym?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/MLGym) |
 | 2026-02 | **AIRS-Bench** | Measures frontier research agents on long-horizon coordination tasks, revealing whether role diversity is preserved or collapses into premature consensus | [AIRS-Bench: A Suite of Tasks for Frontier AI Research Science Agents](https://arxiv.org/abs/2602.06855) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/airs-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/airs-bench) |
 
+### Biological Exploration Parallels
+- **Sensory-motor embodiment** → Lévy flights, whisking, saccades
+- **Intrinsic curiosity** → Dopaminergic information prediction errors
+- **Meta-control** → Locus coeruleus-norepinephrine regulation
+- **Cognitive simulation** → Hippocampal preplay sequences
+- **Social exploration** → Swarm intelligence, Theory of Mind
+
 ### Open Challenges
 - Open-domain scalable exploration for reasoning beyond verifiable tasks
 - Safe exploration with predictive world action models
