@@ -1023,12 +1023,7 @@ Methods that explore an ordered chain of models—typically from cheaper/weaker 
 
 ---
 
-<br>
-
-
 ## 6. Exploration Evaluation
-
-<p align="center"><i>Figure: §6 organises evaluation around three principles (C1 Information Gain, C2 Value Improvement, C3 Epistemic Reachability) and five infrastructure components (Task, Metrics, Grader, Outcome, Environment), then applies them to each of the four trajectory spaces from §2–§5.</i></p>
 
 ### 6.1 Principles & Infrastructure
 
@@ -1059,7 +1054,7 @@ Frontier reasoning suites, code benchmarks with executable feedback, and classic
 |:---:|:-------|:---------|:------|:---:|
 | 2024-11 | **FrontierMath** | Exposes the pass@1-to-pass@k gap at capability frontiers, measuring whether reasoning search reaches answers beyond one-shot competence | [FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI](https://arxiv.org/abs/2411.04872) | - |
 | 2024-02 | **OlympiadBench** | Probes whether extended reasoning chains resolve genuine uncertainty or merely rephrase prior content at olympiad-level difficulty | [OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems](https://arxiv.org/abs/2402.14008) | [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/OlympiadBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/OlympiadBench) |
-| 2025-01 | **Humanity's Last Exam** | Tests epistemic reachability by revealing which answers remain inaccessible even when exploratory reasoning branches are exhausted | [Humanity's Last Exam](https://www.lastexam.ai/) | - |
+| 2025-01 | **Humanity's Last Exam** | Tests epistemic reachability by revealing which answers remain inaccessible even when exploratory reasoning branches are exhausted | [Humanity's Last Exam](https://www.lastexam.ai/) | [![GitHub Stars](https://img.shields.io/github/stars/centerforaisafety/hle?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/centerforaisafety/hle) |
 | 2024-03 | **LiveCodeBench** | Adds executable feedback to reasoning evaluation, making self-correction gain directly measurable as a signal of productive exploration | [LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code](https://arxiv.org/abs/2403.07974) | [![GitHub Stars](https://img.shields.io/github/stars/LiveCodeBench/LiveCodeBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/LiveCodeBench/LiveCodeBench) |
 | 2023-10 | **SWE-bench** | Provides verifiable revision signals on real-world tasks, enabling direct measurement of whether reasoning exploration improves reachable solutions | [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770) | [![GitHub Stars](https://img.shields.io/github/stars/SWE-bench/SWE-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SWE-bench/SWE-bench) |
 | 2024-10 | **MLE-bench** | Assesses whether iterative reasoning under ML engineering constraints translates into harder-problem success beyond single-attempt competence | [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095) | [![GitHub Stars](https://img.shields.io/github/stars/openai/mle-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/mle-bench) |
