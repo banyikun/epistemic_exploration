@@ -561,7 +561,6 @@ Latent spaces must be action-grounded "Embodied-Native" manifolds — every imag
 
 The most direct approach minimises one-step prediction error iteratively; the policy and model alternate, with the updated policy exploring the environment to collect increasingly informative data.
 
-
 | Date | Method | Key Idea | Paper | Github |
 |:---:|:-------:|:---------|:------|:---:|
 | 2019-06 | **MBPO**   | Short imagined rollouts prevent compounding error; iterative model–policy alternation guides exploration toward regions of true dynamics not yet covered | [When to Trust Your Model: Model-Based Policy Optimization](https://arxiv.org/abs/1906.08253) | [![GitHub Stars](https://img.shields.io/github/stars/jannerm/mbpo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/jannerm/mbpo)             |
@@ -598,7 +597,8 @@ The Dreamer lineage demonstrates progressively sophisticated exploration within 
 
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------:|:---------|:------|:---:|| 2025-09 | **DreamerV4**  | Phased training (WM pre-train → policy post-train) solves dual exploration problem; policy leverages WM priors for efficient exploration of long-horizon imagined trajectories | [Training Agents Inside of Scalable World Models](https://arxiv.org/abs/2509.24527) | -                                                     |
+|:---:|:-------:|:---------|:------|:---:|
+| 2025-09 | **DreamerV4**  | Phased training (WM pre-train → policy post-train) solves dual exploration problem; policy leverages WM priors for efficient exploration of long-horizon imagined trajectories | [Training Agents Inside of Scalable World Models](https://arxiv.org/abs/2509.24527) | -                                                     |
 | 2023-01 | **DreamerV3**  | Percentile return normalisation stabilises exploration intensity across sparse and dense reward scales; adapts entropy regularisation automatically | [Mastering Diverse Domains through World Models](https://arxiv.org/abs/2301.04104) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamerv3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamerv3)  |
 | 2020-10 | **DreamerV2**  | Discrete categorical latents + actor entropy bonus as explicit exploration regulariser; prevents premature policy collapse in imagined rollouts | [Mastering Atari with Discrete World Models](https://arxiv.org/abs/2010.02193) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamerv2?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamerv2)  |
 | 2019-12 | **DreamerV1**  | RSSM world model with action noise for environment exploration; broader state-space coverage improves quality of imagined training data | [Dream to Control: Learning Behaviors by Latent Imagination](https://arxiv.org/abs/1912.01603) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamer?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamer)    |
