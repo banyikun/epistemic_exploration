@@ -20,6 +20,7 @@
   <!-- <a href="#"><img src="https://img.shields.io/badge/📄_Paper-ArXiv-red" alt="Paper"></a> -->
   <!-- <a href="#"><img src="https://img.shields.io/badge/🌐_Website-Project_Page-blue" alt="Website"></a> -->
   <a href="https://github.com/banyikun/epistemic_exploration"><img src="https://img.shields.io/badge/GitHub-Repository-181717?logo=github" alt="GitHub"></a>
+  <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License"></a>
   <a href="#"><img src="https://img.shields.io/badge/Maintained%3F-Yes-brightgreen.svg" alt="Maintained"></a>
   <a href="#"><img src="https://img.shields.io/badge/PRs-Welcome-orange.svg" alt="PRs Welcome"></a>
@@ -39,7 +40,7 @@
 
 
 
----
+
 
 ## 📣 Notices
 
@@ -51,7 +52,7 @@
 
 > **[Always] [Maintain]** We will keep this list updated frequently!
 
----
+
 
 
 <br>
@@ -141,6 +142,7 @@
 
 Unlike undirected exploration (e.g., ε-greedy), epistemic exploration is *intentional*, *belief-driven*, and *multi-scale*: the agent reasons about which actions are most informative and plans multi-step information-gathering strategies across reasoning trajectories, tool-use policies, embodied sensorimotor loops, world-model rollouts, and multi-agent coordination protocols.
 
+
 ### 1.2 Three Criteria
 
 <p align="center"><img src="fig/3criteria.png" width="800"/></p>
@@ -206,8 +208,9 @@ Our survey is organized as a **3×5 taxonomy** crossing three signal-driven meth
 
 
 ---
-
 <br>
+
+
 
 ## 2. Levels 1–2: Responder → Reasoner — Reasoning-Space Exploration
 
@@ -216,12 +219,14 @@ The transition from **Responder** to **Reasoner** requires exploration in *reaso
 <p align="center"><img src="fig/level1_reasoner.png" width="850"/></p>
 <p align="center"><i>Figure: Levels 1–2 Reasoning-Space Exploration — Why (entropy escalation & reward stagnation), Where (tokens → turns → latent trajectories), and How (uncertainty / competence / reachability-driven).</i></p>
 
+<br>
+
 ### 2.1 Uncertainty-Driven Exploration
 
 Methods that prioritise exploration at high-uncertainty branching points in the reasoning process:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-08 | **CURE** | Expands the training-state distribution at critical decision points to sustain exploration | [CURE: Critical-Token-Guided Re-Concatenation for Entropy-Collapse Prevention](https://arxiv.org/pdf/2508.11016) | [![GitHub Stars](https://img.shields.io/github/stars/bytedance/CURE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/bytedance/CURE) |
 | 2026-03 | **SPINE** | Preserves exploration by selectively updating high-entropy branch tokens | [SPINE: Token-Selective Test-Time Reinforcement Learning with Entropy-Band Regularization](https://arxiv.org/abs/2511.17938) | - |
 | 2025-06 | **TreeRL** | Explores reasoning via on-policy tree search from uncertain intermediate states | [TreeRL: LLM Reinforcement Learning with On-Policy Tree Search](https://arxiv.org/abs/2506.11902) | [![GitHub Stars](https://img.shields.io/github/stars/THUDM/TreeRL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/THUDM/TreeRL) |
@@ -231,34 +236,44 @@ Methods that prioritise exploration at high-uncertainty branching points in the 
 | 2025-11 | **ICPO** | Promotes exploration by combining verifiable rewards with confidence-based preference advantages | [ICPO: Intrinsic Confidence-Driven Group Relative Preference Optimization for Efficient Reinforcement Learning](https://arxiv.org/abs/2511.21005) | - |
 | 2026-02 | **REAL** | Stabilizes exploration via balanced gradient allocation | [Rewards as labels: Revisiting rlvr from a classification perspective](https://arxiv.org/pdf/2602.05630) | - |
 
+<br>
+
 ### 2.2 Competence-Driven Exploration
 
 Methods that match problem difficulty to the model's evolving competence frontier:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-06 | **E2H** | Guides exploration through an easy-to-hard curriculum | [Curriculum Reinforcement Learning from Easy to Hard Tasks Improves LLM Reasoning](https://arxiv.org/abs/2506.06632) | [![GitHub Stars](https://img.shields.io/github/stars/divelab/E2H-Reasoning?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/divelab/E2H-Reasoning) |
 | 2025-10 | **RLAAR** | Steers exploration through curriculum learning and rewarded abstention | [Verifiable Accuracy and Abstention Rewards in Curriculum RL to Alleviate Lost-in-Conversation](https://arxiv.org/pdf/2510.18731) | - |
 | 2025-05 | **CDAS** | Explores the competence frontier by sampling problems matched to the model’s current ability | [Rethinking the Sampling Criteria in Reinforcement Learning for LLM Reasoning: A Competence-Difficulty Alignment Perspective](https://arxiv.org/pdf/2505.17652) | [![GitHub Stars](https://img.shields.io/github/stars/DeyangKong/CDAS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/DeyangKong/CDAS) |
 | 2026-01 | **HA-DW** | Reduces exploration imbalance by debiasing group-relative advantages across prompt difficulty | [Your Group-Relative Advantage Is Biased](https://arxiv.org/abs/2601.08521) | - |
 | 2025-08 | **SvS** | Sustains exploration by self-synthesizing diverse but answer-equivalent problems during RLVR | [Beyond Pass@1: Self-play with Variational Problem Synthesis Sustains RLVR](https://arxiv.org/pdf/2508.14029) | [![GitHub Stars](https://img.shields.io/github/stars/MasterVito/SvS?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MasterVito/SvS) |
 
+<br>
 
 ### 2.3 Reachability-Driven Exploration
 
 Methods that prevent irreversible contraction of reasoning trajectory distributions:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-10 | **TROLL** | Stabilizes exploration with principled trust-region updates instead of PPO-style clipping | [TROLL: Trust Regions improve Reinforcement Learning for Large Language Models](https://arxiv.org/abs/2510.03817) | - |
 | 2024-04 | **ROPO** | Preserves useful exploration by downweighting noisy preference signals instead of overfitting to them | [ROPO: Robust Preference Optimization for Large Language Models](https://arxiv.org/abs/2404.04102) | - |
 | 2025-05 | **KTAE** | Explores better by assigning credit to key reasoning tokens rather than whole rollouts | [KTAE: A Model-Free Algorithm to Key-Tokens Advantage Estimation in Mathematical Reasoning](https://arxiv.org/abs/2505.16826) | [![GitHub Stars](https://img.shields.io/github/stars/ZNLP/KTAE?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ZNLP/KTAE.git) |
 | 2025-08 | **VRPRM** | Guides exploration with visual step-level rewards that encourage deeper reasoning paths | [VRPRM: Process Reward Modeling via Visual Reasoning](https://arxiv.org/abs/2508.03556) | - |
 | 2026-01 | **RLVRR** | Turns sparse end rewards into a verifiable reward chain that supports broader open-ended exploration | [From Verifiable Dot to Reward Chain: Harnessing Verifiable Reference-based Rewards for Reinforcement Learning of Open-ended Generation](https://arxiv.org/abs/2601.18533) | [![GitHub Stars](https://img.shields.io/github/stars/YJiangcm/RLVRR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/YJiangcm/RLVRR) |
 
+
+
+
 ---
 
 <br>
+
+
+
+
 
 ## 3. Level 3: Reasoner → Agent — Perception- & Action-Space Exploration
 
@@ -273,7 +288,7 @@ Agents operating in software-mediated environments (web, APIs, code interpreters
 Methods that acquire information under partial observability by prioritising uncertain states, tool calls, or capability boundaries:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2026-01 | **JitRL** | Uses count-based uncertainty bonuses to explore unseen state-action pairs | [Just-In-Time Reinforcement Learning: Continual Learning in LLM Agents Without Gradient Updates](https://arxiv.org/abs/2601.18510) | [![GitHub Stars](https://img.shields.io/github/stars/liushiliushi/JitRL?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/liushiliushi/JitRL) |
 | 2023-05 | **RAP** | Explores alternative reasoning paths with MCTS and UCB guidance | [Reasoning with Language Model is Planning with World Model](https://doi.org/10.18653/v1/2023.emnlp-main.507) | [![GitHub Stars](https://img.shields.io/github/stars/Ber666/RAP?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Ber666/RAP) |
 | 2024-08 | **Agent Q** | Expands high-value action trajectories via MCTS-guided exploration | [Agent Q: Advanced Reasoning and Learning for Autonomous AI Agents](https://arxiv.org/abs/2408.07199) | - |
@@ -287,7 +302,7 @@ Methods that acquire information under partial observability by prioritising unc
 Methods that tame combinatorial tool-use spaces through curricula, process-level credit assignment, and self-generated training tasks:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-08 | **PilotRL** | Stages curricula to expand agent exploration from planning to tool use | [PilotRL: Training Language Model Agents via Global Planning-Guided Progressive Reinforcement Learning](https://arxiv.org/abs/2508.00344) | - |
 | 2025-09 | **ReSum-GRPO** | Sustains long-horizon search exploration through context summarization | [ReSum: Unlocking Long-Horizon Search Intelligence via Context Summarization](https://arxiv.org/abs/2509.13313) | - |
 | 2024-03 | **ETO** | Optimizes exploratory trial-and-error trajectories for agent learning | [Trial and Error: Exploration-Based Trajectory Optimization for LLM Agents](https://arxiv.org/abs/2403.02502) | [![GitHub Stars](https://img.shields.io/github/stars/Yifan-Song793/ETO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Yifan-Song793/ETO) |
@@ -304,12 +319,14 @@ Methods that tame combinatorial tool-use spaces through curricula, process-level
 Methods that preserve behavioural flexibility by regulating entropy or injecting useful off-policy experience:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-08 | **EGPO** | Adds entropy bonuses to encourage exploration in function-call reasoning | [Reasoning through Exploration: A Reinforcement Learning Framework for Robust Function Calling](https://arxiv.org/abs/2508.05118) | [![GitHub Stars](https://img.shields.io/github/stars/BingguangHao/RLFC?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/BingguangHao/RLFC) |
 | 2025-09 | **EPO** | Regularizes entropy to sustain exploration in multi-turn agent RL | [EPO: Entropy-regularized Policy Optimization for LLM Agents Reinforcement Learning](https://arxiv.org/abs/2509.22576) | [![GitHub Stars](https://img.shields.io/github/stars/WujiangXu/EPO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/WujiangXu/EPO) |
 | 2025-09 | **ENTROPO** | Uses entropy-enhanced preferences to diversify coding-agent exploration | [Building Coding Agents via Entropy-Enhanced Multi-Turn Preference Optimization](https://arxiv.org/abs/2509.12434) | - |
 | 2026-03 | **RAPO** | Expands policy exploration with retrieval-augmented experience | [RAPO: Expanding Exploration for LLM Agents via Retrieval-Augmented Policy Optimization](https://arxiv.org/abs/2603.03078) | - |
 | 2026-04 | **E³-TIR** | Branches from high-entropy prefixes to exploit exploratory experience | [E3-TIR: Enhanced Experience Exploitation for Tool-Integrated Reasoning](https://arxiv.org/abs/2604.09455) | [![GitHub Stars](https://img.shields.io/github/stars/yuki-younai/E3-TIR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yuki-younai/E3-TIR) |
+
+<br>
 
 ### 3.2 Embodied Agents
 
@@ -325,7 +342,7 @@ Before executing complex plans in open-ended environments, agents must overcome 
 **Geometric & high-fidelity reconstruction.** Viewpoint selection for active mapping, information-theoretic coverage, and ensemble-disagreement-based exploration of dynamics.
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2018-10 | **MAX** | Ensemble-disagreement drives active exploration of dynamics | [Model-Based Active Exploration](https://arxiv.org/abs/1810.12162) | [![GitHub Stars](https://img.shields.io/github/stars/nnaisense/MAX?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/nnaisense/MAX) |
 | 2020-04 | **Active Neural SLAM** | Coverage-maximising hierarchical policies explore unknown occupancy maps | [Learning To Explore Using Active Neural SLAM](https://arxiv.org/abs/2004.05155) | [![GitHub Stars](https://img.shields.io/github/stars/devendrachaplot/Neural-SLAM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/devendrachaplot/Neural-SLAM) |
 | 2021-03 | **APT** | Non-parametric entropy maximisation for unsupervised active pre-training | [Behavior From the Void: Unsupervised Active Pre-Training](https://arxiv.org/abs/2103.04551) | [![GitHub Stars](https://img.shields.io/github/stars/rll-research/url_benchmark?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/rll-research/url_benchmark) |
@@ -335,7 +352,7 @@ Before executing complex plans in open-ended environments, agents must overcome 
 **Semantic & multi-modal active inference.** Probing the environment to disambiguate alternative scene-graph completions or to gather cross-modal (audio / language) evidence.
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2023-11 | **Conan** | Active interactive exploration as Bayesian query to disambiguate latent scene state | [Active Reasoning in an Open-World Environment](https://arxiv.org/abs/2311.02018) | [![GitHub Stars](https://img.shields.io/github/stars/ariesssxu/Conan-Active-Reasoning?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ariesssxu/Conan-Active-Reasoning) |
 | 2024-04 | **ActiveRIR** | Cross-modal audio-visual exploration for acoustic scene mapping (room impulse responses) | [ActiveRIR: Active Audio-Visual Exploration for Building Room Impulse Responses](https://arxiv.org/abs/2404.16216) | - |
 | 2025-10 | **Active Semantic Perception** | Entropy-driven exploration over LLM-sampled scene graph hypotheses | [Active Semantic Perception](https://arxiv.org/abs/2510.05430) | [![GitHub Stars](https://img.shields.io/github/stars/grasp-lyrl/active_semantic_perception?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/grasp-lyrl/active_semantic_perception) |
@@ -347,7 +364,7 @@ Competence-driven exploration spans two tightly coupled phases: the agent must f
 **Objective-driven navigation.** Translating high-level language goals into executable subgoals and using semantic representations to prune the spatial search manifold.
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2022-04 | **SayCan** | Affordance value-function reweights LLM-proposed action exploration | [Do As I Can, Not As I Say: Grounding Language in Robotic Affordances](https://arxiv.org/abs/2204.01691) | [![GitHub Stars](https://img.shields.io/github/stars/google-research/google-research?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/google-research/google-research) |
 | 2022-07 | **Inner Monologue** | Closed-loop replanning via inner-speech feedback re-explores failed plans | [Inner Monologue: Embodied Reasoning through Planning with Language Models](https://arxiv.org/abs/2207.05608) | - |
 | 2022-07 | **LM-Nav** | Goal-directed exploration over LLM-annotated topological graphs | [LM-Nav: Robotic Navigation with Large Pre-Trained Models of Language, Vision, and Action](https://arxiv.org/abs/2207.04429) | [![GitHub Stars](https://img.shields.io/github/stars/blazejosinski/lm_nav?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/blazejosinski/lm_nav) |
@@ -358,7 +375,7 @@ Competence-driven exploration spans two tightly coupled phases: the agent must f
 **RL for VLA policy exploration.** Safely expanding manipulation boundaries via offline RL, online PPO/GRPO, and hybrid offline-to-online fine-tuning on Vision-Language-Action architectures.
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2023-03 | **Cal-QL** | Calibrated offline value exploration enabling safe online fine-tuning | [Cal-QL: Calibrated Offline RL Pre-Training for Efficient Online Fine-Tuning](https://arxiv.org/abs/2303.05479) | - |
 | 2023-09 | **Q-Transformer** | Scales autoregressive value-based exploration to static multi-task trajectories | [Q-Transformer: Scalable Offline RL via Autoregressive Q-Functions](https://arxiv.org/abs/2309.10150) | - |
 | 2024-09 | **DPPO** | Formulates denoising trajectories as auxiliary MDP for stable PPO on diffusion policies | [Diffusion Policy Policy Optimization](https://arxiv.org/abs/2409.00588) | [![GitHub Stars](https://img.shields.io/github/stars/irom-princeton/dppo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/irom-princeton/dppo) |
@@ -381,7 +398,7 @@ Competence-driven exploration spans two tightly coupled phases: the agent must f
 **Test-time compute & cognitive search.** Moving the exploration burden from training to deployment via MCTS, flow-guided steering, test-time RL, and "System-2" deliberation before physical execution.
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-10 | **V-GPS** | Offline value guidance steers generalist AR / diffusion VLA decoding at test time | [Steering Your Generalists: Improving Robotic Foundation Models via Value Guidance](https://arxiv.org/abs/2410.13816) | - |
 | 2025-05 | **Hume** | System-2 deliberative exploration via continuous flow value guidance | [Hume: Introducing System-2 Thinking in Visual-Language-Action Model](https://arxiv.org/abs/2505.21432) | [![GitHub Stars](https://img.shields.io/github/stars/hume-vla/hume?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/hume-vla/hume) |
 | 2025-08 | **MB-Search VLA** | Model-based MCTS over AR / Diffusion VLA imagines trajectories before acting | [Improving Pre-Trained VLA Policies with Model-Based Search](https://arxiv.org/abs/2508.12211) | - |
@@ -398,7 +415,7 @@ Defining *what* to explore and preventing exploration from irreversibly foreclos
 **Automated reward engineering & curiosity.** LLM-driven reward synthesis and curiosity / curriculum mechanisms sustain broad exploration incentives in unbounded physical manifolds.
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2018-10 | **RND** | Curiosity-driven exploration bonus via random network distillation | [Exploration by Random Network Distillation](https://arxiv.org/abs/1810.12894) | [![GitHub Stars](https://img.shields.io/github/stars/openai/random-network-distillation?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/random-network-distillation) |
 | 2020-02 | **Never Give Up** | Episodic + lifelong novelty bonuses sustain directed exploration across long horizons | [Never Give Up: Learning Directed Exploration Strategies](https://arxiv.org/abs/2002.06038) | - |
 | 2023-06 | **Language-to-Rewards** | LLM synthesises dense language-conditioned reward for skill exploration | [Language to Rewards for Robotic Skill Synthesis](https://arxiv.org/abs/2306.08647) | [![GitHub Stars](https://img.shields.io/github/stars/google-deepmind/language_to_reward_2023?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/google-deepmind/language_to_reward_2023) |
@@ -409,7 +426,7 @@ Defining *what* to explore and preventing exploration from irreversibly foreclos
 **Constrained safety.** Learned safety zones, recovery policies, and hard safety constraints bound trajectories while preserving the agent's reachable state set.
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2020-10 | **Recovery RL** | Learned recovery zones bound exploration without collapsing reachable set | [Recovery RL: Safe Reinforcement Learning with Learned Recovery Zones](https://arxiv.org/abs/2010.15920) | [![GitHub Stars](https://img.shields.io/github/stars/abalakrishna123/recovery-rl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/abalakrishna123/recovery-rl) |
 | 2024-04 | **RECOVER** | Neuro-symbolic failure detection bounds exploratory trajectories in manipulation | [RECOVER: Neuro-Symbolic Failure Recovery for Robotic Manipulation](https://arxiv.org/abs/2404.00756) | - |
 | 2025-03 | **SafeVLA** | Constrained policy exploration under hard safety guarantees for VLA | [SafeVLA: Towards Safety Alignment of VLA Model via Constrained Learning](https://arxiv.org/abs/2503.03480) | [![GitHub Stars](https://img.shields.io/github/stars/PKU-Alignment/SafeVLA?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/PKU-Alignment/SafeVLA) |
@@ -434,8 +451,8 @@ The Prospector internalises a **world model** and faces a **dual exploration pro
 World models act as recursive self-simulators where infinitesimal single-step errors compound exponentially over long imagined horizons, causing mental simulations to catastrophically diverge from reality. Agents must proactively probe epistemic boundaries and gather adversarial data that anchors "dreams" to physical constraints.
 
 
-| Date    | Method                 | Key Idea                                                                                                                                                                                                                                        | Paper                                     | Github                                                     |
-| ------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2023-01 | **DreamerV3**          | Explores long imagined rollouts with entropy-regularised actor to prevent premature convergence in sparse-reward settings | [Mastering Diverse Domains through World Models](https://arxiv.org/abs/2301.04104) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamerv3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamerv3)       |
 | 2019-06 | **MBPO**               | Limits imagined rollout length to prevent compounding error accumulation; iterative policy–model alternation drives exploration of true dynamics | [When to Trust Your Model: Model-Based Policy Optimization](https://arxiv.org/abs/1906.08253) | [![GitHub Stars](https://img.shields.io/github/stars/jannerm/mbpo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/jannerm/mbpo)            |
 | 2018-05 | **PETS**               | Ensemble of probabilistic networks quantifies epistemic uncertainty; explores regions where ensemble predictions most disagree to anchor model to reality | [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](https://arxiv.org/abs/1805.12114) | [![GitHub Stars](https://img.shields.io/github/stars/kchua/handful-of-trials?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/kchua/handful-of-trials) |
@@ -450,8 +467,8 @@ World models act as recursive self-simulators where infinitesimal single-step er
 Curiosity-driven agents waste exploration budgets on irreducible stochasticity (noisy-TV problem) rather than informative states. Disentangling aleatoric from epistemic uncertainty via reachability metrics and learning-progress monitoring is essential.
 
 
-| Date    | Method                             | Key Idea                                                                                                                                                                                                                                     | Paper                                     | Github                                                                |
-| ------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2020-05 | **Plan2Explore**                   | Maximises future ensemble disagreement in latent space for task-agnostic exploration; disagreement targets epistemic uncertainty, not irreducible noise | [Planning to Explore via Self-Supervised World Models](https://arxiv.org/abs/2005.05960) | [![GitHub Stars](https://img.shields.io/github/stars/ramanans1/plan2explore?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ramanans1/plan2explore)             |
 | 2020-06 | **RIDES**                          | Reward-weighted state-reachability intrinsic motivation separates reachable novel states from high-entropy irreducible noise | [Active World Model Learning with Progress Curiosity](https://arxiv.org/abs/2007.07853) | [![GitHub Stars](https://img.shields.io/github/stars/MarcCote/thinker?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MarcCote/thinker)                   |
 | 2018-08 | **RND**                            | Random network distillation as epistemic novelty signal; highlights persistent failure to distinguish aleatoric from epistemic uncertainty in stochastic envs | [Exploration by Random Network Distillation](https://arxiv.org/abs/1810.12894) | [![GitHub Stars](https://img.shields.io/github/stars/openai/random-network-distillation?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/random-network-distillation) |
@@ -465,15 +482,14 @@ Curiosity-driven agents waste exploration budgets on irreducible stochasticity (
 
 Aggressive compression of high-dimensional sensory streams loses safety-critical details (motor vibrations, slippery surfaces, grip deformations). Physical stress-testing and structured latent representations force world models to encode functionally critical geometric realities.
 
-
-| Date    | Method           | Key Idea                                                                                                                                                                                                                                                              | Paper                                     | Github                                                    |
-| ------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2019-02 | **PlaNet**       | RSSM with deterministic + stochastic latent components; stochastic branch explores multiple plausible states rather than collapsing to a single deterministic prediction | [Learning Latent Dynamics for Planning from Pixels](https://arxiv.org/abs/1811.04551) | [![GitHub Stars](https://img.shields.io/github/stars/google-research/planet?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/google-research/planet) |
 | 2018-03 | **World Models** | V–M–C architecture compresses pixels to latent then explores futures via RNN-based mental simulation; highlights information loss from pure deterministic latents | [World Models](https://arxiv.org/abs/1803.10122) | [![GitHub Stars](https://img.shields.io/github/stars/hardmaru/worldmodels?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/hardmaru/worldmodels)   |
 | 2023-04 | **I-JEPA**       | Image Joint-Embedding Predictive Architecture… | [Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture](https://arxiv.org/abs/2301.08243) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/ijepa?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/ijepa) |
 
 
----
+<br>
 
 ### 4.2 Where: Exploration Across Different Spaces
 
@@ -482,8 +498,8 @@ Aggressive compression of high-dimensional sensory streams loses safety-critical
 Agents generate imagined trajectories to discover effective behaviours before physical execution, exploiting computational parallelism — thousands of hypothetical scenarios per second.
 
 
-| Date    | Method                  | Key Idea                                                                                                                                                                                                         | Paper                                                    | Github                                                          |
-| ------- | ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | --------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-09 | **DreamerV4**           | Shared world-model/policy backbone with phased training; first agent to obtain Minecraft diamonds from offline data via exhaustive imagined rollouts | [Training Agents Inside of Scalable World Models](https://arxiv.org/abs/2509.24527)                | -                                                               |
 | 2020-11 | **MuZero**              | Learns latent dynamics supporting MCTS planning without pixel reconstruction; achieves superhuman performance by planning over imagined state sequences | [Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model](https://arxiv.org/abs/1911.08265)                | [![GitHub Stars](https://img.shields.io/github/stars/werner-duvaud/muzero-general?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/werner-duvaud/muzero-general) |
 | 2019-12 | **DreamerV1**           | RSSM-based latent world model; explores via action noise during environment interaction to broaden state-space coverage for model training | [Dream to Control: Learning Behaviors by Latent Imagination](https://arxiv.org/abs/1912.01603)                | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamer?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamer)              |
@@ -497,8 +513,8 @@ Agents generate imagined trajectories to discover effective behaviours before ph
 Safety-critical exploration probes operational failure boundaries before physical deployment; world models evaluate "what-if" counterfactuals without incurring real-world risk.
 
 
-| Date    | Method         | Key Idea                                                                                                                                                                                                             | Paper                                     | Github                                                     |
-| ------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2023-01 | **DayDreamer** | Transfers Dreamer latent-imagination to physical robots; explores counterfactual hardware interactions in latent space before committing to unsafe real actions | [DayDreamer: World Models for Physical Robot Learning](https://arxiv.org/abs/2206.14176) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/daydreamer?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/daydreamer)      |
 | 2018-05 | **PETS**       | Probabilistic ensemble models epistemic uncertainty for planning; agents probe high-uncertainty regions to discover failure modes before physical execution | [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](https://arxiv.org/abs/1805.12114) | [![GitHub Stars](https://img.shields.io/github/stars/kchua/handful-of-trials?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/kchua/handful-of-trials) |
 | 2024-10 | **ActSafe**    | Active safe exploration via worst-case trajectory imagination; uses constrained world model rollouts to identify unsafe counterfactual outcomes before committing to any real action | [ActSafe: Active Exploration with Safety Constraints for Reinforcement Learning](https://arxiv.org/abs/2410.09486) | [![GitHub Stars](https://img.shields.io/github/stars/yardenas/actsafe?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yardenas/actsafe)        |
@@ -510,8 +526,8 @@ Safety-critical exploration probes operational failure boundaries before physica
 In sparse-reward settings, agents construct internal value landscapes through intrinsic motivation, turning world-model predictive errors into exploration bonuses that guide search toward informative states.
 
 
-| Date    | Method                             | Key Idea                                                                                                                                                                                                                                                         | Paper                                     | Github                                                                |
-| ------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2020-05 | **Plan2Explore**                   | World model ensemble disagreement as intrinsic reward; constructs a latent value landscape rewarding states where model uncertainty is highest | [Planning to Explore via Self-Supervised World Models](https://arxiv.org/abs/2005.05960) | [![GitHub Stars](https://img.shields.io/github/stars/ramanans1/plan2explore?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ramanans1/plan2explore)             |
 | 2020-06 | **RIDES**                          | Reachability-weighted novelty bonus sculpts intrinsic value landscape to emphasise informative and accessible states | [Active World Model Learning with Progress Curiosity](https://arxiv.org/abs/2007.07853) | -                                                                     |
 | 2018-10 | **RND**                            | Forward model prediction error on random network as novelty signal; constructs a pseudo-value landscape for count-free exploration in high-dimensional spaces | [Exploration by Random Network Distillation](https://arxiv.org/abs/1810.12894) | [![GitHub Stars](https://img.shields.io/github/stars/openai/random-network-distillation?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/random-network-distillation) |
@@ -526,8 +542,8 @@ In sparse-reward settings, agents construct internal value landscapes through in
 Latent spaces must be action-grounded "Embodied-Native" manifolds — every imagined future tightly coupled with executable motor commands — enabling structural robustness over purely visual manifolds.
 
 
-| Date    | Method        | Key Idea                                                                                                                                                                                                                | Paper                                     | Github                                                                 |
-| ------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-06 | **V-JEPA 2**  | Video-pretrained JEPA model enabling zero-shot robotic grasping; explores action-grounded latent manifold via abstract representation rather than pixel reconstruction | [V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning](https://arxiv.org/abs/2506.09985) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/jepa?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/jepa)               |
 | 2025-06 | **WorldVLA**  | Unified autoregressive framework for text, image, and action generation; joint latent manifold treats physical actions and visual evolution as first-class citizens | [WorldVLA: Towards Autoregressive Action World Model](https://arxiv.org/abs/2506.21539) | [![GitHub Stars](https://img.shields.io/github/stars/alibaba-damo-academy/WorldVLA?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/alibaba-damo-academy/WorldVLA)       |
 | 2024-04 | **V-JEPA**    | First pure-video self-supervised JEPA; latent prediction of masked spatiotemporal blocks produces rich action-predictive representations without pixel reconstruction | [Revisiting Feature Prediction for Learning Visual Representations from Video](https://arxiv.org/abs/2404.08471) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/jepa?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/jepa)               |
@@ -535,7 +551,7 @@ Latent spaces must be action-grounded "Embodied-Native" manifolds — every imag
 | 2025-01 | **AD-L-JEPA** | Autonomous driving latent-space JEPA: predicts action-conditioned future representations of driving scenes… | [Self-Supervised Representation Learning with Joint Embedding Predictive Architecture for Automotive LiDAR Object Detection](https://arxiv.org/abs/2501.04969) | [![GitHub Stars](https://img.shields.io/github/stars/haoranzhuexplorer/ad-l-jepa-release?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/haoranzhuexplorer/ad-l-jepa-release) |
 
 
----
+<br>
 
 ### 4.3 How: Exploration Across World-Model Domains
 
@@ -546,8 +562,8 @@ Latent spaces must be action-grounded "Embodied-Native" manifolds — every imag
 The most direct approach minimises one-step prediction error iteratively; the policy and model alternate, with the updated policy exploring the environment to collect increasingly informative data.
 
 
-| Date    | Method     | Key Idea                                                                                                                                                                                                                         | Paper                                     | Github                                                      |
-| ------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2019-06 | **MBPO**   | Short imagined rollouts prevent compounding error; iterative model–policy alternation guides exploration toward regions of true dynamics not yet covered | [When to Trust Your Model: Model-Based Policy Optimization](https://arxiv.org/abs/1906.08253) | [![GitHub Stars](https://img.shields.io/github/stars/jannerm/mbpo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/jannerm/mbpo)             |
 | 2018-07 | **SLBO**   | Jointly maximises return lower bound over policy and model; optimism in model optimisation encourages exploration of state–action regions not yet well covered | [Algorithmic Framework for Model-based Deep Reinforcement Learning with Theoretical Guarantees](https://arxiv.org/abs/1807.03858) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/slbo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/slbo)    |
 | 2019-03 | **SimPLe** | Sequential policy optimisation in latent model: pixel-based video prediction model supports model-free policy gradient exploration… | [Model-Based Reinforcement Learning for Atari](https://arxiv.org/abs/1903.00374) | [![GitHub Stars](https://img.shields.io/github/stars/tensorflow/tensor2tensor?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/tensorflow/tensor2tensor) |
@@ -558,8 +574,8 @@ The most direct approach minimises one-step prediction error iteratively; the po
 Isolating epistemic uncertainty from aleatoric uncertainty guides exploration toward regions where the model is genuinely ignorant rather than inherently noisy.
 
 
-| Date    | Method                                   | Key Idea                                                                                                                                                                                                                       | Paper                                     | Github                                                     |
-| ------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ---------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2018-05 | **PETS**                                 | Probabilistic ensemble explicitly disentangles aleatoric vs. epistemic uncertainty via KL minimisation between ensemble members; explores where epistemic uncertainty is highest | [Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models](https://arxiv.org/abs/1805.12114) | [![GitHub Stars](https://img.shields.io/github/stars/kchua/handful-of-trials?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/kchua/handful-of-trials) |
 | 2018-10 | **ME-TRPO**                              | Model-ensemble trust-region policy optimisation: uses N independently trained models and limits policy updates to regions where all models agree, preventing exploitation of epistemic uncertainty in… | [Model-Ensemble Trust-Region Policy Optimization](https://arxiv.org/abs/1802.10592) | [![GitHub Stars](https://img.shields.io/github/stars/thanard/me-trpo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/thanard/me-trpo)         |
 | 2019-10 | **Model-Based Active Exploration (MAX)** | Treats exploration as active learning: at each step selects actions that maximally reduce epistemic uncertainty under the ensemble… | [Model-Based Active Exploration](https://arxiv.org/abs/1810.12162) | [![GitHub Stars](https://img.shields.io/github/stars/nnaisense/MAX?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/nnaisense/MAX)           |
@@ -569,9 +585,8 @@ Isolating epistemic uncertainty from aleatoric uncertainty guides exploration to
 
 For high-dimensional pixel observations, representation learning compresses inputs into compact latents to enable tractable imagination-space exploration.
 
-
-| Date    | Method           | Key Idea                                                                                                                                                          | Paper                                     | Github                                                    |
-| ------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2020-05 | **Plan2Explore** | Novelty = future ensemble disagreement in RSSM latent space; task-agnostic exploration pre-trains a world model before any reward signal is available | [Planning to Explore via Self-Supervised World Models](https://arxiv.org/abs/2005.05960) | [![GitHub Stars](https://img.shields.io/github/stars/ramanans1/plan2explore?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ramanans1/plan2explore) |
 | 2019-02 | **PlaNet**       | Pioneers RSSM: deterministic hidden state + stochastic Gaussian latent; stochastic branch forces imagination to explore multiple plausible environmental outcomes | [Learning Latent Dynamics for Planning from Pixels](https://arxiv.org/abs/1811.04551) | [![GitHub Stars](https://img.shields.io/github/stars/google-research/planet?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/google-research/planet) |
 | 2018-03 | **World Models** | V–M–C architecture: VAE compresses pixels, RNN explores temporal structure in latent space, controller acts within learned representation | [World Models](https://arxiv.org/abs/1803.10122) | [![GitHub Stars](https://img.shields.io/github/stars/hardmaru/worldmodels?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/hardmaru/worldmodels)   |
@@ -582,9 +597,8 @@ For high-dimensional pixel observations, representation learning compresses inpu
 The Dreamer lineage demonstrates progressively sophisticated exploration within learned latent spaces, from action noise to entropy regularisation to phased world-model/policy co-training.
 
 
-| Date    | Method         | Key Idea                                                                                                                                                                       | Paper                                     | Github                                                |
-| ------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ----------------------------------------------------- |
-| 2025-09 | **DreamerV4**  | Phased training (WM pre-train → policy post-train) solves dual exploration problem; policy leverages WM priors for efficient exploration of long-horizon imagined trajectories | [Training Agents Inside of Scalable World Models](https://arxiv.org/abs/2509.24527) | -                                                     |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|| 2025-09 | **DreamerV4**  | Phased training (WM pre-train → policy post-train) solves dual exploration problem; policy leverages WM priors for efficient exploration of long-horizon imagined trajectories | [Training Agents Inside of Scalable World Models](https://arxiv.org/abs/2509.24527) | -                                                     |
 | 2023-01 | **DreamerV3**  | Percentile return normalisation stabilises exploration intensity across sparse and dense reward scales; adapts entropy regularisation automatically | [Mastering Diverse Domains through World Models](https://arxiv.org/abs/2301.04104) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamerv3?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamerv3)  |
 | 2020-10 | **DreamerV2**  | Discrete categorical latents + actor entropy bonus as explicit exploration regulariser; prevents premature policy collapse in imagined rollouts | [Mastering Atari with Discrete World Models](https://arxiv.org/abs/2010.02193) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamerv2?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamerv2)  |
 | 2019-12 | **DreamerV1**  | RSSM world model with action noise for environment exploration; broader state-space coverage improves quality of imagined training data | [Dream to Control: Learning Behaviors by Latent Imagination](https://arxiv.org/abs/1912.01603) | [![GitHub Stars](https://img.shields.io/github/stars/danijar/dreamer?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/danijar/dreamer)    |
@@ -596,14 +610,14 @@ The Dreamer lineage demonstrates progressively sophisticated exploration within 
 JEPA shifts from pixel reconstruction to abstract latent prediction, naturally encouraging exploration over multiple plausible world interpretations rather than fitting a single deterministic output.
 
 
-| Date    | Method       | Key Idea                                                                                                                                                                                                                         | Paper                                     | Github                                                    |
-| ------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-06 | **V-JEPA 2** | Video-pretrained world model enabling zero-shot robotic deployment; latent-space exploration closes the loop between imagination and physical execution | [V-JEPA 2: Self-Supervised Video Models Enable Understanding, Prediction and Planning](https://arxiv.org/abs/2506.09985) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/jepa?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/jepa)  |
 | 2024-04 | **V-JEPA**   | First pure-video JEPA: predicts masked spatiotemporal block representations; abstract latent prediction explores rich spatiotemporal structure without pixel-level noise | [Revisiting Feature Prediction for Learning Visual Representations from Video](https://arxiv.org/abs/2404.08471) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/jepa?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/jepa)  |
 | 2023-06 | **I-JEPA**   | Image JEPA: learns representations by predicting abstract features of masked image regions from context… | [Self-Supervised Learning from Images with a Joint-Embedding Predictive Architecture](https://arxiv.org/abs/2301.08243) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/ijepa?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/ijepa) |
 
 
----
+
 
 #### 4.3.2 Video Generation as World Simulation
 
@@ -614,8 +628,8 @@ Large-scale video diffusion models have evolved from passive visual generators t
 Video generation models serve as physics engines, enabling RL agents to explore within generated "dreams" at zero physical cost.
 
 
-| Date    | Method                      | Key Idea                                                                                                                                                                                                                                  | Paper                                     | Github                                                              |
-| ------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-05 | **Genie**                   | Learns action-conditioned state transitions from unlabelled video; creates controllable virtual sandboxes for agent exploration without real-world interaction | [Genie: Generative Interactive Environments](https://arxiv.org/abs/2402.15391) | -                                                                   |
 | 2024-03 | **UniSim**                  | Universal simulator of sensorimotor interactions; trains RL agents entirely in simulated video environments for safe long-tail exploration | [Video Language Planning](https://arxiv.org/abs/2310.10625) | -                                                                   |
 | 2024-01 | **DriveDreamer**            | Driving-domain video world model conditioned on structured HD-map and traffic annotations… | [DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving](https://arxiv.org/abs/2309.09777) | [![GitHub Stars](https://img.shields.io/github/stars/JeffWang987/DriveDreamer?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JeffWang987/DriveDreamer)         |
@@ -628,8 +642,8 @@ Video generation models serve as physics engines, enabling RL agents to explore 
 RL directly optimises the video generation process itself, forcing the generative model to actively explore the generation space toward physically plausible outputs.
 
 
-| Date    | Method            | Key Idea                                                                                                                                                                                                                                | Paper                                     | Github                                                     |
-| ------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-01 | **Cosmos Policy** | Injects latent frames for video–action co-diffusion; RL reward guides generation to explore physically consistent action-conditioned futures | [Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning](https://arxiv.org/abs/2601.16163) | -                                                          |
 | 2025-01 | **VideoDPO**      | DPO applied to video generation; preference data forces generative exploration toward spatiotemporally consistent physical trajectories | [STAR: Stepwise Task Augmentation with Relation Learning for Aspect Sentiment Quad Prediction](https://arxiv.org/abs/2501.16093) | [![GitHub Stars](https://img.shields.io/github/stars/CIntellifusion/VideoDPO?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/CIntellifusion/VideoDPO) |
 | 2026-01 | **TAGRPO**        | Token-level advantage-guided reward policy optimisation for video generation… | [TAGRPO: Boosting GRPO on Image-to-Video Generation with Direct Trajectory Alignment](https://arxiv.org/abs/2601.05729) | [![GitHub Stars](https://img.shields.io/github/stars/SkyworkAI/SkyReels-V1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/SkyworkAI/SkyReels-V1)   |
@@ -641,8 +655,8 @@ RL directly optimises the video generation process itself, forcing the generativ
 Video generation at inference time becomes dynamic search and planning — generating multiple trajectory candidates and filtering via physics verifiers, analogous to MCTS in imagination.
 
 
-| Date    | Method                        | Key Idea                                                                                                                                                                                                                                 | Paper                                     | Github                                                       |
-| ------- | ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------ |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-01 | **Video-T1**                  | Test-time scaling for video generation: generates multiple candidate trajectories, uses verifiers to select the most physically consistent — inference as tree search | [Time-Dependent Radiation Transport Simulations of Infrared Echoes from Dust-Shrouded Luminous Transients](https://arxiv.org/abs/2501.13157) | [![GitHub Stars](https://img.shields.io/github/stars/THU-SI/Video-T1?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/THU-SI/Video-T1)           |
 | 2026-01 | **WMReward (Inference-Time)** | Uses world model value estimates as verifier rewards at inference time… | [Inference-time Physics Alignment of Video Generative Models with Latent World Models](https://arxiv.org/abs/2601.10553) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/WMReward?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/WMReward) |
 | 2026-02 | **DreamZero (Inference)**     | Leverages a frozen video world model at inference time to score action proposals via forward imagination… | [World Action Models are Zero-shot Policies](https://arxiv.org/abs/2602.15922) | [![GitHub Stars](https://img.shields.io/github/stars/dreamzero0/dreamzero?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/dreamzero0/dreamzero)      |
@@ -653,15 +667,14 @@ Video generation at inference time becomes dynamic search and planning — gener
 Exploration evolves from passive open-loop video generation to active closed-loop counterfactual simulation; WAMs treat physical actions and visual evolution as joint first-class citizens.
 
 
-| Date    | Method              | Key Idea                                                                                                                                                                                     | Paper                                     | Github                                                           |
-| ------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2026-03 | **FastWAM**         | Decouples video generation from policy inference; skips test-time future imagination entirely to achieve 190ms latency for real-time closed-loop action exploration | [Fast-WAM: Do World Action Models Need Test-time Future Imagination?](https://arxiv.org/abs/2603.16666) | [![GitHub Stars](https://img.shields.io/github/stars/yuantianyuan01/FastWAM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yuantianyuan01/FastWAM)        |
 | 2025-06 | **WorldVLA**        | Unified autoregressive framework generating text, images, and actions; explores action-grounded latent manifold as joint first-class representation | [WorldVLA: Towards Autoregressive Action World Model](https://arxiv.org/abs/2506.21539) | [![GitHub Stars](https://img.shields.io/github/stars/alibaba-damo-academy/WorldVLA?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/alibaba-damo-academy/WorldVLA) |
 | 2025-01 | **Cosmos Policy**   | Latent frame injection synchronises video and action co-diffusion; closed-loop counterfactual simulation with RL-guided physically consistent exploration | [Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning](https://arxiv.org/abs/2601.16163) | -                                                                |
 | 2026-02 | **DreamZero (WAM)** | Zero-shot WAM that couples a frozen video world model with a learned action decoder; closed-loop action exploration via iterative world-model querying without any task-specific fine-tuning | [World Action Models are Zero-shot Policies](https://arxiv.org/abs/2602.15922) | [![GitHub Stars](https://img.shields.io/github/stars/dreamzero0/dreamzero?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/dreamzero0/dreamzero)          |
 
 
----
 
 #### 4.3.3 Autonomous Driving: Vectorised and Occupancy Exploration
 
@@ -672,8 +685,8 @@ Autonomous driving demands exploration of rare long-tail scenarios through imagi
 Generative world models serve as data engines bridging the reality gap; exploration is conducted in compact latent spaces to bypass rendering burdens.
 
 
-| Date    | Method           | Key Idea                                                                                                                                                                                                                        | Paper                                     | Github                                                          |
-| ------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | --------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-01 | **DriveDreamer** | Driving world model synthesising future scenes conditioned on actions; explores diverse driving futures in latent space to validate plans before physical execution | [DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving](https://arxiv.org/abs/2309.09777) | [![GitHub Stars](https://img.shields.io/github/stars/JeffWang987/DriveDreamer?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/JeffWang987/DriveDreamer)     |
 | 2023-09 | **GAIA-1**       | Generative world model for autonomous driving; produces diverse imagined driving scenarios as a data engine for exploring rare safety-critical events | [GAIA-1: A Generative World Model for Autonomous Driving](https://arxiv.org/abs/2309.17080) | -                                                               |
 | 2022-10 | **MILE**         | Model-based imitation learning in compact latent space; imagined rollouts in latent representation for sample-efficient exploration of driving behaviours | [Model-Based Imitation Learning for Urban Driving](https://arxiv.org/abs/2210.07729) | [![GitHub Stars](https://img.shields.io/github/stars/wayveai/mile?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/wayveai/mile)                 |
@@ -688,8 +701,8 @@ Generative world models serve as data engines bridging the reality gap; explorat
 Action-conditioned generation enables safe exploration of "what-if" counterfactual outcomes; uncertainty quantification prevents the policy exploiting out-of-distribution hallucinations.
 
 
-| Date    | Method        | Key Idea                                                                                                                                                                                                                        | Paper                                     | Github                                                                 |
-| ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ---------------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-01 | **Drive-WM**  | Action-conditioned multi-view video generation for driving; visualises consequences of hypothetical manoeuvres to explore safe counterfactual futures | [Personalized Autonomous Driving with Large Language Models: Field Experiments](https://arxiv.org/abs/2312.09397) | [![GitHub Stars](https://img.shields.io/github/stars/BraveGroup/Drive-WM?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/BraveGroup/Drive-WM)                 |
 | 2024-03 | **RealGen**   | Adversarial retrieval-augmented generation targeting safety-critical scenario boundaries; probes failure-mode hazard zones via adversarial imagination exploration | [RealGen: Retrieval Augmented Generation for Controllable Traffic Scenarios](https://arxiv.org/abs/2312.13303) | [![GitHub Stars](https://img.shields.io/github/stars/yejy53/RealGen?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yejy53/RealGen)                      |
 | 2025-01 | **AD-L-JEPA** | Autonomous driving latent-space JEPA: predicts action-conditioned future driving representations… | [Self-Supervised Representation Learning with Joint Embedding Predictive Architecture for Automotive LiDAR Object Detection](https://arxiv.org/abs/2501.04969) | [![GitHub Stars](https://img.shields.io/github/stars/haoranzhuexplorer/ad-l-jepa-release?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/haoranzhuexplorer/ad-l-jepa-release) |
@@ -702,8 +715,8 @@ Action-conditioned generation enables safe exploration of "what-if" counterfactu
 Shifting from 2D pixel generation to 4D occupancy grids combats depth/scale drift and provides collision-risk cost volumes for safe planning exploration.
 
 
-| Date    | Method                   | Key Idea                                                                                                                                                                                                                                                      | Paper                                     | Github                                                         |
-| ------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-08 | **OccSora**              | Diffusion-based 4D occupancy generation; synthesises long-horizon occupancy sequences enabling exploration of temporally consistent physical futures | [OccSora: 4D Occupancy Generation Models as World Simulators for Autonomous Driving](https://arxiv.org/abs/2405.20337) | [![GitHub Stars](https://img.shields.io/github/stars/wzzheng/OccSora?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/wzzheng/OccSora)             |
 | 2024-05 | **OccWorld**             | Vision-centric 3D occupancy world model for driving; forecasts occupancy evolution providing collision-risk cost volumes for safe spatial exploration | [OccWorld: Learning a 3D Occupancy World Model for Autonomous Driving](https://arxiv.org/abs/2311.16038) | [![GitHub Stars](https://img.shields.io/github/stars/wzzheng/OccWorld?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/wzzheng/OccWorld)            |
 | 2025-01 | **Drive-OccWorld**       | Drives entirely in a 4D occupancy world: unified model for scene generation and ego-planning… | [Driving in the Occupancy World: Vision-Centric 4D Occupancy Forecasting and Planning via World Models for Autonomous Driving](https://arxiv.org/abs/2408.14197) | [![GitHub Stars](https://img.shields.io/github/stars/yuyang-cloud/Drive-OccWorld?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yuyang-cloud/Drive-OccWorld) |
@@ -717,8 +730,8 @@ Shifting from 2D pixel generation to 4D occupancy grids combats depth/scale drif
 Exploration evolves from static data augmentation to dynamic closed-loop systems where the policy actively interacts with neural simulators to probe decision boundaries.
 
 
-| Date    | Method               | Key Idea                                                                                                                                                                                                                                            | Paper                                     | Github                                                      |
-| ------- | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-10 | **DriveArena**       | Creates reactive 4D worlds where the policy actively interacts with a neural simulator; enables closed-loop exploration of diverse reactive traffic scenarios | [DriveArena: A Closed-loop Generative Simulation Platform for Autonomous Driving](https://arxiv.org/abs/2408.00415) | [![GitHub Stars](https://img.shields.io/github/stars/PJLab-ADG/DriveArena?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/PJLab-ADG/DriveArena)     |
 | 2024-09 | **SimGen**           | Cascaded diffusion for high-fidelity, controllable scenario augmentation; addresses long-tail exploration by generating rare safety-critical scenarios on demand | [SimGen: Simulator-conditioned Driving Scene Generation](https://arxiv.org/abs/2406.09386) | [![GitHub Stars](https://img.shields.io/github/stars/metadriverse/SimGen?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/metadriverse/SimGen)      |
 | 2024-03 | **DrivingDiffusion** | Multi-view video diffusion for closed-loop driving simulation… | [DrivingDiffusion: Layout-Guided multi-view driving scene video generation with latent diffusion model](https://arxiv.org/abs/2310.07771) | [![GitHub Stars](https://img.shields.io/github/stars/shalfun/DrivingDiffusion?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/shalfun/DrivingDiffusion) |
@@ -727,21 +740,24 @@ Exploration evolves from static data augmentation to dynamic closed-loop systems
 | 2025-04 | **DrivingSphere**    | Spherical-projection world model for full 360° closed-loop driving simulation; complete spatial coverage removes blind spots so policies train against surrounding agents in all directions | [DrivingSphere: Building a High-fidelity 4D World for Closed-loop Simulation](https://arxiv.org/abs/2411.11252) | [![GitHub Stars](https://img.shields.io/github/stars/yanty123/DrivingSphere?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/yanty123/DrivingSphere)   |
 
 
----
+
 
 #### 4.3.4 Social Dynamics: Exploration in Strategic and Normative Environments
 
 Social environments introduce recursive exploration: probing social dynamics reshapes those very dynamics, requiring agents to reason counterfactually over beliefs, incentives, and equilibria.
 
 
-| Date    | Method            | Key Idea                                                                                                                                                                                                                                                          | Paper                                     | Github                                                            |
-| ------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------- |
+| Date | Method | Key Idea | Paper | Github |
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-01 | **VBench**        | Comprehensive benchmark evaluating world model quality including social regularity capture; provides metrics to assess whether exploration produces socially plausible behaviours | [VBench: Comprehensive Benchmark Suite for Video Generative Models](https://arxiv.org/abs/2311.17982) | [![GitHub Stars](https://img.shields.io/github/stars/Vchitect/VBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Vchitect/VBench)                |
 | 2020-08 | **Social-STGCNN** | Spatio-temporal graph CNN models pedestrian trajectory social forces; world model for social dynamics enabling exploration of crowd interaction counterfactuals | [Social-STGCNN: A Social Spatio-Temporal Graph Convolutional Neural Network for Human Trajectory Prediction](https://arxiv.org/abs/2002.11927) | [![GitHub Stars](https://img.shields.io/github/stars/abduallahmohamed/Social-STGCNN?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/abduallahmohamed/Social-STGCNN) |
 | 2025-10 | **LCTGen**        | Language-conditioned traffic generation: natural-language scene specs, structured map retrieval, and multi-agent rollouts for counterfactual social traffic exploration | [Language Conditioned Traffic Generation](https://arxiv.org/abs/2307.07947) | [![GitHub Stars](https://img.shields.io/github/stars/Ariostgx/lctgen?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Ariostgx/lctgen)                |
 
 
 ---
+
+<br>
+
 
 
 ## 5. Level 5: Prospector → Ecosystem — Coordination-Space Exploration
@@ -782,7 +798,7 @@ This transition is not merely about scaling the number of agents. Single-agent s
 Methods that coordinate collaboration through pre-defined routing rules, role protocols, or structured workflows to guarantee deterministic reachability across agents:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2026-02 | **ORCH** | Explores many parallel analysis trajectories and merges them via a deterministic EMA-guided router to ensure reachable consensus in discrete-choice reasoning | [ORCH: Many Analyses, One Merge — A Deterministic Multi-Agent Orchestrator for Discrete-Choice Reasoning with EMA-Guided Routing](https://arxiv.org/abs/2602.01797) | - |
 | 2025-11 | **MA-IR** | Deterministic multi-agent orchestration for high-quality incident response decision support | [Multi-Agent LLM Orchestration Achieves Deterministic, High-Quality Decision Support for Incident Response](https://arxiv.org/abs/2511.15755) | - |
 | 2025-10 | **MOSAIC** | Task-intelligent orchestration routes specialised agents to explore scientific coding workflows within a rule-governed collaboration space | [MOSAIC: Multi-agent Orchestration for Task-Intelligent Scientific Coding](https://arxiv.org/abs/2510.08804) | - |
@@ -797,7 +813,7 @@ Methods that coordinate collaboration through pre-defined routing rules, role pr
 Methods that train orchestrators, meta-agents, or agent graphs to route tasks toward the most competent executors and expand multi-agent capability boundaries:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2026-01 | **MAS-Orchestra** | Expands multi-agent reasoning competence through holistic orchestration, with controlled benchmarks probing the explored system space | [MAS-Orchestra: Understanding and Improving Multi-Agent Reasoning Through Holistic Orchestration and Controlled Benchmarks](https://arxiv.org/abs/2601.14652) | - |
 | 2025-05 | **Puppeteer-Puppet** | Evolves a puppeteer that explores dynamic orchestration strategies over puppet agents to extend collaborative competence | [Multi-Agent Collaboration via Evolving Orchestration](https://arxiv.org/abs/2505.19591) | - |
 | 2025-04 | **W4S** | Trains a weak meta-agent to explore task decompositions and harness strong executor agents beyond its own competence | [Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors](https://arxiv.org/abs/2504.04785) | - |
@@ -809,7 +825,7 @@ Methods that train orchestrators, meta-agents, or agent graphs to route tasks to
 Methods that adapt orchestration policies through reflection feedback or information-theoretic uncertainty signals across long-horizon multi-agent tasks:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-09 | **Orchestrator** | Uses active inference to drive multi-agent exploration under epistemic uncertainty across long-horizon tasks | [Orchestrator: Active Inference for Multi-Agent Systems in Long-Horizon Tasks](https://arxiv.org/abs/2509.05651) | - |
 | 2025-04 | **W4S** | Weak meta-agent explores orchestration policies over strong executors, guided by reflection on uncertain outcomes | [Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors](https://arxiv.org/abs/2504.04785) | - |
 | 2025-03 | **MAS-GPT** | Trains LLMs to synthesise multi-agent systems per query, exploring the system-design space conditioned on task uncertainty | [MAS-GPT: Training LLMs to Build LLM-based Multi-Agent Systems](https://arxiv.org/abs/2503.03686) | - |
@@ -820,7 +836,7 @@ Methods that adapt orchestration policies through reflection feedback or informa
 Methods that build self-evolving multi-agent systems on shared memory or knowledge substrates to support long-horizon specialisation and exploration:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2025-05 | **PiFlow** | Principle-aware orchestration grows a scientific knowledge substrate that guides multi-agent discovery exploration | [PiFlow: Principle-aware Scientific Discovery with Multi-Agent Collaboration](https://arxiv.org/abs/2505.15047) | [![GitHub Stars](https://img.shields.io/github/stars/amair-lab/PiFlow?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/amair-lab/PiFlow) |
 | 2025-03 | **MedAgentSim** | Self-evolving clinical multi-agent simulation explores new cases by accumulating case-level memory as a shared substrate | [Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions](https://arxiv.org/abs/2503.22678) | [![GitHub Stars](https://img.shields.io/github/stars/MAXNORM8650/MedAgentSim?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MAXNORM8650/MedAgentSim) |
 | 2025 | **SEMC** | Self-evolving consultation grows a shared diagnostic knowledge base, expanding the reachable medical case space over time | A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models | - |
@@ -829,6 +845,7 @@ Methods that build self-evolving multi-agent systems on shared memory or knowled
 | 2023-04 | **Generative Agents** | Interactive simulacra use memory-retrieval substrates to explore and surface emergent social behaviour over long horizons | [Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442) | [![GitHub Stars](https://img.shields.io/github/stars/joonspk-research/generative_agents?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/joonspk-research/generative_agents) |
 
 
+<br>
 
 
 ### 5.2 Agentic Ensemble Papers
@@ -980,6 +997,9 @@ Methods that explore an ordered chain of models—typically from cheaper/weaker 
 | 2023-01 | **Confidence Deferral** | Clarifies when confidence-only deferral can explore the cascade effectively and when downstream-aware signals are required | [When Does Confidence-Based Cascade Deferral Suffice?](https://proceedings.neurips.cc/paper_files/paper/2023/hash/1f09e1ee5035a4c3fe38a5681cae5815-Abstract-Conference.html) | - |
 | 2022-10 | **Model Cascading** | Explores early exit across models of increasing capacity, reserving large-model compute for harder inputs | [Model Cascading: Towards Jointly Improving Efficiency and Accuracy of NLP Systems](https://arxiv.org/abs/2210.05528) | - |
 
+
+<br>
+
 ### 5.3 MARL
 | Date | Method | Key Idea | Paper | Github |
 |:---:|:-------:|:---------|:------|:---:|
@@ -995,6 +1015,12 @@ Methods that explore an ordered chain of models—typically from cheaper/weaker 
 | 2019-10 | **MAVEN** | Introduces latent-variable hierarchical control to induce temporally committed exploration modes while retaining value-decomposition scalability | [MAVEN: Multi-Agent Variational Exploration](https://arxiv.org/abs/1910.07483) | [![GitHub Stars](https://img.shields.io/github/stars/AnujMahajanOxf/MAVEN?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/AnujMahajanOxf/MAVEN) |
 | 2019-10 | **EITI/EDTI** | Encourages coordinated exploration by maximizing inter-agent influence, using mutual information (EITI) and value-of-interaction rewards (EDTI) | [Influence-Based Multi-Agent Exploration](https://arxiv.org/abs/1910.05512) | [![GitHub Stars](https://img.shields.io/github/stars/TonghanWang/EITI-EDTI?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/TonghanWang/EITI-EDTI) |
 | 2017-05 | **ICM** | Defines curiosity as forward-model prediction error in inverse-dynamics features, promoting exploration without relying on extrinsic rewards | [Curiosity-driven Exploration by Self-supervised Prediction](https://arxiv.org/abs/1705.05363) | [![GitHub Stars](https://img.shields.io/github/stars/pathak22/noreward-rl?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/pathak22/noreward-rl) |
+
+
+
+
+<br>
+
 
 ### 5.4 Self-Evolving
 
@@ -1022,8 +1048,9 @@ Methods that let agents or LLMs continuously improve themselves—via self-gener
 | 2022-03 | **STaR** | Generates rationales for problems, rationalises wrong answers given the correct one, and iteratively fine-tunes on rationales that yield correct answers, bootstrapping reasoning ability | [STaR: Bootstrapping Reasoning with Reasoning](https://arxiv.org/abs/2203.14465) | [![GitHub Stars](https://img.shields.io/github/stars/ezelikman/STaR?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ezelikman/STaR) |
 
 
-
 ---
+<br>
+
 
 ## 6. Exploration Evaluation
 
@@ -1048,12 +1075,14 @@ Exploration is not a primitive observable but an inferential claim about how an 
 - **C2 Value Improvement** → **Outcome, Metrics, Grader.** Capture boundary expansion; measure pass@1 vs pass@k gap; recognise novel valid solutions.
 - **C3 Epistemic Reachability** → **Task, Metrics, Environment.** Design multi-path tasks; measure diversity and coverage; ensure branching structure supports genuine choice.
 
+<br>
+
 ### 6.2 Reasoning-Space Evaluation
 
 Frontier reasoning suites, code benchmarks with executable feedback, and classical sparse-reward settings — together they expose the pass@1-to-pass@k gap, make self-correction $\Delta_{\text{self}}$ measurable, and diagnose entropy collapse and chain-of-thought shortening:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-11 | **FrontierMath** | Exposes the pass@1-to-pass@k gap at capability frontiers, measuring whether reasoning search reaches answers beyond one-shot competence | [FrontierMath: A Benchmark for Evaluating Advanced Mathematical Reasoning in AI](https://arxiv.org/abs/2411.04872) | - |
 | 2024-02 | **OlympiadBench** | Probes whether extended reasoning chains resolve genuine uncertainty or merely rephrase prior content at olympiad-level difficulty | [OlympiadBench: A Challenging Benchmark for Promoting AGI with Olympiad-Level Bilingual Multimodal Scientific Problems](https://arxiv.org/abs/2402.14008) | [![GitHub Stars](https://img.shields.io/github/stars/OpenBMB/OlympiadBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/OpenBMB/OlympiadBench) |
 | 2025-01 | **Humanity's Last Exam** | Tests epistemic reachability by revealing which answers remain inaccessible even when exploratory reasoning branches are exhausted | [Humanity's Last Exam](https://www.lastexam.ai/) | [![GitHub Stars](https://img.shields.io/github/stars/centerforaisafety/hle?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/centerforaisafety/hle) |
@@ -1062,6 +1091,9 @@ Frontier reasoning suites, code benchmarks with executable feedback, and classic
 | 2024-10 | **MLE-bench** | Assesses whether iterative reasoning under ML engineering constraints translates into harder-problem success beyond single-attempt competence | [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095) | [![GitHub Stars](https://img.shields.io/github/stars/openai/mle-bench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/openai/mle-bench) |
 | 2016-06 | **Montezuma's Revenge** | Diagnoses exploration pathologies in which novelty-driven coverage fails to reduce uncertainty or transfer to downstream reasoning tasks | [Unifying Count-Based Exploration and Intrinsic Motivation](https://arxiv.org/abs/1606.01868) | - |
 | 2024-02 | **Craftax** | Exposes premature chain-of-thought collapse and entropy failure by testing whether open-ended exploration sustains distinct reasoning paths over time | [Craftax: A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning](https://arxiv.org/abs/2402.16801) | [![GitHub Stars](https://img.shields.io/github/stars/MichaelTMatthews/Craftax?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MichaelTMatthews/Craftax) |
+
+
+<br>
 
 ### 6.3 Interaction-Space Evaluation
 
@@ -1072,7 +1104,7 @@ The Reasoner-to-Agent transition moves exploration from internal reasoning into 
 Heterogeneous-tool, dynamic-interface, and long-horizon research-workflow benchmarks that force the controller to reopen exploration when strategies stop being informative:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2023-11 | **GAIA** | Stresses tool selection and strategy switching across heterogeneous real-world tasks to evaluate information-gain-driven action-policy control | [GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983) | - |
 | 2024-03 | **WorkArena** | Reveals whether the controller reopens exploration when web-based interfaces and subtask structures change across knowledge-work scenarios | [WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?](https://arxiv.org/abs/2403.07718) | [![GitHub Stars](https://img.shields.io/github/stars/ServiceNow/WorkArena?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/ServiceNow/WorkArena) |
 | 2024-04 | **OSWorld** | Tests whether multimodal agents reopen search and adapt action policies when open-ended computer-environment tasks shift tool demands | [OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments](https://arxiv.org/abs/2404.07972) | [![GitHub Stars](https://img.shields.io/github/stars/xlang-ai/OSWorld?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/xlang-ai/OSWorld) |
@@ -1086,7 +1118,7 @@ Heterogeneous-tool, dynamic-interface, and long-horizon research-workflow benchm
 Navigation platforms, manipulation suites, and integrated embodied benchmarks that make active sensing, recovery, and behavioural diversity observable under physical cost and partial observability:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2019-04 | **Habitat** | Tests whether agent locomotion and viewpoint selection reduce spatial uncertainty under partial observability across navigation tasks | [Habitat: A Platform for Embodied AI Research](https://arxiv.org/abs/1904.01201) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/habitat-lab?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/habitat-lab) |
 | 2021-06 | **Habitat 2.0** | Extends navigation evaluation to rearrangement manipulation, measuring whether active sensing improves physical interaction beyond familiar locomotion routes | [Habitat 2.0: Training Home Assistants to Rearrange their Habitat](https://arxiv.org/abs/2106.14405) | [![GitHub Stars](https://img.shields.io/github/stars/facebookresearch/habitat-lab?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/facebookresearch/habitat-lab) |
 | 2020-04 | **RoboTHOR** | Evaluates sim-to-real transfer fidelity so that coverage and path-efficiency gains in simulation reflect genuine sensorimotor uncertainty reduction | [RoboTHOR: An Open Simulation-to-Real Embodied AI Platform](https://arxiv.org/abs/2004.06799) | [![GitHub Stars](https://img.shields.io/github/stars/allenai/ai2thor?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/allenai/ai2thor) |
@@ -1099,12 +1131,14 @@ Navigation platforms, manipulation suites, and integrated embodied benchmarks th
 | 2025-02 | **EmbodiedBench** | Comprehensive vision-driven benchmark tests whether coverage, recovery, and behavioural diversity persist rather than collapsing after first successful multimodal policy | [EmbodiedBench: Comprehensive Benchmarking Multi-Modal Large Language Models for Vision-Driven Embodied Agents](https://arxiv.org/abs/2502.09560) | [![GitHub Stars](https://img.shields.io/github/stars/EmbodiedBench/EmbodiedBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/EmbodiedBench/EmbodiedBench) |
 | 2025-10 | **RoboBench** | Integrated suite assesses whether embodied-brain LLMs preserve epistemic reachability across navigation, manipulation, and instruction-following under unified protocols | [RoboBench: A Comprehensive Evaluation Benchmark for Multimodal Large Language Models as Embodied Brain](https://arxiv.org/abs/2510.17801) | [![GitHub Stars](https://img.shields.io/github/stars/lyl750697268/RoboBench?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/lyl750697268/RoboBench) |
 
+<br>
+
 ### 6.4 Imagination-Space Evaluation
 
 Open-ended MBRL suites and planning-focused benchmarks that separate "can imagine futures" from "futures are coherent" from "futures actually help real control":
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2024-02 | **Craftax** | Tests whether world-model-based exploration converts imagined rollouts into genuine epistemic gains across sparse-reward, open-ended tasks where simulation advantage is measurable | [Craftax: A Lightning-Fast Benchmark for Open-Ended Reinforcement Learning](https://arxiv.org/abs/2402.16801) | [![GitHub Stars](https://img.shields.io/github/stars/MichaelTMatthews/Craftax?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MichaelTMatthews/Craftax) |
 | 2022-06 | **MineDojo** | Evaluates whether embodied agents leverage internal simulation to reduce real interaction cost in long-horizon, open-ended environments requiring broad counterfactual reasoning | [MineDojo: Building Open-Ended Embodied Agents with Internet-Scale Knowledge](https://arxiv.org/abs/2206.08853) | [![GitHub Stars](https://img.shields.io/github/stars/MineDojo/MineDojo?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/MineDojo/MineDojo) |
 | 2022-10 | **Avalon** | Probes whether model-based planners maintain epistemic reachability across procedurally generated worlds rather than collapsing onto narrow imagined trajectories | [Avalon: A Benchmark for RL Generalization Using Procedurally Generated Worlds](https://arxiv.org/abs/2210.13417) | [![GitHub Stars](https://img.shields.io/github/stars/Avalon-Benchmark/avalon?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/Avalon-Benchmark/avalon) |
@@ -1117,7 +1151,7 @@ Open-ended MBRL suites and planning-focused benchmarks that separate "can imagin
 Classical multi-agent RL suites and newer language-agent collaboration benchmarks that test whether communication reduces joint uncertainty rather than producing superficial agreement:
 
 | Date | Method | Key Idea | Paper | Github |
-|:---:|:-------|:---------|:------|:---:|
+|:---:|:-------:|:---------|:------|:---:|
 | 2019-02 | **SMAC** | Tests whether decentralised agents reduce joint uncertainty through tactical coordination rather than relying on a single dominant agent | [The StarCraft Multi-Agent Challenge](https://arxiv.org/abs/1902.04043) | [![GitHub Stars](https://img.shields.io/github/stars/oxwhirl/smac?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/oxwhirl/smac) |
 | 2019-02 | **Hanabi** | Measures belief sharing and disagreement resolution among agents reasoning under hidden-information constraints central to collective exploration | [The Hanabi Challenge: A New Frontier for AI Research](https://arxiv.org/abs/1902.00506) | [![GitHub Stars](https://img.shields.io/github/stars/google-deepmind/hanabi-learning-environment?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/google-deepmind/hanabi-learning-environment) |
 | 2019-10 | **Overcooked** | Evaluates whether tight human-AI coupling produces genuine information transfer or merely stable role labels masking brittle epistemic division | [On the Utility of Learning about Humans for Human-AI Coordination](https://arxiv.org/abs/1910.05789) | [![GitHub Stars](https://img.shields.io/github/stars/HumanCompatibleAI/overcooked_ai?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/HumanCompatibleAI/overcooked_ai) |
@@ -1142,8 +1176,9 @@ Classical multi-agent RL suites and newer language-agent collaboration benchmark
 - Epistemic uncertainty quantification in imagination
 - Scalable coordination-space exploration without combinatorial explosion
 
----
 
+
+---
 <br>
 
 ## 7. Citation
@@ -1160,7 +1195,15 @@ If you find this survey useful, please cite:
 ```
 
 ---
+<br>
+
+<div align=center><img src="./fig/logobeihang.png" width="60%">
+</div> 
+
+
 
 <p align="center">
   <i>This repository is actively maintained. If you find any errors or have new papers to suggest, please open an issue or submit a pull request!</i>
 </p>
+
+
