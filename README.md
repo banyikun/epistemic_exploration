@@ -31,6 +31,9 @@
 <p align="center">
   <a href="https://github.com/banyikun/epistemic_exploration/stargazers"><img src="https://img.shields.io/github/stars/banyikun/epistemic_exploration?style=social" alt="GitHub stars"></a>
   <a href="https://github.com/banyikun/epistemic_exploration/network/members"><img src="https://img.shields.io/github/forks/banyikun/epistemic_exploration?style=social" alt="GitHub forks"></a>
+  <a href="https://visitor-badge.laobi.icu/badge?page_id=banyikun.epistemic_exploration">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=banyikun.epistemic_exploration" alt="Visitors">
+  </a>
 </p>
 
 <h4 align="center">If you find our survey helpful, please give it a star ⭐ to show your support！Thank you:)
