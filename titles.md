@@ -2,7 +2,7 @@
 
 # Full Paper Titles 
 
-> **Note:** Please directly refer to the main [README.md](./README.md) for the complete project content and IGNORE this file (as this file is only intended to help researchers more easily discover our project through paper-title search).
+> **Note:** Please directly refer to the main [README.md](https://github.com/banyikun/epistemic_exploration) for the complete project content and IGNORE this file (as this file is only intended to help researchers more easily discover our project through paper-title search).
 
 
 ---
