@@ -1182,6 +1182,10 @@ Classical multi-agent RL suites and newer language-agent collaboration benchmark
 
 
 
+> Finally, just for searchability, a supplementary paper-title index is also available: [titles.md](./titles.md).
+
+
+
 ---
 <br>
 
