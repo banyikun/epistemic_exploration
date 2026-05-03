@@ -529,7 +529,7 @@
 
 #### [Self-Evolving Multi-Agent Simulations for Realistic Clinical Interactions](https://arxiv.org/abs/2503.22678) `2025-03`
 
-#### A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models `2025`
+#### [A Self-Evolving Framework for Multi-Agent Medical Consultation Based on Large Language Models](https://ieeexplore.ieee.org/abstract/document/10889517) `2025`
 
 #### [MobileSteward: Integrating Multiple App-Oriented Agents with Self-Evolution to Automate Cross-App Instructions](https://arxiv.org/abs/2502.16796) `2025-02`
 
