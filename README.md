@@ -1,7 +1,7 @@
 
 <h1 align="center">🔥 Awesome-Epistemic-Exploration
 
-"Epistemic Exploration Toward Artificial General Intelligence"  (ArXiv 2026) </h2>
+"Epistemic Exploration Toward Artificial General Intelligence"</h2>
 
 
 
